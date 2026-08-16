@@ -266,9 +266,137 @@ function renderFilters(events) {
   container.appendChild(onlySelectedWrapper);
 }
 
+// ---------- ICS-Export ----------
+// Alpbach liegt in der Zeitzone Europe/Vienna. Die gesamte Konferenz
+// (24. Aug - 4. Sep) faellt in die Sommerzeit (CEST, UTC+2), daher reicht
+// ein fest verdrahteter Offset - keine DST-Umstellung in diesem Zeitraum.
+const VIENNA_UTC_OFFSET_HOURS = 2;
+
+function pad2(n) {
+  return String(n).padStart(2, "0");
+}
+
+function toIcsDateTimeUtc(day, time) {
+  const [y, m, d] = day.split("-").map(Number);
+  const [hh, mm] = time.split(":").map(Number);
+  const utc = new Date(Date.UTC(y, m - 1, d, hh - VIENNA_UTC_OFFSET_HOURS, mm));
+  return (
+    `${utc.getUTCFullYear()}${pad2(utc.getUTCMonth() + 1)}${pad2(utc.getUTCDate())}` +
+    `T${pad2(utc.getUTCHours())}${pad2(utc.getUTCMinutes())}00Z`
+  );
+}
+
+function toIcsDate(day) {
+  return day.replaceAll("-", "");
+}
+
+function addDaysToIsoDate(isoDate, days) {
+  const [y, m, d] = isoDate.split("-").map(Number);
+  const date = new Date(Date.UTC(y, m - 1, d));
+  date.setUTCDate(date.getUTCDate() + days);
+  return `${date.getUTCFullYear()}${pad2(date.getUTCMonth() + 1)}${pad2(date.getUTCDate())}`;
+}
+
+function escapeIcsText(text) {
+  return String(text)
+    .replace(/\\/g, "\\\\")
+    .replace(/;/g, "\\;")
+    .replace(/,/g, "\\,")
+    .replace(/\n/g, "\\n");
+}
+
+// RFC 5545: Zeilen ueber 75 Oktetten (Bytes, nicht Zeichen!) muessen gefaltet
+// werden (CRLF + Leerzeichen). Wichtig bei Umlauten/ß, die in UTF-8 mehrere
+// Bytes belegen - deshalb byteweise statt zeichenweise zaehlen.
+const ICS_ENCODER = new TextEncoder();
+
+function foldLine(line) {
+  if (ICS_ENCODER.encode(line).length <= 75) return line;
+
+  const chunks = [];
+  let current = "";
+  let currentBytes = 0;
+  for (const ch of line) {
+    const chBytes = ICS_ENCODER.encode(ch).length;
+    if (currentBytes + chBytes > 74) {
+      chunks.push(current);
+      current = "";
+      currentBytes = 0;
+    }
+    current += ch;
+    currentBytes += chBytes;
+  }
+  chunks.push(current);
+
+  return chunks.map((chunk, i) => (i === 0 ? chunk : ` ${chunk}`)).join("\r\n");
+}
+
+function eventToVEvent(event, dtstamp) {
+  const lines = [
+    "BEGIN:VEVENT",
+    `UID:${event.id}@efa26-planner`,
+    `DTSTAMP:${dtstamp}`,
+    `SUMMARY:${escapeIcsText(event.title)}`,
+  ];
+
+  if (event.startTime && event.endTime) {
+    lines.push(`DTSTART:${toIcsDateTimeUtc(event.day, event.startTime)}`);
+    lines.push(`DTEND:${toIcsDateTimeUtc(event.day, event.endTime)}`);
+  } else {
+    // Keine exakte Zeit bekannt (siehe CLAUDE.md) -> ganztaegiger Eintrag,
+    // damit das Event nicht komplett verloren geht. DTEND ist bei
+    // ganztaegigen Terminen exklusiv, daher +1 Tag.
+    lines.push(`DTSTART;VALUE=DATE:${toIcsDate(event.day)}`);
+    lines.push(`DTEND;VALUE=DATE:${addDaysToIsoDate(event.day, 1)}`);
+  }
+
+  if (event.location) lines.push(`LOCATION:${escapeIcsText(event.location)}`);
+  if (event.description)
+    lines.push(`DESCRIPTION:${escapeIcsText(event.description)}`);
+
+  lines.push("END:VEVENT");
+  return lines.map(foldLine).join("\r\n");
+}
+
+function nowAsIcsUtc() {
+  const now = new Date();
+  return (
+    `${now.getUTCFullYear()}${pad2(now.getUTCMonth() + 1)}${pad2(now.getUTCDate())}` +
+    `T${pad2(now.getUTCHours())}${pad2(now.getUTCMinutes())}${pad2(now.getUTCSeconds())}Z`
+  );
+}
+
+function buildIcs(events) {
+  const dtstamp = nowAsIcsUtc();
+  const lines = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//EFA26 Planner//DE",
+    "CALSCALE:GREGORIAN",
+    ...events.map((event) => eventToVEvent(event, dtstamp)),
+    "END:VCALENDAR",
+  ];
+  return lines.join("\r\n") + "\r\n";
+}
+
+function downloadIcsFile(filename, content) {
+  const blob = new Blob([content], { type: "text/calendar;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+}
+
 function updateSelectionCount() {
   const status = document.getElementById("status");
   status.textContent = `${selection.size} von ${totalEventCount} Events ausgewählt`;
+
+  const exportButton = document.getElementById("export-ics");
+  exportButton.disabled = selection.size === 0;
 }
 
 async function main() {
@@ -282,6 +410,11 @@ async function main() {
     renderFilters(events);
     refresh();
     updateSelectionCount();
+
+    document.getElementById("export-ics").addEventListener("click", () => {
+      const selectedEvents = allEvents.filter((event) => selection.has(event.id));
+      downloadIcsFile("efa26-mein-programm.ics", buildIcs(selectedEvents));
+    });
   } catch (err) {
     status.textContent = "Fehler beim Laden der Events. Details in der Konsole.";
     console.error(err);
