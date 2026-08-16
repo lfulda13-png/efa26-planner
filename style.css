@@ -1,6 +1,8 @@
 :root {
   color-scheme: light dark;
   --max-width: 800px;
+  --font-heading: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 * {
@@ -10,8 +12,14 @@
 body {
   margin: 0;
   padding: 2rem 1rem;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-family: var(--font-body);
   line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
 }
 
 header,
