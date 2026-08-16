@@ -189,6 +189,27 @@ aus der ersten Seite wiederverwendet).
     und "Veranstaltet von" - kombiniert sich mit den bestehenden Filtern
   - Damit ist die urspruengliche Phase-6-Idee "durchsuchbare Liste" erledigt
 
+- **2. Nutzer-Feedback-Runde** ✅ abgeschlossen (2026-08-16)
+  - "Auswahl leeren"-Button (mit `confirm()`-Bestaetigung)
+  - Kalenderansicht: "Kalender von:"-Dropdown zeigt die Auswahl anderer
+    synchronisierter Club-Mitglieder im Zeitraster (`calendarState.viewingName`,
+    `eventIdsForViewer` in `app.js`) - unabhaengig von der eigenen lokalen
+    Auswahl, die weiterhin fuer Export/Clear/Sync massgeblich bleibt
+  - Klick/Enter/Space auf den Header-Titel wechselt zur Listenansicht und
+    scrollt nach oben (`#home-link` in `index.html`)
+  - Mobile-Fix Wochenansicht (7-Spalten-Zeitraster mit Mindestbreite +
+    horizontalem Scroll statt unlesbarem Schrumpfen)
+  - Filter (Tag/Format/Sprache/Track) in einem `<details>`-Element,
+    einklappbar - dabei einen echten Bug gefunden: eigene `display:flex`-
+    Regel hat die native `<details>`-Klapplogik ausgehebelt (Inhalt blieb
+    sichtbar), jetzt explizit ueber `[open]`/`:not([open])` gesteuert
+  - **Hinweis zur Testumgebung:** Mehrere Rendering-Eigenheiten in der
+    Browser-Automatisierung dieser Session (siehe auch Phase-5-Eintrag zu
+    `:has()`) - z.B. hat die native `<details>`-Klapplogik in Tests nicht
+    funktioniert, obwohl sie in normalen Browsern Standard ist. Der Fix
+    (explizite Sichtbarkeits-Regeln) ist trotzdem strikt besser/robuster,
+    unabhaengig von der Ursache - kein Nacharbeiten noetig.
+
 - **Weitere "Gadgets" (nach Nutzer-Ansage besprechen, bevor gebaut wird):**
   Speaker-bioLink-Abgleich (siehe oben, bewusst nicht gemacht wegen
   Fehlzuordnungs-Risiko), Mitternachts-Bug im ICS-Export (siehe oben)
