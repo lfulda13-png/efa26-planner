@@ -118,8 +118,13 @@ function parseProgramHtml(html) {
           .find(".lang-time-labels span")
           .each((i, e) => {
             const text = $(e).text().trim();
-            if (/^\d+$/.test(text)) durationMinutes = Number(text);
-            else if (text) language = text;
+            // Lange Dauern (z.B. mehrtaegige Labs) werden mit deutschem
+            // Tausenderpunkt angezeigt, z.B. "3.060" (Minuten).
+            if (/^[\d.]+$/.test(text)) {
+              durationMinutes = Number(text.replace(/\./g, ""));
+            } else if (text) {
+              language = text;
+            }
           });
 
         const locationParts = card

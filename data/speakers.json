@@ -78,34 +78,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/hattmannsdorfer-wolfgang-2"
   },
   {
-    "name": "Micael Johansson",
-    "role": "Präsident und CEO",
-    "organization": "Saab AB",
-    "bioLink": "https://www.alpbach.org/de/speakers/johansson-micael"
-  },
-  {
     "name": "Martin Kocher",
     "role": "Gouverneur",
     "organization": "Austrian Central Bank (OeNB)",
     "bioLink": "https://www.alpbach.org/de/speakers/kocher-martin-3"
-  },
-  {
-    "name": "Arancha González Laya",
-    "role": "Dekanin der Paris School of International Affairs, ehem. Außenministerin",
-    "organization": "Sciences Po",
-    "bioLink": "https://www.alpbach.org/de/speakers/gonzalez-laya-arancha-4"
-  },
-  {
-    "name": "Ferit Hoxha",
-    "role": "Minister für Europa und Auswärtige Angelegenheiten",
-    "organization": "Government of Albania",
-    "bioLink": "https://www.alpbach.org/de/speakers/hoxha-ferit"
-  },
-  {
-    "name": "Eva Maria Holzleitner",
-    "role": "Bundesministerin für Frauen, Wissenschaft und Forschung",
-    "organization": "Federal Ministry for Women, Science and Research",
-    "bioLink": "https://www.alpbach.org/de/speakers/holzleitner-eva-maria"
   },
   {
     "name": "Maria Kalesnikava",
@@ -114,10 +90,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/kalesnikava-maria"
   },
   {
-    "name": "Benjamin Haddad",
-    "role": "Beigeordneter Minister",
-    "organization": "Ministry for Europe and Foreign Affairs (France)",
-    "bioLink": "https://www.alpbach.org/de/speakers/haddad-benjamin"
+    "name": "Nika Kovač",
+    "role": "Geschäftsführerin des D-Hub",
+    "organization": "D-Hub",
+    "bioLink": "https://www.alpbach.org/de/speakers/kovac-nika-2"
+  },
+  {
+    "name": "Arancha González Laya",
+    "role": "Dekanin der Paris School of International Affairs, ehem. Außenministerin",
+    "organization": "Sciences Po",
+    "bioLink": "https://www.alpbach.org/de/speakers/gonzalez-laya-arancha-4"
   },
   {
     "name": "Michael Faulend",
@@ -126,10 +108,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/faulend-michael"
   },
   {
-    "name": "Othmar Karas",
-    "role": "Präsident",
-    "organization": "European Forum Alpbach",
-    "bioLink": "https://www.alpbach.org/de/speakers/karas-othmar-4"
+    "name": "Benjamin Haddad",
+    "role": "Beigeordneter Minister",
+    "organization": "Ministry for Europe and Foreign Affairs (France)",
+    "bioLink": "https://www.alpbach.org/de/speakers/haddad-benjamin"
+  },
+  {
+    "name": "Ferit Hoxha",
+    "role": "Minister für Europa und Auswärtige Angelegenheiten",
+    "organization": "Government of Albania",
+    "bioLink": "https://www.alpbach.org/de/speakers/hoxha-ferit"
   },
   {
     "name": "Peter Hanke",
@@ -138,28 +126,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/hanke-peter-2"
   },
   {
-    "name": "Nika Kovač",
-    "role": "Geschäftsführerin des D-Hub",
-    "organization": "D-Hub",
-    "bioLink": "https://www.alpbach.org/de/speakers/kovac-nika-2"
+    "name": "Othmar Karas",
+    "role": "Präsident",
+    "organization": "European Forum Alpbach",
+    "bioLink": "https://www.alpbach.org/de/speakers/karas-othmar-4"
   },
   {
-    "name": "Iara Lee",
-    "role": "Activist, Filmmaker, and Cultural Producer",
-    "organization": "Cultures of Resistance",
-    "bioLink": "https://www.alpbach.org/de/speakers/lee-iara"
+    "name": "Eva Maria Holzleitner",
+    "role": "Bundesministerin für Frauen, Wissenschaft und Forschung",
+    "organization": "Federal Ministry for Women, Science and Research",
+    "bioLink": "https://www.alpbach.org/de/speakers/holzleitner-eva-maria"
   },
   {
-    "name": "Mairéad McGuinness",
-    "role": "EU-Sondergesandte für die Förderung der Religions- und Weltanschauungsfreiheit",
-    "organization": "European Commission",
-    "bioLink": "https://www.alpbach.org/de/speakers/mcguinness-mairead"
-  },
-  {
-    "name": "Enrico Letta",
-    "role": "Dekan der IE University in Madrid und Präsident des Jacques Delors Institute in Paris.",
-    "organization": "IE University and Jacques Delors Institute",
-    "bioLink": "https://www.alpbach.org/de/speakers/letta-enrico-2"
+    "name": "Micael Johansson",
+    "role": "Präsident und CEO",
+    "organization": "Saab AB",
+    "bioLink": "https://www.alpbach.org/de/speakers/johansson-micael"
   },
   {
     "name": "Siegfried Mureșan",
@@ -168,10 +150,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/muresan-siegfried"
   },
   {
-    "name": "Armin Laschet",
-    "role": "Vorsitzender des Auswärtigen Ausschusses",
-    "organization": "German Bundestag",
-    "bioLink": "https://www.alpbach.org/de/speakers/laschet-armin-2"
+    "name": "Mairéad McGuinness",
+    "role": "EU-Sondergesandte für die Förderung der Religions- und Weltanschauungsfreiheit",
+    "organization": "European Commission",
+    "bioLink": "https://www.alpbach.org/de/speakers/mcguinness-mairead"
   },
   {
     "name": "Ignacy Niemczycki",
@@ -180,28 +162,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/niemczycki-ignacy"
   },
   {
-    "name": "Korinna Schumann",
-    "role": "Bundesministerin",
-    "organization": "Federal Ministry of Labour, Social Affairs, Health, Care and Consumer Protection (BMASGPK)",
-    "bioLink": "https://www.alpbach.org/de/speakers/schumann-korinna-2"
-  },
-  {
     "name": "Clara Raposo",
     "role": "Stellvertretende Gouverneurin",
     "organization": "Banco de Portugal",
     "bioLink": "https://www.alpbach.org/de/speakers/raposo-clara-2"
   },
   {
-    "name": "Ivan Krastev",
-    "role": "Albert Hirschman Permanent Fellow",
-    "organization": "Institute for Human Sciences, IWM Vienna",
-    "bioLink": "https://www.alpbach.org/de/speakers/krastev-ivan"
-  },
-  {
     "name": "Mario Nava",
     "role": "Generaldirektor für Beschäftigung, Soziales und Integration",
     "organization": "European Commission",
     "bioLink": "https://www.alpbach.org/de/speakers/nava-mario-2"
+  },
+  {
+    "name": "Enrico Letta",
+    "role": "Dekan der IE University in Madrid und Präsident des Jacques Delors Institute in Paris.",
+    "organization": "IE University and Jacques Delors Institute",
+    "bioLink": "https://www.alpbach.org/de/speakers/letta-enrico-2"
   },
   {
     "name": "Beate Meinl-Reisinger",
@@ -216,52 +192,34 @@
     "bioLink": "https://www.alpbach.org/de/speakers/lazard-olivia"
   },
   {
-    "name": "Norbert Totschnig",
-    "role": "Bundesminister für Land- und Forstwirtschaft, Klima- und Umweltschutz, Regionen und Wasserwirtschaft",
-    "organization": "Federal Ministry (BMLUK)",
-    "bioLink": "https://www.alpbach.org/de/speakers/totschnig-norbert-4"
+    "name": "Iara Lee",
+    "role": "Activist, Filmmaker, and Cultural Producer",
+    "organization": "Cultures of Resistance",
+    "bioLink": "https://www.alpbach.org/de/speakers/lee-iara"
+  },
+  {
+    "name": "Ivan Krastev",
+    "role": "Albert Hirschman Permanent Fellow",
+    "organization": "Institute for Human Sciences, IWM Vienna",
+    "bioLink": "https://www.alpbach.org/de/speakers/krastev-ivan"
+  },
+  {
+    "name": "Armin Laschet",
+    "role": "Vorsitzender des Auswärtigen Ausschusses",
+    "organization": "German Bundestag",
+    "bioLink": "https://www.alpbach.org/de/speakers/laschet-armin-2"
+  },
+  {
+    "name": "Korinna Schumann",
+    "role": "Bundesministerin",
+    "organization": "Federal Ministry of Labour, Social Affairs, Health, Care and Consumer Protection (BMASGPK)",
+    "bioLink": "https://www.alpbach.org/de/speakers/schumann-korinna-2"
   },
   {
     "name": "Wolfgang Anzengruber",
     "role": "Regierungskoordinator",
     "organization": "Ukraine Reconstruction",
     "bioLink": "https://www.alpbach.org/de/speakers/anzengruber-wolfgang"
-  },
-  {
-    "name": "Daniela Schwarzer",
-    "role": "Designierte Präsidentin",
-    "organization": "Hertie School",
-    "bioLink": "https://www.alpbach.org/de/speakers/schwarzer-daniela-2"
-  },
-  {
-    "name": "Thomas Arnoldner",
-    "role": "Stellvertretender CEO",
-    "organization": "A1 Group",
-    "bioLink": "https://www.alpbach.org/de/speakers/arnoldner-thomas"
-  },
-  {
-    "name": "Jan Philipp Albrecht",
-    "role": "Vorstand",
-    "organization": "Heinrich-Böll-Stiftung",
-    "bioLink": "https://www.alpbach.org/de/speakers/albrecht-jan-philipp"
-  },
-  {
-    "name": "Felippa Amanta",
-    "role": "PhD candidate and policy researcher",
-    "organization": "Environmental Change Institute, University of Oxford",
-    "bioLink": "https://www.alpbach.org/de/speakers/amanta-felippa"
-  },
-  {
-    "name": "Christoph Wiederkehr",
-    "role": "Bundesminister für Bildung",
-    "organization": "Austrian Ministry of Education (BMB)",
-    "bioLink": "https://www.alpbach.org/de/speakers/wiederkehr-christoph-2"
-  },
-  {
-    "name": "Lea Ypi",
-    "role": "Professorin für Politik und Philosophie",
-    "organization": "The London School of Economics and Political Science (LSE)",
-    "bioLink": "https://www.alpbach.org/de/speakers/ypi-lea"
   },
   {
     "name": "Gernot Wagner",
@@ -276,10 +234,40 @@
     "bioLink": "https://www.alpbach.org/de/speakers/vohanka-martin"
   },
   {
+    "name": "Jan Philipp Albrecht",
+    "role": "Vorstand",
+    "organization": "Heinrich-Böll-Stiftung",
+    "bioLink": "https://www.alpbach.org/de/speakers/albrecht-jan-philipp"
+  },
+  {
+    "name": "Norbert Totschnig",
+    "role": "Bundesminister für Land- und Forstwirtschaft, Klima- und Umweltschutz, Regionen und Wasserwirtschaft",
+    "organization": "Federal Ministry (BMLUK)",
+    "bioLink": "https://www.alpbach.org/de/speakers/totschnig-norbert-4"
+  },
+  {
     "name": "Andreas Treichl",
     "role": "Geschäftsführer",
     "organization": "ERSTE Foundation",
     "bioLink": "https://www.alpbach.org/de/speakers/treichl-andreas-4"
+  },
+  {
+    "name": "Lea Ypi",
+    "role": "Professorin für Politik und Philosophie",
+    "organization": "The London School of Economics and Political Science (LSE)",
+    "bioLink": "https://www.alpbach.org/de/speakers/ypi-lea"
+  },
+  {
+    "name": "Thomas Arnoldner",
+    "role": "Stellvertretender CEO",
+    "organization": "A1 Group",
+    "bioLink": "https://www.alpbach.org/de/speakers/arnoldner-thomas"
+  },
+  {
+    "name": "Christoph Wiederkehr",
+    "role": "Bundesminister für Bildung",
+    "organization": "Austrian Ministry of Education (BMB)",
+    "bioLink": "https://www.alpbach.org/de/speakers/wiederkehr-christoph-2"
   },
   {
     "name": "Marina Alcazar Cid",
@@ -288,34 +276,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/alcazar-cid-marina"
   },
   {
-    "name": "Laure-Catherine Beyers",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/beyers-laure-catherine"
+    "name": "Felippa Amanta",
+    "role": "PhD candidate and policy researcher",
+    "organization": "Environmental Change Institute, University of Oxford",
+    "bioLink": "https://www.alpbach.org/de/speakers/amanta-felippa"
   },
   {
-    "name": "Marian Benbow Pfisterer",
-    "role": "Leiterin der Mission",
-    "organization": "International Organization for Migration (IOM) Country Office for Austria",
-    "bioLink": "https://www.alpbach.org/de/speakers/benbow-pfisterer-marian"
-  },
-  {
-    "name": "Alexander Bamberger",
-    "role": "CEO",
-    "organization": "BMW Austria",
-    "bioLink": "https://www.alpbach.org/de/speakers/bamberger-alexander-3"
-  },
-  {
-    "name": "Köksal Baltaci",
-    "role": "Redakteur",
-    "organization": "Die Presse",
-    "bioLink": "https://www.alpbach.org/de/speakers/baltaci-koksal"
-  },
-  {
-    "name": "Philipp Axmann",
-    "role": "Jugendreferent",
-    "organization": "Protestant Church of Austria",
-    "bioLink": "https://www.alpbach.org/de/speakers/axmann-philipp"
+    "name": "Daniela Schwarzer",
+    "role": "Designierte Präsidentin",
+    "organization": "Hertie School",
+    "bioLink": "https://www.alpbach.org/de/speakers/schwarzer-daniela-2"
   },
   {
     "name": "Eveline Beer",
@@ -330,22 +300,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/baratieri-marco"
   },
   {
-    "name": "Marcus Bachmann",
-    "role": "Advocacy & Humanitarian Affairs Advisor, Médecins Sans Frontières",
-    "organization": "Médecins Sans Frontières",
-    "bioLink": "https://www.alpbach.org/de/speakers/bachmann-marcus"
-  },
-  {
-    "name": "Daniel Bayer",
-    "role": "Founder & Consultant",
-    "organization": "Fingu GmbH",
-    "bioLink": "https://www.alpbach.org/de/speakers/bayer-daniel-3"
-  },
-  {
-    "name": "Samir Beharić",
-    "role": "Programme Manager für Research, Policy and Advocacy",
-    "organization": "European Fund for the Balkans",
-    "bioLink": "https://www.alpbach.org/de/speakers/beharic-samir"
+    "name": "Marian Benbow Pfisterer",
+    "role": "Leiterin der Mission",
+    "organization": "International Organization for Migration (IOM) Country Office for Austria",
+    "bioLink": "https://www.alpbach.org/de/speakers/benbow-pfisterer-marian"
   },
   {
     "name": "Jonathan Barth",
@@ -354,34 +312,52 @@
     "bioLink": "https://www.alpbach.org/de/speakers/barth-jonathan"
   },
   {
+    "name": "Marcus Bachmann",
+    "role": "Advocacy & Humanitarian Affairs Advisor, Médecins Sans Frontières",
+    "organization": "Médecins Sans Frontières",
+    "bioLink": "https://www.alpbach.org/de/speakers/bachmann-marcus"
+  },
+  {
+    "name": "Alexander Bamberger",
+    "role": "CEO",
+    "organization": "BMW Austria",
+    "bioLink": "https://www.alpbach.org/de/speakers/bamberger-alexander-3"
+  },
+  {
+    "name": "Philipp Axmann",
+    "role": "Jugendreferent",
+    "organization": "Protestant Church of Austria",
+    "bioLink": "https://www.alpbach.org/de/speakers/axmann-philipp"
+  },
+  {
+    "name": "Samir Beharić",
+    "role": "Programme Manager für Research, Policy and Advocacy",
+    "organization": "European Fund for the Balkans",
+    "bioLink": "https://www.alpbach.org/de/speakers/beharic-samir"
+  },
+  {
+    "name": "Laure-Catherine Beyers",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/beyers-laure-catherine"
+  },
+  {
+    "name": "Köksal Baltaci",
+    "role": "Redakteur",
+    "organization": "Die Presse",
+    "bioLink": "https://www.alpbach.org/de/speakers/baltaci-koksal"
+  },
+  {
     "name": "Frederic Berger",
     "role": "Intelligence Analyst",
     "organization": "POLITICO Research & Analysis Division",
     "bioLink": "https://www.alpbach.org/de/speakers/berger-frederic"
   },
   {
-    "name": "Mag. Neslihan Bilgin-Kara",
-    "role": "Geschäftsführerin",
-    "organization": "WOMAN World",
-    "bioLink": "https://www.alpbach.org/de/speakers/bilgin-kara-mag-neslihan"
-  },
-  {
-    "name": "Vincent Bloem",
-    "role": "Präsident/Politischer Berater für Migrationsfragen",
-    "organization": "Club Alpbach Netherlands/Tweede Kamer der Staten-General",
-    "bioLink": "https://www.alpbach.org/de/speakers/bloem-vincent-2"
-  },
-  {
-    "name": "Vedrana Bibić",
-    "role": "Kommunikations Managerin",
-    "organization": "Faktograf",
-    "bioLink": "https://www.alpbach.org/de/speakers/bibic-vedrana"
-  },
-  {
-    "name": "Ivonne Julitta Bollow",
-    "role": "Senior Vice President Corporate Communications, Public Policy & Responsibility",
-    "organization": "METRO",
-    "bioLink": "https://www.alpbach.org/de/speakers/bollow-ivonne-julitta"
+    "name": "Daniel Bayer",
+    "role": "Founder & Consultant",
+    "organization": "Fingu GmbH",
+    "bioLink": "https://www.alpbach.org/de/speakers/bayer-daniel-3"
   },
   {
     "name": "Ursula Bittner",
@@ -396,16 +372,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/blitzkovsky-petr"
   },
   {
-    "name": "Nicola Bilotta",
-    "role": "Senior Research Associate und Koordinator der EU-Supervisory Digital Finance Academy / Ökonomischer",
-    "organization": "Florence School of Banking and Finance - European University Institute / GLOBSEC",
-    "bioLink": "https://www.alpbach.org/de/speakers/bilotta-nicola"
-  },
-  {
-    "name": "Luiza Bialasiewicz",
-    "role": "Professor of Political and Economic Geography",
-    "organization": "Ca' Foscari University of Venice",
-    "bioLink": "https://www.alpbach.org/de/speakers/bialasiewicz-luiza"
+    "name": "Mag. Neslihan Bilgin-Kara",
+    "role": "Geschäftsführerin",
+    "organization": "WOMAN World",
+    "bioLink": "https://www.alpbach.org/de/speakers/bilgin-kara-mag-neslihan"
   },
   {
     "name": "Csaba Borboly",
@@ -420,10 +390,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/blazevic-ivan"
   },
   {
+    "name": "Nicola Bilotta",
+    "role": "Senior Research Associate und Koordinator der EU-Supervisory Digital Finance Academy / Ökonomischer",
+    "organization": "Florence School of Banking and Finance - European University Institute / GLOBSEC",
+    "bioLink": "https://www.alpbach.org/de/speakers/bilotta-nicola"
+  },
+  {
     "name": "Petar Bojanic",
     "role": "Professor für Philosophie",
     "organization": "University of Belgrade and RECAS",
     "bioLink": "https://www.alpbach.org/de/speakers/bojanic-petar"
+  },
+  {
+    "name": "Vedrana Bibić",
+    "role": "Kommunikations Managerin",
+    "organization": "Faktograf",
+    "bioLink": "https://www.alpbach.org/de/speakers/bibic-vedrana"
   },
   {
     "name": "Barend Bos",
@@ -432,46 +414,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/bos-barend"
   },
   {
-    "name": "Loes Damhof",
-    "role": "UNESCO Vorsitzende für Futures Literacy in höherer Bildung",
-    "organization": "Hanze University of Applied Sciences",
-    "bioLink": "https://www.alpbach.org/de/speakers/damhof-loes-2"
+    "name": "Vincent Bloem",
+    "role": "Präsident/Politischer Berater für Migrationsfragen",
+    "organization": "Club Alpbach Netherlands/Tweede Kamer der Staten-General",
+    "bioLink": "https://www.alpbach.org/de/speakers/bloem-vincent-2"
   },
   {
-    "name": "Helmut Brandstätter",
-    "role": "Mitglied des Europäischen Parlaments (Renew Europe)",
-    "organization": "European Parliament",
-    "bioLink": "https://www.alpbach.org/de/speakers/brandstatter-helmut-2"
+    "name": "Ivonne Julitta Bollow",
+    "role": "Senior Vice President Corporate Communications, Public Policy & Responsibility",
+    "organization": "METRO",
+    "bioLink": "https://www.alpbach.org/de/speakers/bollow-ivonne-julitta"
   },
   {
-    "name": "Robert Brieger",
-    "role": "Vorsitzender (a.D.) Militärausschuss der Europäischen Union | General",
-    "organization": "Austrian Federal Army",
-    "bioLink": "https://www.alpbach.org/de/speakers/brieger-robert"
+    "name": "Luiza Bialasiewicz",
+    "role": "Professor of Political and Economic Geography",
+    "organization": "Ca' Foscari University of Venice",
+    "bioLink": "https://www.alpbach.org/de/speakers/bialasiewicz-luiza"
   },
   {
-    "name": "Maximilian Clary und Aldringen",
-    "role": "Vorstandsmitglied, Chief Retail Officer und COO",
-    "organization": "Erste Bank",
-    "bioLink": "https://www.alpbach.org/de/speakers/clary-und-aldringen-maximilian"
-  },
-  {
-    "name": "Ludvig Broomé",
-    "role": "Analyst im Europa-Programm",
-    "organization": "The Swedish Institute of International Affairs",
-    "bioLink": "https://www.alpbach.org/de/speakers/broome-ludvig"
-  },
-  {
-    "name": "David Bosshart",
-    "role": "Trendforscher",
-    "organization": "Bosshart & Partners",
-    "bioLink": "https://www.alpbach.org/de/speakers/bosshart-david"
-  },
-  {
-    "name": "Goran Buldioski",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/buldioski-goran-2"
+    "name": "Siddharth Chatterjee",
+    "role": "Vorstandsvorsitzender",
+    "organization": "Global Neighbours",
+    "bioLink": "https://www.alpbach.org/de/speakers/chatterjee-siddharth-2"
   },
   {
     "name": "Andrea Carlà",
@@ -486,16 +450,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/crane-tim"
   },
   {
-    "name": "Flavio Deflorian",
-    "role": "Rektor der Universität Trient",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/deflorian-flavio"
-  },
-  {
-    "name": "Siddharth Chatterjee",
-    "role": "Vorstandsvorsitzender",
-    "organization": "Global Neighbours",
-    "bioLink": "https://www.alpbach.org/de/speakers/chatterjee-siddharth-2"
+    "name": "Helmut Brandstätter",
+    "role": "Mitglied des Europäischen Parlaments (Renew Europe)",
+    "organization": "European Parliament",
+    "bioLink": "https://www.alpbach.org/de/speakers/brandstatter-helmut-2"
   },
   {
     "name": "Christiane Brunner",
@@ -504,28 +462,46 @@
     "bioLink": "https://www.alpbach.org/de/speakers/brunner-christiane-2"
   },
   {
-    "name": "Natalia Dovhalonok",
-    "role": "Designerin",
-    "organization": "Open Future Lab",
-    "bioLink": "https://www.alpbach.org/de/speakers/dovhalonok-natalia"
+    "name": "Flavio Deflorian",
+    "role": "Rektor der Universität Trient",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/deflorian-flavio"
   },
   {
-    "name": "Sorcha Edwards",
-    "role": "Generalsekretärin von Housing Europe",
-    "organization": "Housing Europe",
-    "bioLink": "https://www.alpbach.org/de/speakers/edwards-sorcha-3"
+    "name": "Maximilian Clary und Aldringen",
+    "role": "Vorstandsmitglied, Chief Retail Officer und COO",
+    "organization": "Erste Bank",
+    "bioLink": "https://www.alpbach.org/de/speakers/clary-und-aldringen-maximilian"
   },
   {
-    "name": "Emiline Elangovan",
-    "role": "Doktorats Student",
-    "organization": "Chalmers University of Technology",
-    "bioLink": "https://www.alpbach.org/de/speakers/elangovan-emiline"
+    "name": "Loes Damhof",
+    "role": "UNESCO Vorsitzende für Futures Literacy in höherer Bildung",
+    "organization": "Hanze University of Applied Sciences",
+    "bioLink": "https://www.alpbach.org/de/speakers/damhof-loes-2"
   },
   {
-    "name": "Dalma Dojcsák",
-    "role": "Geschäftsführerin",
-    "organization": "Hungarian Civil Liberties Union",
-    "bioLink": "https://www.alpbach.org/de/speakers/dojcsak-dalma"
+    "name": "Robert Brieger",
+    "role": "Vorsitzender (a.D.) Militärausschuss der Europäischen Union | General",
+    "organization": "Austrian Federal Army",
+    "bioLink": "https://www.alpbach.org/de/speakers/brieger-robert"
+  },
+  {
+    "name": "David Bosshart",
+    "role": "Trendforscher",
+    "organization": "Bosshart & Partners",
+    "bioLink": "https://www.alpbach.org/de/speakers/bosshart-david"
+  },
+  {
+    "name": "Goran Buldioski",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/buldioski-goran-2"
+  },
+  {
+    "name": "Ludvig Broomé",
+    "role": "Analyst im Europa-Programm",
+    "organization": "The Swedish Institute of International Affairs",
+    "bioLink": "https://www.alpbach.org/de/speakers/broome-ludvig"
   },
   {
     "name": "Tina Deutsch",
@@ -534,10 +510,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/deutsch-tina-3"
   },
   {
-    "name": "Luis Durnwalder",
-    "role": "Landeshauptmann der Autonomen Provinz Bozen–Südtirol von 1989 bis 2014",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/durnwalder-luis"
+    "name": "Emiline Elangovan",
+    "role": "Doktorats Student",
+    "organization": "Chalmers University of Technology",
+    "bioLink": "https://www.alpbach.org/de/speakers/elangovan-emiline"
   },
   {
     "name": "Elisabeth Engelbrechtsmüller-Strauss",
@@ -552,22 +528,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/disslbacher-franziska-2"
   },
   {
-    "name": "Hans-Adrian Dorfmeister-Pölzer",
-    "role": "Masterstudent",
-    "organization": "Music and Arts University of the City of Vienna | MUK",
-    "bioLink": "https://www.alpbach.org/de/speakers/dorfmeister-polzer-hans-adrian"
+    "name": "Dalma Dojcsák",
+    "role": "Geschäftsführerin",
+    "organization": "Hungarian Civil Liberties Union",
+    "bioLink": "https://www.alpbach.org/de/speakers/dojcsak-dalma"
   },
   {
-    "name": "Kilian Dorner",
-    "role": "Geschäftsführer",
-    "organization": "Dorner Electronic GmbH",
-    "bioLink": "https://www.alpbach.org/de/speakers/dorner-kilian"
-  },
-  {
-    "name": "Ashwin Immanuel Dhanabalan",
-    "role": "Doktorand, wissenschaftlicher Mitarbeiter",
-    "organization": "Christ University, Hoody Strategy Group",
-    "bioLink": "https://www.alpbach.org/de/speakers/dhanabalan-ashwin-immanuel"
+    "name": "Luis Durnwalder",
+    "role": "Landeshauptmann der Autonomen Provinz Bozen–Südtirol von 1989 bis 2014",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/durnwalder-luis"
   },
   {
     "name": "Ivana Dragičević",
@@ -576,70 +546,40 @@
     "bioLink": "https://www.alpbach.org/de/speakers/dragicevic-ivana-3"
   },
   {
+    "name": "Ashwin Immanuel Dhanabalan",
+    "role": "Doktorand, wissenschaftlicher Mitarbeiter",
+    "organization": "Christ University, Hoody Strategy Group",
+    "bioLink": "https://www.alpbach.org/de/speakers/dhanabalan-ashwin-immanuel"
+  },
+  {
+    "name": "Sorcha Edwards",
+    "role": "Generalsekretärin von Housing Europe",
+    "organization": "Housing Europe",
+    "bioLink": "https://www.alpbach.org/de/speakers/edwards-sorcha-3"
+  },
+  {
+    "name": "Kilian Dorner",
+    "role": "Geschäftsführer",
+    "organization": "Dorner Electronic GmbH",
+    "bioLink": "https://www.alpbach.org/de/speakers/dorner-kilian"
+  },
+  {
+    "name": "Hans-Adrian Dorfmeister-Pölzer",
+    "role": "Masterstudent",
+    "organization": "Music and Arts University of the City of Vienna | MUK",
+    "bioLink": "https://www.alpbach.org/de/speakers/dorfmeister-polzer-hans-adrian"
+  },
+  {
+    "name": "Natalia Dovhalonok",
+    "role": "Designerin",
+    "organization": "Open Future Lab",
+    "bioLink": "https://www.alpbach.org/de/speakers/dovhalonok-natalia"
+  },
+  {
     "name": "Susann Fiedler",
     "role": "Professorin der Wirtschaftspsychologie",
     "organization": "Vienna University of Economics and Business",
     "bioLink": "https://www.alpbach.org/de/speakers/fiedler-susann"
-  },
-  {
-    "name": "Julius E. O. Fintelmann",
-    "role": "Chefredakteur",
-    "organization": "The European Correspondent",
-    "bioLink": "https://www.alpbach.org/de/speakers/fintelmann-julius-e-o"
-  },
-  {
-    "name": "Lucy English",
-    "role": "Professor of Creative Enterprise and The Spoken Word",
-    "organization": "Bath Spa University",
-    "bioLink": "https://www.alpbach.org/de/speakers/english-lucy-4"
-  },
-  {
-    "name": "Kilian Erhart",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/erhart-kilian"
-  },
-  {
-    "name": "Melissa Fleming",
-    "role": "UN Under-Secretary-General for Global Communications",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/fleming-melissa-4"
-  },
-  {
-    "name": "RADA Ensemble",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/ensemble-rada"
-  },
-  {
-    "name": "WAGA Ensemble",
-    "role": "Musikensemble",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/ensemble-waga"
-  },
-  {
-    "name": "Jan Farfal",
-    "role": "Co-President",
-    "organization": "Club Alpbach Poland",
-    "bioLink": "https://www.alpbach.org/de/speakers/farfal-jan-3"
-  },
-  {
-    "name": "Lisa-Marie Fassl",
-    "role": "Geschäftsführende Partnerin",
-    "organization": "Fund F",
-    "bioLink": "https://www.alpbach.org/de/speakers/fassl-lisa"
-  },
-  {
-    "name": "Karen Fanto",
-    "role": "Vorstandsvorsitzende / Direktorin der internationalen Märkte",
-    "organization": "Zukunft.Frauen Alumnae Club / Berndorf Bäderbau",
-    "bioLink": "https://www.alpbach.org/de/speakers/fanto-karen-2"
-  },
-  {
-    "name": "Lisandra Flach",
-    "role": "Direktorin und Professorin",
-    "organization": "ifo Center for International Economics and LMU Munich",
-    "bioLink": "https://www.alpbach.org/de/speakers/flach-lisandra"
   },
   {
     "name": "PPCM Ensemble",
@@ -648,22 +588,76 @@
     "bioLink": "https://www.alpbach.org/de/speakers/ensemble-ppcm"
   },
   {
-    "name": "Eduard jun. Fröschl",
-    "role": "Geschäftsführer",
-    "organization": "Fröschl AG & Co. KG",
-    "bioLink": "https://www.alpbach.org/de/speakers/froschl-eduard-jun"
+    "name": "Lucy English",
+    "role": "Professor of Creative Enterprise and The Spoken Word",
+    "organization": "Bath Spa University",
+    "bioLink": "https://www.alpbach.org/de/speakers/english-lucy-4"
   },
   {
-    "name": "Jérome Garcin",
-    "role": "Senior Biopharma-Manager | General Manager CH-AT",
-    "organization": "Bristol Myers Squibb",
-    "bioLink": "https://www.alpbach.org/de/speakers/garcin-jerome"
+    "name": "Melissa Fleming",
+    "role": "UN Under-Secretary-General for Global Communications",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/fleming-melissa-4"
   },
   {
-    "name": "Co-Pierre Georg",
-    "role": "Professor für Finanztechnologie",
-    "organization": "Frankfurt School of Finance & Management",
-    "bioLink": "https://www.alpbach.org/de/speakers/georg-co-pierre"
+    "name": "Jan Farfal",
+    "role": "Co-President",
+    "organization": "Club Alpbach Poland",
+    "bioLink": "https://www.alpbach.org/de/speakers/farfal-jan-3"
+  },
+  {
+    "name": "WAGA Ensemble",
+    "role": "Musikensemble",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/ensemble-waga"
+  },
+  {
+    "name": "Karen Fanto",
+    "role": "Vorstandsvorsitzende / Direktorin der internationalen Märkte",
+    "organization": "Zukunft.Frauen Alumnae Club / Berndorf Bäderbau",
+    "bioLink": "https://www.alpbach.org/de/speakers/fanto-karen-2"
+  },
+  {
+    "name": "RADA Ensemble",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/ensemble-rada"
+  },
+  {
+    "name": "Kilian Erhart",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/erhart-kilian"
+  },
+  {
+    "name": "Julius E. O. Fintelmann",
+    "role": "Chefredakteur",
+    "organization": "The European Correspondent",
+    "bioLink": "https://www.alpbach.org/de/speakers/fintelmann-julius-e-o"
+  },
+  {
+    "name": "Lisandra Flach",
+    "role": "Direktorin und Professorin",
+    "organization": "ifo Center for International Economics and LMU Munich",
+    "bioLink": "https://www.alpbach.org/de/speakers/flach-lisandra"
+  },
+  {
+    "name": "Lisa-Marie Fassl",
+    "role": "Geschäftsführende Partnerin",
+    "organization": "Fund F",
+    "bioLink": "https://www.alpbach.org/de/speakers/fassl-lisa"
+  },
+  {
+    "name": "Michaela Fritz",
+    "role": "Vizerektorin für Forschung und Innovation",
+    "organization": "Medical University Vienna",
+    "bioLink": "https://www.alpbach.org/de/speakers/fritz-michaela-4"
+  },
+  {
+    "name": "Joseph Gepp",
+    "role": "Wirtschaftsressortleiter",
+    "organization": "Der Standard",
+    "bioLink": "https://www.alpbach.org/de/speakers/gepp-joseph-2"
   },
   {
     "name": "Sonja Gabriel",
@@ -672,16 +666,34 @@
     "bioLink": "https://www.alpbach.org/de/speakers/gabriel-sonja"
   },
   {
+    "name": "Hannah Försterling",
+    "role": "Session Chair, Extended Board, Club Alpbach Tirol",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/forsterling-hannah"
+  },
+  {
+    "name": "Co-Pierre Georg",
+    "role": "Professor für Finanztechnologie",
+    "organization": "Frankfurt School of Finance & Management",
+    "bioLink": "https://www.alpbach.org/de/speakers/georg-co-pierre"
+  },
+  {
+    "name": "Natascha Fürst",
+    "role": "CEO",
+    "organization": "Female Founders",
+    "bioLink": "https://www.alpbach.org/de/speakers/furst-natascha-2"
+  },
+  {
     "name": "Alexandra Föderl-Schmid",
     "role": "Korrespondentin",
     "organization": "Süddeutsche Zeitung",
     "bioLink": "https://www.alpbach.org/de/speakers/foderl-schmid-alexandra-2"
   },
   {
-    "name": "Michaela Fritz",
-    "role": "Vizerektorin für Forschung und Innovation",
-    "organization": "Medical University Vienna",
-    "bioLink": "https://www.alpbach.org/de/speakers/fritz-michaela-4"
+    "name": "Eduard jun. Fröschl",
+    "role": "Geschäftsführer",
+    "organization": "Fröschl AG & Co. KG",
+    "bioLink": "https://www.alpbach.org/de/speakers/froschl-eduard-jun"
   },
   {
     "name": "Franz-Stefan Gady",
@@ -702,70 +714,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/geier-gerald"
   },
   {
-    "name": "Hannah Försterling",
-    "role": "Session Chair, Extended Board, Club Alpbach Tirol",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/forsterling-hannah"
-  },
-  {
-    "name": "Natascha Fürst",
-    "role": "CEO",
-    "organization": "Female Founders",
-    "bioLink": "https://www.alpbach.org/de/speakers/furst-natascha-2"
-  },
-  {
-    "name": "Joseph Gepp",
-    "role": "Wirtschaftsressortleiter",
-    "organization": "Der Standard",
-    "bioLink": "https://www.alpbach.org/de/speakers/gepp-joseph-2"
-  },
-  {
-    "name": "Hannes Götsch",
-    "role": "Founder of BASIS Vinschgau Venosta",
-    "organization": "BASIS Vinschgau Venosta",
-    "bioLink": "https://www.alpbach.org/de/speakers/gotsch-hannes"
-  },
-  {
-    "name": "Costanza Greppi",
-    "role": "Wirtschaftswissenschaftliche Analystin",
-    "organization": "Bruegel, European economic think tank",
-    "bioLink": "https://www.alpbach.org/de/speakers/greppi-costanza"
-  },
-  {
-    "name": "Fabian Goslar",
-    "role": "Gründer",
-    "organization": "Enkel Europas",
-    "bioLink": "https://www.alpbach.org/de/speakers/goslar-fabian"
-  },
-  {
-    "name": "Andreas Grassl",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/grassl-andreas"
-  },
-  {
-    "name": "Hannes Grassegger",
-    "role": "Founder & CEO",
-    "organization": "Spatz",
-    "bioLink": "https://www.alpbach.org/de/speakers/grassegger-hannes"
-  },
-  {
-    "name": "Günther Gruber",
-    "role": "Geschäftsführer",
-    "organization": "Silberquelle",
-    "bioLink": "https://www.alpbach.org/de/speakers/gruber-gunther"
-  },
-  {
-    "name": "Bernhard Gmeiner",
-    "role": "Lehrer | Keynote-Speaker | Autor",
-    "organization": "GRG 15 Auf der Schmelz",
-    "bioLink": "https://www.alpbach.org/de/speakers/gmeiner-bernhard"
-  },
-  {
-    "name": "Eva Glawischnig",
-    "role": "CEO | Ehemalige Bundesparteivorsitzende",
-    "organization": "EvaGlawischnigConsulting | The Green Alternative (Austria)",
-    "bioLink": "https://www.alpbach.org/de/speakers/glawischnig-eva"
+    "name": "Jérome Garcin",
+    "role": "Senior Biopharma-Manager | General Manager CH-AT",
+    "organization": "Bristol Myers Squibb",
+    "bioLink": "https://www.alpbach.org/de/speakers/garcin-jerome"
   },
   {
     "name": "Daniela Gruber",
@@ -780,10 +732,46 @@
     "bioLink": "https://www.alpbach.org/de/speakers/gruszkiewicz-barbara-3"
   },
   {
+    "name": "Günther Gruber",
+    "role": "Geschäftsführer",
+    "organization": "Silberquelle",
+    "bioLink": "https://www.alpbach.org/de/speakers/gruber-gunther"
+  },
+  {
     "name": "Mietta Groeneveld",
     "role": "Direktorin",
     "organization": "NATO Command & Control Centre of Excellence",
     "bioLink": "https://www.alpbach.org/de/speakers/groeneveld-mietta"
+  },
+  {
+    "name": "Fabian Goslar",
+    "role": "Gründer",
+    "organization": "Enkel Europas",
+    "bioLink": "https://www.alpbach.org/de/speakers/goslar-fabian"
+  },
+  {
+    "name": "Bernhard Gmeiner",
+    "role": "Lehrer | Keynote-Speaker | Autor",
+    "organization": "GRG 15 Auf der Schmelz",
+    "bioLink": "https://www.alpbach.org/de/speakers/gmeiner-bernhard"
+  },
+  {
+    "name": "Andreas Grassl",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/grassl-andreas"
+  },
+  {
+    "name": "Hannes Götsch",
+    "role": "Founder of BASIS Vinschgau Venosta",
+    "organization": "BASIS Vinschgau Venosta",
+    "bioLink": "https://www.alpbach.org/de/speakers/gotsch-hannes"
+  },
+  {
+    "name": "Hannes Grassegger",
+    "role": "Founder & CEO",
+    "organization": "Spatz",
+    "bioLink": "https://www.alpbach.org/de/speakers/grassegger-hannes"
   },
   {
     "name": "Johannes Greubel",
@@ -792,34 +780,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/greubel-johannes"
   },
   {
-    "name": "Marcus Hofer",
-    "role": "Geschäftsführer Standortagentur Tirol",
-    "organization": "Standortagentur Tirol",
-    "bioLink": "https://www.alpbach.org/de/speakers/hofer-marcus"
+    "name": "Eva Glawischnig",
+    "role": "CEO | Ehemalige Bundesparteivorsitzende",
+    "organization": "EvaGlawischnigConsulting | The Green Alternative (Austria)",
+    "bioLink": "https://www.alpbach.org/de/speakers/glawischnig-eva"
   },
   {
-    "name": "Jan Christoph Harder",
-    "role": "Präsident Region West | Nord | Rest der Welt (RoW)",
-    "organization": "Škoda Group",
-    "bioLink": "https://www.alpbach.org/de/speakers/harder-jan-christoph-2"
-  },
-  {
-    "name": "Itam Gutiérrez",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/gutierrez-itam"
-  },
-  {
-    "name": "Sarah Haas",
-    "role": "Stakeholder Relations Manager",
-    "organization": "KONTEXT Institut",
-    "bioLink": "https://www.alpbach.org/de/speakers/haas-sarah-2"
-  },
-  {
-    "name": "Neal Haddaway",
-    "role": "Fotojournalist und Forscher",
-    "organization": "Freelance",
-    "bioLink": "https://www.alpbach.org/de/speakers/haddaway-neal"
+    "name": "Costanza Greppi",
+    "role": "Wirtschaftswissenschaftliche Analystin",
+    "organization": "Bruegel, European economic think tank",
+    "bioLink": "https://www.alpbach.org/de/speakers/greppi-costanza"
   },
   {
     "name": "Hermann Hauser",
@@ -828,22 +798,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/hauser-hermann-4"
   },
   {
-    "name": "Sabine Herlitschka",
-    "role": "Vorstandsvorsitzende",
-    "organization": "Infineon Technologies Austria",
-    "bioLink": "https://www.alpbach.org/de/speakers/herlitschka-sabine-5"
-  },
-  {
     "name": "Khalil Hassan",
     "role": "Vizepräsident",
     "organization": "Club Alpbach Iraq",
     "bioLink": "https://www.alpbach.org/de/speakers/hassan-khalil"
   },
   {
-    "name": "Jean-Claude Hollerich",
-    "role": "Erzbischof von Luxemburg",
-    "organization": "Archdiocese of Luxembourg",
-    "bioLink": "https://www.alpbach.org/de/speakers/hollerich-jean-claude-2"
+    "name": "Neal Haddaway",
+    "role": "Fotojournalist und Forscher",
+    "organization": "Freelance",
+    "bioLink": "https://www.alpbach.org/de/speakers/haddaway-neal"
+  },
+  {
+    "name": "Marcus Hofer",
+    "role": "Geschäftsführer Standortagentur Tirol",
+    "organization": "Standortagentur Tirol",
+    "bioLink": "https://www.alpbach.org/de/speakers/hofer-marcus"
   },
   {
     "name": "Alexander Gstrein",
@@ -852,10 +822,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/gstrein-alexander-4"
   },
   {
+    "name": "Sabine Herlitschka",
+    "role": "Vorstandsvorsitzende",
+    "organization": "Infineon Technologies Austria",
+    "bioLink": "https://www.alpbach.org/de/speakers/herlitschka-sabine-5"
+  },
+  {
     "name": "Yevhen Hlibovytsky",
     "role": null,
     "organization": null,
     "bioLink": "https://www.alpbach.org/de/speakers/hlibovytsky-yevhen"
+  },
+  {
+    "name": "Itam Gutiérrez",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/gutierrez-itam"
+  },
+  {
+    "name": "Jan Christoph Harder",
+    "role": "Präsident Region West | Nord | Rest der Welt (RoW)",
+    "organization": "Škoda Group",
+    "bioLink": "https://www.alpbach.org/de/speakers/harder-jan-christoph-2"
   },
   {
     "name": "Bastian Herre",
@@ -864,16 +852,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/herre-bastian"
   },
   {
-    "name": "Gerda Holzinger-Burgstaller",
-    "role": "CEO und CFO",
-    "organization": "Erste Bank Österreich",
-    "bioLink": "https://www.alpbach.org/de/speakers/holzinger-burgstaller-gerda-4"
+    "name": "Jean-Claude Hollerich",
+    "role": "Erzbischof von Luxemburg",
+    "organization": "Archdiocese of Luxembourg",
+    "bioLink": "https://www.alpbach.org/de/speakers/hollerich-jean-claude-2"
   },
   {
-    "name": "Jiri Honzírek",
-    "role": "Drehbuchautor, Dramaturg und Regisseur des Feste Theaters",
-    "organization": "Feste Theatre / Divadlo Feste",
-    "bioLink": "https://www.alpbach.org/de/speakers/honzirek-jiri"
+    "name": "Sarah Haas",
+    "role": "Stakeholder Relations Manager",
+    "organization": "KONTEXT Institut",
+    "bioLink": "https://www.alpbach.org/de/speakers/haas-sarah-2"
+  },
+  {
+    "name": "Lauren Jeffries",
+    "role": "Student",
+    "organization": "Bath Spa University",
+    "bioLink": "https://www.alpbach.org/de/speakers/jeffries-lauren"
+  },
+  {
+    "name": "Erekle Iantbelidze",
+    "role": "Board Member",
+    "organization": "Club Alpbach Georgia",
+    "bioLink": "https://www.alpbach.org/de/speakers/iantbelidze-erekle"
   },
   {
     "name": "Wolfgang Ischinger",
@@ -882,10 +882,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/ischinger-wolfgang-4"
   },
   {
-    "name": "Lauren Jeffries",
-    "role": "Student",
-    "organization": "Bath Spa University",
-    "bioLink": "https://www.alpbach.org/de/speakers/jeffries-lauren"
+    "name": "Jiri Honzírek",
+    "role": "Drehbuchautor, Dramaturg und Regisseur des Feste Theaters",
+    "organization": "Feste Theatre / Divadlo Feste",
+    "bioLink": "https://www.alpbach.org/de/speakers/honzirek-jiri"
+  },
+  {
+    "name": "Sophie Howe",
+    "role": "Direktorin",
+    "organization": "Sophie Howe Associates",
+    "bioLink": "https://www.alpbach.org/de/speakers/howe-sophie-2"
+  },
+  {
+    "name": "Maximilian Hrebicek",
+    "role": "CEO | Gründer",
+    "organization": "FTG Finance Technologies",
+    "bioLink": "https://www.alpbach.org/de/speakers/hrebicek-maximilian"
   },
   {
     "name": "Soori Hossaini",
@@ -900,16 +912,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/hossaini-soraya-2"
   },
   {
+    "name": "Hartwig Hufnagl",
+    "role": "Chief Operating Officer",
+    "organization": "ASFINAG",
+    "bioLink": "https://www.alpbach.org/de/speakers/hufnagl-hartwig"
+  },
+  {
+    "name": "Gerda Holzinger-Burgstaller",
+    "role": "CEO und CFO",
+    "organization": "Erste Bank Österreich",
+    "bioLink": "https://www.alpbach.org/de/speakers/holzinger-burgstaller-gerda-4"
+  },
+  {
     "name": "Tristan Horx",
     "role": "Zukunftsforscher | Autor | Dozent",
     "organization": "Horx: Future GmbH",
     "bioLink": "https://www.alpbach.org/de/speakers/horx-tristan-2"
-  },
-  {
-    "name": "Sophie Howe",
-    "role": "Direktorin",
-    "organization": "Sophie Howe Associates",
-    "bioLink": "https://www.alpbach.org/de/speakers/howe-sophie-2"
   },
   {
     "name": "Katja Hummer",
@@ -918,58 +936,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/hummer-katja-2"
   },
   {
-    "name": "Hartwig Hufnagl",
-    "role": "Chief Operating Officer",
-    "organization": "ASFINAG",
-    "bioLink": "https://www.alpbach.org/de/speakers/hufnagl-hartwig"
-  },
-  {
-    "name": "Maximilian Hrebicek",
-    "role": "CEO | Gründer",
-    "organization": "FTG Finance Technologies",
-    "bioLink": "https://www.alpbach.org/de/speakers/hrebicek-maximilian"
-  },
-  {
-    "name": "Erekle Iantbelidze",
-    "role": "Board Member",
-    "organization": "Club Alpbach Georgia",
-    "bioLink": "https://www.alpbach.org/de/speakers/iantbelidze-erekle"
-  },
-  {
-    "name": "Margreth Keiler",
-    "role": "Direktor des Instituts für Interdisziplinäre Gebirgsforschung | Professor für Gebirgsforschung",
-    "organization": "Institute for Interdisciplinary Mountain Research | University of Innsbruckces | University of Inns",
-    "bioLink": "https://www.alpbach.org/de/speakers/keiler-margreth"
-  },
-  {
-    "name": "Karmen Joller",
-    "role": "Ministerin für soziale Angelegenheiten",
-    "organization": "Ministry of Social Affairs in Estonia",
-    "bioLink": "https://www.alpbach.org/de/speakers/joller-karmen"
-  },
-  {
-    "name": "Injy Johnstone",
-    "role": "Senior Research Fellow / Associate",
-    "organization": "Max Planck Institute for Innovation and Competition / Oxford Net Zero",
-    "bioLink": "https://www.alpbach.org/de/speakers/johnstone-injy"
-  },
-  {
-    "name": "Mikayla Jensen-Large",
-    "role": null,
+    "name": "Esther Jennings",
+    "role": "Geschäftsführerin der Euregio Inntal",
     "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/jensen-large-mikayla"
-  },
-  {
-    "name": "Kilian Kaminski",
-    "role": "Co-Founder",
-    "organization": "refurbed",
-    "bioLink": "https://www.alpbach.org/de/speakers/kaminski-kilian"
-  },
-  {
-    "name": "Kiryl Kascian",
-    "role": "Leiter des Zentrums für Kommunikationsbeeinflussung und Propagandaforschung",
-    "organization": "Vilnius University",
-    "bioLink": "https://www.alpbach.org/de/speakers/kascian-kiryl"
+    "bioLink": "https://www.alpbach.org/de/speakers/jennings-esther"
   },
   {
     "name": "Natacha Kazatchkine",
@@ -978,16 +948,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/kazatchkine-natacha"
   },
   {
+    "name": "Injy Johnstone",
+    "role": "Senior Research Fellow / Associate",
+    "organization": "Max Planck Institute for Innovation and Competition / Oxford Net Zero",
+    "bioLink": "https://www.alpbach.org/de/speakers/johnstone-injy"
+  },
+  {
+    "name": "Kiryl Kascian",
+    "role": "Leiter des Zentrums für Kommunikationsbeeinflussung und Propagandaforschung",
+    "organization": "Vilnius University",
+    "bioLink": "https://www.alpbach.org/de/speakers/kascian-kiryl"
+  },
+  {
     "name": "Katrin Kamin",
     "role": "Senior Director Government Affairs, Strategy & Geopolitics",
     "organization": "Siemens AG | Kiel Institute for the World Economy",
     "bioLink": "https://www.alpbach.org/de/speakers/kamin-katrin"
-  },
-  {
-    "name": "Arnold Kammel",
-    "role": "Generalsekretär",
-    "organization": "Austrian Federal Ministry of Defence (BMLV)",
-    "bioLink": "https://www.alpbach.org/de/speakers/kammel-arnold-3"
   },
   {
     "name": "Ivana Katurić",
@@ -996,16 +972,70 @@
     "bioLink": "https://www.alpbach.org/de/speakers/katuric-ivana"
   },
   {
+    "name": "Mikayla Jensen-Large",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/jensen-large-mikayla"
+  },
+  {
+    "name": "Arnold Kammel",
+    "role": "Generalsekretär",
+    "organization": "Austrian Federal Ministry of Defence (BMLV)",
+    "bioLink": "https://www.alpbach.org/de/speakers/kammel-arnold-3"
+  },
+  {
+    "name": "Kilian Kaminski",
+    "role": "Co-Founder",
+    "organization": "refurbed",
+    "bioLink": "https://www.alpbach.org/de/speakers/kaminski-kilian"
+  },
+  {
+    "name": "Karmen Joller",
+    "role": "Ministerin für soziale Angelegenheiten",
+    "organization": "Ministry of Social Affairs in Estonia",
+    "bioLink": "https://www.alpbach.org/de/speakers/joller-karmen"
+  },
+  {
     "name": "Karyna Keliohlo",
     "role": "Mitarbeiterin beim staatlichen Dienst der Ukraine",
     "organization": null,
     "bioLink": "https://www.alpbach.org/de/speakers/keliohlo-karyna"
   },
   {
-    "name": "Esther Jennings",
-    "role": "Geschäftsführerin der Euregio Inntal",
+    "name": "Margreth Keiler",
+    "role": "Direktor des Instituts für Interdisziplinäre Gebirgsforschung | Professor für Gebirgsforschung",
+    "organization": "Institute for Interdisciplinary Mountain Research | University of Innsbruckces | University of Inns",
+    "bioLink": "https://www.alpbach.org/de/speakers/keiler-margreth"
+  },
+  {
+    "name": "Tobias Kochseder",
+    "role": null,
     "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/jennings-esther"
+    "bioLink": "https://www.alpbach.org/de/speakers/kochseder-tobias"
+  },
+  {
+    "name": "Ernst Kloboucnik",
+    "role": "Direktor",
+    "organization": "Österreichischer Automobil-, Motorrad- und Touring (ÖAMTC)",
+    "bioLink": "https://www.alpbach.org/de/speakers/kloboucnik-ernst"
+  },
+  {
+    "name": "Winfried Kneip",
+    "role": "Gründer und Programmleiter",
+    "organization": "Love Politics",
+    "bioLink": "https://www.alpbach.org/de/speakers/kneip-winfried-3"
+  },
+  {
+    "name": "Christian Kern",
+    "role": "Geschäftsführer",
+    "organization": "European Locomotive Leasing Group",
+    "bioLink": "https://www.alpbach.org/de/speakers/kern-christian-2"
+  },
+  {
+    "name": "Sabine Kirchmayr-Schliesselberger",
+    "role": "Vorständin des Instituts für Finanzrecht | Universitätsprofessorin",
+    "organization": "LeitnerLeitner | University of Vienna",
+    "bioLink": "https://www.alpbach.org/de/speakers/kirchmayr-schliesselberger-sabine"
   },
   {
     "name": "Bettina Kern",
@@ -1014,10 +1044,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/kern-bettina"
   },
   {
-    "name": "Anita Kienesberger",
-    "role": "Kinderonkologie-Pflegefachkraft | Vorstandsmitglied",
-    "organization": "European Cancer Organisation",
-    "bioLink": "https://www.alpbach.org/de/speakers/kienesberger-anita"
+    "name": "Daniel Kondor",
+    "role": "Postdoctoral Researcher",
+    "organization": "Complexity Science Hub",
+    "bioLink": "https://www.alpbach.org/de/speakers/kondor-daniel"
+  },
+  {
+    "name": "Ronja Kempin",
+    "role": "Senior Fellow EU/Europa",
+    "organization": "Stiftung Wissenschaft und Politik (SWP)",
+    "bioLink": "https://www.alpbach.org/de/speakers/kempin-ronja"
   },
   {
     "name": "Christophe Knoch",
@@ -1032,16 +1068,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/kiska-andrej"
   },
   {
-    "name": "Christian Kern",
-    "role": "Geschäftsführer",
-    "organization": "European Locomotive Leasing Group",
-    "bioLink": "https://www.alpbach.org/de/speakers/kern-christian-2"
-  },
-  {
-    "name": "Ernst Kloboucnik",
-    "role": "Direktor",
-    "organization": "Österreichischer Automobil-, Motorrad- und Touring (ÖAMTC)",
-    "bioLink": "https://www.alpbach.org/de/speakers/kloboucnik-ernst"
+    "name": "Anita Kienesberger",
+    "role": "Kinderonkologie-Pflegefachkraft | Vorstandsmitglied",
+    "organization": "European Cancer Organisation",
+    "bioLink": "https://www.alpbach.org/de/speakers/kienesberger-anita"
   },
   {
     "name": "Patricia Klarner",
@@ -1050,88 +1080,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/klarner-patricia"
   },
   {
-    "name": "Sabine Kirchmayr-Schliesselberger",
-    "role": "Vorständin des Instituts für Finanzrecht | Universitätsprofessorin",
-    "organization": "LeitnerLeitner | University of Vienna",
-    "bioLink": "https://www.alpbach.org/de/speakers/kirchmayr-schliesselberger-sabine"
-  },
-  {
-    "name": "Tobias Kochseder",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/kochseder-tobias"
-  },
-  {
-    "name": "Ronja Kempin",
-    "role": "Senior Fellow EU/Europa",
-    "organization": "Stiftung Wissenschaft und Politik (SWP)",
-    "bioLink": "https://www.alpbach.org/de/speakers/kempin-ronja"
-  },
-  {
-    "name": "Daniel Kondor",
-    "role": "Postdoctoral Researcher",
-    "organization": "Complexity Science Hub",
-    "bioLink": "https://www.alpbach.org/de/speakers/kondor-daniel"
-  },
-  {
-    "name": "Winfried Kneip",
-    "role": "Gründer und Programmleiter",
-    "organization": "Love Politics",
-    "bioLink": "https://www.alpbach.org/de/speakers/kneip-winfried-3"
-  },
-  {
-    "name": "Pascal Lamy",
-    "role": "Präsident",
-    "organization": "Climate Overshoot Commission",
-    "bioLink": "https://www.alpbach.org/de/speakers/lamy-pascal-3"
-  },
-  {
-    "name": "Michael Köttritsch",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/kottritsch-michael-5"
-  },
-  {
-    "name": "Elizabete Krivcova",
-    "role": "Lawyer and human rights advocate",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/krivcova-elizabete"
-  },
-  {
-    "name": "Richard König",
-    "role": "CEO",
-    "organization": "Enery",
-    "bioLink": "https://www.alpbach.org/de/speakers/konig-richard-3"
-  },
-  {
-    "name": "Richard Kuenel",
-    "role": "Direktor der Europäischen Kommission",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/kuenel-richard"
-  },
-  {
-    "name": "Martje Köppen",
-    "role": "DPhil Researcher",
-    "organization": "University of Oxford",
-    "bioLink": "https://www.alpbach.org/de/speakers/koppen-martje"
-  },
-  {
-    "name": "Bernhard Kowatsch",
-    "role": "Leiter Global Accelerator und Ventures",
-    "organization": "United Nations World Food Programme",
-    "bioLink": "https://www.alpbach.org/de/speakers/kowatsch-bernhard-3"
-  },
-  {
-    "name": "Marcus Kratzsch",
-    "role": "Head of Sales",
-    "organization": "METRO",
-    "bioLink": "https://www.alpbach.org/de/speakers/kratzsch-marcus"
-  },
-  {
-    "name": "Walter Kreisel",
-    "role": "Serienunternehmer | Investor | Gründer | CEO",
-    "organization": "neoom | KREISEL Ventures",
-    "bioLink": "https://www.alpbach.org/de/speakers/kreisel-walter-2"
+    "name": "Friederike Krippner",
+    "role": "Akademiedirektorin",
+    "organization": "Evangelische Akademie zu Berlin",
+    "bioLink": "https://www.alpbach.org/de/speakers/krippner-friederike"
   },
   {
     "name": "Monika Köppl-Turyna",
@@ -1140,22 +1092,70 @@
     "bioLink": "https://www.alpbach.org/de/speakers/koppl-turyna-monika-3"
   },
   {
+    "name": "Martje Köppen",
+    "role": "DPhil Researcher",
+    "organization": "University of Oxford",
+    "bioLink": "https://www.alpbach.org/de/speakers/koppen-martje"
+  },
+  {
+    "name": "Marcus Kratzsch",
+    "role": "Head of Sales",
+    "organization": "METRO",
+    "bioLink": "https://www.alpbach.org/de/speakers/kratzsch-marcus"
+  },
+  {
+    "name": "Richard Kuenel",
+    "role": "Direktor der Europäischen Kommission",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/kuenel-richard"
+  },
+  {
+    "name": "Walter Kreisel",
+    "role": "Serienunternehmer | Investor | Gründer | CEO",
+    "organization": "neoom | KREISEL Ventures",
+    "bioLink": "https://www.alpbach.org/de/speakers/kreisel-walter-2"
+  },
+  {
+    "name": "Michael Köttritsch",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/kottritsch-michael-5"
+  },
+  {
+    "name": "Richard König",
+    "role": "CEO",
+    "organization": "Enery",
+    "bioLink": "https://www.alpbach.org/de/speakers/konig-richard-3"
+  },
+  {
+    "name": "Pascal Lamy",
+    "role": "Präsident",
+    "organization": "Climate Overshoot Commission",
+    "bioLink": "https://www.alpbach.org/de/speakers/lamy-pascal-3"
+  },
+  {
     "name": "Alexander Krasnitsky",
     "role": "Medienexperte",
     "organization": null,
     "bioLink": "https://www.alpbach.org/de/speakers/krasnitsky-alexander"
   },
   {
-    "name": "Friederike Krippner",
-    "role": "Akademiedirektorin",
-    "organization": "Evangelische Akademie zu Berlin",
-    "bioLink": "https://www.alpbach.org/de/speakers/krippner-friederike"
+    "name": "Bernhard Kowatsch",
+    "role": "Leiter Global Accelerator und Ventures",
+    "organization": "United Nations World Food Programme",
+    "bioLink": "https://www.alpbach.org/de/speakers/kowatsch-bernhard-3"
   },
   {
-    "name": "FangFang Li",
-    "role": "CEO & CSO",
-    "organization": "IKEA Austria",
-    "bioLink": "https://www.alpbach.org/de/speakers/li-fangfang-2"
+    "name": "Elizabete Krivcova",
+    "role": "Lawyer and human rights advocate",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/krivcova-elizabete"
+  },
+  {
+    "name": "Pille-Riin Lillepalu-Tubli",
+    "role": "Head of Centre for Creative Entrepeneurship CAMP – Culture Amplified",
+    "organization": "Tartu University Viljandi Culture Academy",
+    "bioLink": "https://www.alpbach.org/de/speakers/lillepalu-tubli-pille-riin"
   },
   {
     "name": "Vyacheslav Likhachev",
@@ -1170,16 +1170,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/lentsch-josef"
   },
   {
-    "name": "Heike Lehner",
-    "role": "Ökonomin",
-    "organization": "independent",
-    "bioLink": "https://www.alpbach.org/de/speakers/lehner-heike"
-  },
-  {
-    "name": "Raphael Lehmann",
-    "role": "Impact Investment Manager",
-    "organization": "ERSTE Foundation",
-    "bioLink": "https://www.alpbach.org/de/speakers/lehmann-raphael-3"
+    "name": "Chiara Libiseller",
+    "role": "Dozent für Strategische Studien",
+    "organization": "King's College London",
+    "bioLink": "https://www.alpbach.org/de/speakers/libiseller-chiara"
   },
   {
     "name": "Hartwig Löger",
@@ -1188,22 +1182,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/loger-hartwig"
   },
   {
+    "name": "Nico Lange",
+    "role": "Gründer und Direktor",
+    "organization": "IRIS Institute for Risk analysis and International Security",
+    "bioLink": "https://www.alpbach.org/de/speakers/lange-nico-2"
+  },
+  {
     "name": "Karen Lips",
     "role": "Stellvertretende Generaldirektorin",
     "organization": "International Institute for Applied Systems Analysis (IIASA)",
     "bioLink": "https://www.alpbach.org/de/speakers/lips-karen-2"
   },
   {
-    "name": "Fabian Lecker",
-    "role": "Architekt und Forscher",
-    "organization": "EFFEKT Architects",
-    "bioLink": "https://www.alpbach.org/de/speakers/lecker-fabian-2"
+    "name": "Raphael Lehmann",
+    "role": "Impact Investment Manager",
+    "organization": "ERSTE Foundation",
+    "bioLink": "https://www.alpbach.org/de/speakers/lehmann-raphael-3"
   },
   {
-    "name": "Nico Lange",
-    "role": "Gründer und Direktor",
-    "organization": "IRIS Institute for Risk analysis and International Security",
-    "bioLink": "https://www.alpbach.org/de/speakers/lange-nico-2"
+    "name": "FangFang Li",
+    "role": "CEO & CSO",
+    "organization": "IKEA Austria",
+    "bioLink": "https://www.alpbach.org/de/speakers/li-fangfang-2"
   },
   {
     "name": "Anastasia Lemberg-Lvova",
@@ -1212,46 +1212,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/lemberg-lvova-anastasia-2"
   },
   {
-    "name": "Pille-Riin Lillepalu-Tubli",
-    "role": "Head of Centre for Creative Entrepeneurship CAMP – Culture Amplified",
-    "organization": "Tartu University Viljandi Culture Academy",
-    "bioLink": "https://www.alpbach.org/de/speakers/lillepalu-tubli-pille-riin"
+    "name": "Fabian Lecker",
+    "role": "Architekt und Forscher",
+    "organization": "EFFEKT Architects",
+    "bioLink": "https://www.alpbach.org/de/speakers/lecker-fabian-2"
   },
   {
-    "name": "Chiara Libiseller",
-    "role": "Dozent für Strategische Studien",
-    "organization": "King's College London",
-    "bioLink": "https://www.alpbach.org/de/speakers/libiseller-chiara"
-  },
-  {
-    "name": "Berta López Domènech",
-    "role": "Policy-Analystin für EU-Erweiterung und den Westbalkan",
-    "organization": "European Policy Centre (EPC)",
-    "bioLink": "https://www.alpbach.org/de/speakers/lopez-domenech-berta"
-  },
-  {
-    "name": "Nikolina Maričić",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/maricic-nikolina"
-  },
-  {
-    "name": "Pia Madlener",
-    "role": "Student",
-    "organization": "Music and Arts University of the City of Vienna | MUK",
-    "bioLink": "https://www.alpbach.org/de/speakers/madlener-pia"
-  },
-  {
-    "name": "Camilo Martinez",
-    "role": "Postdoktorand",
-    "organization": "Central European University",
-    "bioLink": "https://www.alpbach.org/de/speakers/martinez-camilo"
-  },
-  {
-    "name": "Johanna Mair",
-    "role": "Direktorin",
-    "organization": "School of Transnational Governance at the European University Institute in Florence",
-    "bioLink": "https://www.alpbach.org/de/speakers/mair-johanna-2"
+    "name": "Heike Lehner",
+    "role": "Ökonomin",
+    "organization": "independent",
+    "bioLink": "https://www.alpbach.org/de/speakers/lehner-heike"
   },
   {
     "name": "Manu Luksch",
@@ -1260,28 +1230,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/luksch-manu"
   },
   {
-    "name": "Bettina Ludwig",
-    "role": "Kulturanthropologin",
-    "organization": "Zukunfts.Symposium Eferding",
-    "bioLink": "https://www.alpbach.org/de/speakers/ludwig-bettina-2"
+    "name": "Johanna Mair",
+    "role": "Direktorin",
+    "organization": "School of Transnational Governance at the European University Institute in Florence",
+    "bioLink": "https://www.alpbach.org/de/speakers/mair-johanna-2"
   },
   {
-    "name": "Hkaw Lwi",
-    "role": "Geschäftsführerin",
-    "organization": "BRIDGE Myanmar",
-    "bioLink": "https://www.alpbach.org/de/speakers/lwi-hkaw"
+    "name": "Camilo Martinez",
+    "role": "Postdoktorand",
+    "organization": "Central European University",
+    "bioLink": "https://www.alpbach.org/de/speakers/martinez-camilo"
   },
   {
-    "name": "James MacDonald-Nelson",
-    "role": "Leiter des Städteprogramms",
-    "organization": "DemocracyNext",
-    "bioLink": "https://www.alpbach.org/de/speakers/macdonald-nelson-james"
-  },
-  {
-    "name": "Gene Ma",
-    "role": "Chief Representative für den Asien-Pazifik-Raum (APAC) | Leiter des Bereichs China Research",
-    "organization": "Institute of International Finance (IIF)",
-    "bioLink": "https://www.alpbach.org/de/speakers/ma-gene"
+    "name": "Berta López Domènech",
+    "role": "Policy-Analystin für EU-Erweiterung und den Westbalkan",
+    "organization": "European Policy Centre (EPC)",
+    "bioLink": "https://www.alpbach.org/de/speakers/lopez-domenech-berta"
   },
   {
     "name": "Faraz Majdianfar",
@@ -1290,46 +1254,46 @@
     "bioLink": "https://www.alpbach.org/de/speakers/majdianfar-faraz"
   },
   {
+    "name": "Pia Madlener",
+    "role": "Student",
+    "organization": "Music and Arts University of the City of Vienna | MUK",
+    "bioLink": "https://www.alpbach.org/de/speakers/madlener-pia"
+  },
+  {
+    "name": "Nikolina Maričić",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/maricic-nikolina"
+  },
+  {
+    "name": "Gene Ma",
+    "role": "Chief Representative für den Asien-Pazifik-Raum (APAC) | Leiter des Bereichs China Research",
+    "organization": "Institute of International Finance (IIF)",
+    "bioLink": "https://www.alpbach.org/de/speakers/ma-gene"
+  },
+  {
+    "name": "Hkaw Lwi",
+    "role": "Geschäftsführerin",
+    "organization": "BRIDGE Myanmar",
+    "bioLink": "https://www.alpbach.org/de/speakers/lwi-hkaw"
+  },
+  {
+    "name": "Bettina Ludwig",
+    "role": "Kulturanthropologin",
+    "organization": "Zukunfts.Symposium Eferding",
+    "bioLink": "https://www.alpbach.org/de/speakers/ludwig-bettina-2"
+  },
+  {
+    "name": "James MacDonald-Nelson",
+    "role": "Leiter des Städteprogramms",
+    "organization": "DemocracyNext",
+    "bioLink": "https://www.alpbach.org/de/speakers/macdonald-nelson-james"
+  },
+  {
     "name": "Anita Malli",
     "role": "Leitung Umwelt & Nachhaltigkeit | Mitglied des Aufsichtsrats",
     "organization": "ORF | Burgenland Energie",
     "bioLink": "https://www.alpbach.org/de/speakers/malli-anita"
-  },
-  {
-    "name": "Antonella Mei-Pochtler",
-    "role": "Vizepräsidentin",
-    "organization": "European Forum Alpbach",
-    "bioLink": "https://www.alpbach.org/de/speakers/mei-pochtler-antonella-4"
-  },
-  {
-    "name": "Monika Mörth",
-    "role": "Generaldirektor für Wassermanagement",
-    "organization": "Federal Ministry of Agriculture, Forestry, Regions and Water Management (BMLUK)",
-    "bioLink": "https://www.alpbach.org/de/speakers/morth-monika"
-  },
-  {
-    "name": "Rhiannon McQuone",
-    "role": "Wissenschaftliche Mitarbeiterin",
-    "organization": "More in Common",
-    "bioLink": "https://www.alpbach.org/de/speakers/mcquone-rhiannon"
-  },
-  {
-    "name": "Peter Mirski",
-    "role": "Chief Information Officer, MCI | Die Unternehmerhochschule",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/mirski-peter"
-  },
-  {
-    "name": "Josef Mitterer",
-    "role": "Universitätsprofessor",
-    "organization": "University Klagenfurt",
-    "bioLink": "https://www.alpbach.org/de/speakers/mitterer-josef-4"
-  },
-  {
-    "name": "Corinna Milborn",
-    "role": "Informationsdirektorin",
-    "organization": "ProSiebenSat1Puls4",
-    "bioLink": "https://www.alpbach.org/de/speakers/milborn-corinna-4"
   },
   {
     "name": "Yascha Mounk",
@@ -1350,10 +1314,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/mitteregger-markus"
   },
   {
+    "name": "Peter Mirski",
+    "role": "Chief Information Officer, MCI | Die Unternehmerhochschule",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/mirski-peter"
+  },
+  {
     "name": "Thomas Mayr-Harting",
     "role": "Direktor",
     "organization": "EU Diplomatic Academy",
     "bioLink": "https://www.alpbach.org/de/speakers/mayr-harting-thomas-4"
+  },
+  {
+    "name": "Rhiannon McQuone",
+    "role": "Wissenschaftliche Mitarbeiterin",
+    "organization": "More in Common",
+    "bioLink": "https://www.alpbach.org/de/speakers/mcquone-rhiannon"
+  },
+  {
+    "name": "Corinna Milborn",
+    "role": "Informationsdirektorin",
+    "organization": "ProSiebenSat1Puls4",
+    "bioLink": "https://www.alpbach.org/de/speakers/milborn-corinna-4"
   },
   {
     "name": "Anja Meierkord",
@@ -1362,10 +1344,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/meierkord-anja-3"
   },
   {
+    "name": "Monika Mörth",
+    "role": "Generaldirektor für Wassermanagement",
+    "organization": "Federal Ministry of Agriculture, Forestry, Regions and Water Management (BMLUK)",
+    "bioLink": "https://www.alpbach.org/de/speakers/morth-monika"
+  },
+  {
     "name": "Gyude Moore",
     "role": "Ehemaliger Minister für öffentliche Arbeiten Liberias",
     "organization": "Ministry of Public Works of Liberia",
     "bioLink": "https://www.alpbach.org/de/speakers/moore-gyude"
+  },
+  {
+    "name": "Josef Mitterer",
+    "role": "Universitätsprofessor",
+    "organization": "University Klagenfurt",
+    "bioLink": "https://www.alpbach.org/de/speakers/mitterer-josef-4"
+  },
+  {
+    "name": "Antonella Mei-Pochtler",
+    "role": "Vizepräsidentin",
+    "organization": "European Forum Alpbach",
+    "bioLink": "https://www.alpbach.org/de/speakers/mei-pochtler-antonella-4"
   },
   {
     "name": "Martin Nagl-Cupal",
@@ -1380,46 +1380,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/muller-marbach-marcel"
   },
   {
-    "name": "Katharina Neges",
-    "role": "Leitende Wissenschaftlerin",
-    "organization": "Graz University of Technology",
-    "bioLink": "https://www.alpbach.org/de/speakers/neges-katharina-4"
-  },
-  {
-    "name": "Vladimir Norov",
-    "role": "Ehemaliger Außenminister",
-    "organization": "Ministry of Foreign Affairs of Uzbekistan",
-    "bioLink": "https://www.alpbach.org/de/speakers/norov-vladimir"
-  },
-  {
-    "name": "Viviane Ogou Corbi",
+    "name": "Lavinia Noormandipour-Hart",
     "role": null,
     "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/ogou-corbi-viviane-2"
-  },
-  {
-    "name": "Petia Niederländer",
-    "role": "Direktorin für Zahlungsverkehr, Risikomonitoring und Finanzbildung",
-    "organization": "Austrian Central Bank (OeNB)",
-    "bioLink": "https://www.alpbach.org/de/speakers/niederlander-petia-3"
-  },
-  {
-    "name": "Elisabeth Martina Munter",
-    "role": "Stipendiatin, Bachelor-Studierende der Physik",
-    "organization": "Club Alpbach Südtirol Alto Adige (CASA)",
-    "bioLink": "https://www.alpbach.org/de/speakers/munter-elisabeth-martina"
-  },
-  {
-    "name": "Mario Mu",
-    "role": "Visual Artist and Filmmaker",
-    "organization": "-",
-    "bioLink": "https://www.alpbach.org/de/speakers/mu-mario-2"
+    "bioLink": "https://www.alpbach.org/de/speakers/noormandipour-hart-lavinia"
   },
   {
     "name": "Kateryna Mykhalko",
     "role": "Managing Director",
     "organization": "New Age Defence",
     "bioLink": "https://www.alpbach.org/de/speakers/mykhalko-kateryna"
+  },
+  {
+    "name": "Katharina Neges",
+    "role": "Leitende Wissenschaftlerin",
+    "organization": "Graz University of Technology",
+    "bioLink": "https://www.alpbach.org/de/speakers/neges-katharina-4"
   },
   {
     "name": "Sandra Navidi",
@@ -1434,46 +1410,34 @@
     "bioLink": "https://www.alpbach.org/de/speakers/neururer-nenda"
   },
   {
-    "name": "Lavinia Noormandipour-Hart",
+    "name": "Vladimir Norov",
+    "role": "Ehemaliger Außenminister",
+    "organization": "Ministry of Foreign Affairs of Uzbekistan",
+    "bioLink": "https://www.alpbach.org/de/speakers/norov-vladimir"
+  },
+  {
+    "name": "Petia Niederländer",
+    "role": "Direktorin für Zahlungsverkehr, Risikomonitoring und Finanzbildung",
+    "organization": "Austrian Central Bank (OeNB)",
+    "bioLink": "https://www.alpbach.org/de/speakers/niederlander-petia-3"
+  },
+  {
+    "name": "Elisabeth Martina Munter",
+    "role": "Stipendiatin, Bachelor-Studierende der Physik",
+    "organization": "Club Alpbach Südtirol Alto Adige (CASA)",
+    "bioLink": "https://www.alpbach.org/de/speakers/munter-elisabeth-martina"
+  },
+  {
+    "name": "Viviane Ogou Corbi",
     "role": null,
     "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/noormandipour-hart-lavinia"
+    "bioLink": "https://www.alpbach.org/de/speakers/ogou-corbi-viviane-2"
   },
   {
-    "name": "Jutta Perfahl-Strilka",
-    "role": "CEO / Stellvertretende Vorsitzende",
-    "organization": "Hokify / Zukunft.Frauen Alumnae Club",
-    "bioLink": "https://www.alpbach.org/de/speakers/perfahl-strilka-jutta-2"
-  },
-  {
-    "name": "Rauno Pello",
-    "role": "Geschäftsführer",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/pello-rauno-3"
-  },
-  {
-    "name": "Minh-Thu Pham",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/pham-minh-thu"
-  },
-  {
-    "name": "Herwig Ostermann",
-    "role": "Geschäftsführer",
-    "organization": "Austrian National Public Health Institute (GÖG)",
-    "bioLink": "https://www.alpbach.org/de/speakers/ostermann-herwig-2"
-  },
-  {
-    "name": "Maria Kalina Oroschakoff",
-    "role": "Journalistin | Korrespondentin",
-    "organization": "Independent | Neue Zürcher Zeitung",
-    "bioLink": "https://www.alpbach.org/de/speakers/oroschakoff-maria-kalina"
-  },
-  {
-    "name": "Ana Ostojić",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/ostojic-ana"
+    "name": "Mario Mu",
+    "role": "Visual Artist and Filmmaker",
+    "organization": "-",
+    "bioLink": "https://www.alpbach.org/de/speakers/mu-mario-2"
   },
   {
     "name": "Kalin Peshov",
@@ -1482,16 +1446,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/peshov-kalin"
   },
   {
-    "name": "Paulina Parvanov",
-    "role": "Projektleitung",
-    "organization": "Austrian Music Export",
-    "bioLink": "https://www.alpbach.org/de/speakers/parvanov-paulina"
-  },
-  {
-    "name": "Valentina Ostojic",
-    "role": "Ökonomin & Politikwissenschaftlerin",
-    "organization": "Club Alpbach Montenegro",
-    "bioLink": "https://www.alpbach.org/de/speakers/ostojic-valentina"
+    "name": "Ana Ostojić",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/ostojic-ana"
   },
   {
     "name": "Mari-Liis Paaver",
@@ -1500,10 +1458,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/paaver-mari-liis"
   },
   {
-    "name": "Markus Peschl",
-    "role": "Professor für kognitive Wissenschaft und Innovation",
-    "organization": "University of Vienna & theLivingCore",
-    "bioLink": "https://www.alpbach.org/de/speakers/peschl-markus"
+    "name": "Jutta Perfahl-Strilka",
+    "role": "CEO / Stellvertretende Vorsitzende",
+    "organization": "Hokify / Zukunft.Frauen Alumnae Club",
+    "bioLink": "https://www.alpbach.org/de/speakers/perfahl-strilka-jutta-2"
   },
   {
     "name": "Jannik Pfister",
@@ -1512,28 +1470,46 @@
     "bioLink": "https://www.alpbach.org/de/speakers/pfister-jannik"
   },
   {
-    "name": "Katarzyna Pisarska",
-    "role": "Vorsitz des Warschauer Sicherheitsforums",
-    "organization": "Casimir Pulaski Foundation",
-    "bioLink": "https://www.alpbach.org/de/speakers/pisarska-katarzyna-3"
+    "name": "Herwig Ostermann",
+    "role": "Geschäftsführer",
+    "organization": "Austrian National Public Health Institute (GÖG)",
+    "bioLink": "https://www.alpbach.org/de/speakers/ostermann-herwig-2"
   },
   {
-    "name": "Maurizio Poletto",
-    "role": "Chief Operating Officer (COO) und Chief Platform Officer (CPO) der Erste Group",
-    "organization": "Erste Group",
-    "bioLink": "https://www.alpbach.org/de/speakers/poletto-maurizio-3"
+    "name": "Paulina Parvanov",
+    "role": "Projektleitung",
+    "organization": "Austrian Music Export",
+    "bioLink": "https://www.alpbach.org/de/speakers/parvanov-paulina"
   },
   {
-    "name": "Beatrix Praeceptor",
-    "role": "CEO",
-    "organization": "Greiner Packaging",
-    "bioLink": "https://www.alpbach.org/de/speakers/praeceptor-beatrix-3"
+    "name": "Minh-Thu Pham",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/pham-minh-thu"
   },
   {
-    "name": "Grigorijus Potašenko",
-    "role": "Außerordentlicher Professor an der Fakultät für Geschichte",
-    "organization": "Vilnius University",
-    "bioLink": "https://www.alpbach.org/de/speakers/potasenko-grigorijus"
+    "name": "Rauno Pello",
+    "role": "Geschäftsführer",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/pello-rauno-3"
+  },
+  {
+    "name": "Markus Peschl",
+    "role": "Professor für kognitive Wissenschaft und Innovation",
+    "organization": "University of Vienna & theLivingCore",
+    "bioLink": "https://www.alpbach.org/de/speakers/peschl-markus"
+  },
+  {
+    "name": "Valentina Ostojic",
+    "role": "Ökonomin & Politikwissenschaftlerin",
+    "organization": "Club Alpbach Montenegro",
+    "bioLink": "https://www.alpbach.org/de/speakers/ostojic-valentina"
+  },
+  {
+    "name": "Maria Kalina Oroschakoff",
+    "role": "Journalistin | Korrespondentin",
+    "organization": "Independent | Neue Zürcher Zeitung",
+    "bioLink": "https://www.alpbach.org/de/speakers/oroschakoff-maria-kalina"
   },
   {
     "name": "Gerald Podobnik",
@@ -1542,10 +1518,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/podobnik-gerald"
   },
   {
-    "name": "Günther Platter",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/platter-gunther"
+    "name": "Maurizio Poletto",
+    "role": "Chief Operating Officer (COO) und Chief Platform Officer (CPO) der Erste Group",
+    "organization": "Erste Group",
+    "bioLink": "https://www.alpbach.org/de/speakers/poletto-maurizio-3"
+  },
+  {
+    "name": "Grigorijus Potašenko",
+    "role": "Außerordentlicher Professor an der Fakultät für Geschichte",
+    "organization": "Vilnius University",
+    "bioLink": "https://www.alpbach.org/de/speakers/potasenko-grigorijus"
+  },
+  {
+    "name": "Geneviève Pons",
+    "role": "Präsidentin",
+    "organization": "Europe Jacques Delors",
+    "bioLink": "https://www.alpbach.org/de/speakers/pons-genevieve-4"
+  },
+  {
+    "name": "Katarzyna Pisarska",
+    "role": "Vorsitz des Warschauer Sicherheitsforums",
+    "organization": "Casimir Pulaski Foundation",
+    "bioLink": "https://www.alpbach.org/de/speakers/pisarska-katarzyna-3"
   },
   {
     "name": "Jovanka Porsche",
@@ -1554,16 +1548,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/porsche-jovanka"
   },
   {
-    "name": "Julia Pichler",
-    "role": "Geschäftsführerin",
-    "organization": "Education Lab",
-    "bioLink": "https://www.alpbach.org/de/speakers/pichler-julia-2"
-  },
-  {
     "name": "Andreas Pichler",
     "role": "Leiter des Bereichs Private Markets Investments bei der Erste Asset Management GmbH",
     "organization": null,
     "bioLink": "https://www.alpbach.org/de/speakers/pichler-andreas-2"
+  },
+  {
+    "name": "Beatrix Praeceptor",
+    "role": "CEO",
+    "organization": "Greiner Packaging",
+    "bioLink": "https://www.alpbach.org/de/speakers/praeceptor-beatrix-3"
+  },
+  {
+    "name": "Julia Pichler",
+    "role": "Geschäftsführerin",
+    "organization": "Education Lab",
+    "bioLink": "https://www.alpbach.org/de/speakers/pichler-julia-2"
   },
   {
     "name": "Maria Poloz",
@@ -1578,40 +1578,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/pomaska-agnieszka"
   },
   {
-    "name": "Geneviève Pons",
-    "role": "Präsidentin",
-    "organization": "Europe Jacques Delors",
-    "bioLink": "https://www.alpbach.org/de/speakers/pons-genevieve-4"
-  },
-  {
-    "name": "Wiebke Rademacher",
-    "role": "Studiengangsleiterin und Professorin für Kunst- und Kulturvermittlung/Musikpädagogik",
-    "organization": "Music and Arts University of the City of Vienna | MUK",
-    "bioLink": "https://www.alpbach.org/de/speakers/rademacher-wiebke-4"
-  },
-  {
-    "name": "Christine Rainer",
+    "name": "Günther Platter",
     "role": null,
     "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/rainer-christine"
+    "bioLink": "https://www.alpbach.org/de/speakers/platter-gunther"
   },
   {
-    "name": "Dieter Pscheidl",
-    "role": "Head of European Affairs",
-    "organization": "Vienna Insurance Group",
-    "bioLink": "https://www.alpbach.org/de/speakers/pscheidl-dieter-2"
-  },
-  {
-    "name": "Christine Rainer",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/rainer-christine-2"
-  },
-  {
-    "name": "Philip Pramer",
-    "role": "Journalist, Der STANDARD",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/pramer-philip-3"
+    "name": "Sneška Quaedvlieg-Mihailović",
+    "role": "Generalsekretär",
+    "organization": "Europa Nostra",
+    "bioLink": "https://www.alpbach.org/de/speakers/quaedvlieg-mihailovic-sneska"
   },
   {
     "name": "Rainer Prohaska",
@@ -1620,16 +1596,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/prohaska-rainer-2"
   },
   {
-    "name": "Damita Pressl",
-    "role": "Internationale Moderatorin & Journalistin",
+    "name": "Philip Pramer",
+    "role": "Journalist, Der STANDARD",
     "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/pressl-damita-3"
-  },
-  {
-    "name": "Sneška Quaedvlieg-Mihailović",
-    "role": "Generalsekretär",
-    "organization": "Europa Nostra",
-    "bioLink": "https://www.alpbach.org/de/speakers/quaedvlieg-mihailovic-sneska"
+    "bioLink": "https://www.alpbach.org/de/speakers/pramer-philip-3"
   },
   {
     "name": "Cäcilia Raab",
@@ -1644,34 +1614,46 @@
     "bioLink": "https://www.alpbach.org/de/speakers/primeau-camille"
   },
   {
-    "name": "Marco Pucci",
-    "role": "Country President",
-    "organization": "Sandoz Austria",
-    "bioLink": "https://www.alpbach.org/de/speakers/pucci-marco"
-  },
-  {
     "name": "Paula-Marie Pucker",
     "role": "Journalistin",
     "organization": "trend",
     "bioLink": "https://www.alpbach.org/de/speakers/pucker-paula-marie"
   },
   {
-    "name": "Johanna Roniger",
-    "role": "Research Analyst",
-    "organization": "KONTEXT Institute",
-    "bioLink": "https://www.alpbach.org/de/speakers/roniger-johanna"
+    "name": "Christine Rainer",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/rainer-christine"
   },
   {
-    "name": "Oliver Rathkolb",
-    "role": "Vorstandsvorsitzender",
-    "organization": "The Vienna Institute for Cultural and Contemporary History and Arts (VICCA)",
-    "bioLink": "https://www.alpbach.org/de/speakers/rathkolb-oliver"
+    "name": "Wiebke Rademacher",
+    "role": "Studiengangsleiterin und Professorin für Kunst- und Kulturvermittlung/Musikpädagogik",
+    "organization": "Music and Arts University of the City of Vienna | MUK",
+    "bioLink": "https://www.alpbach.org/de/speakers/rademacher-wiebke-4"
   },
   {
-    "name": "Philipp Rösler",
-    "role": "Generalsekretär",
-    "organization": "Global Neighbours",
-    "bioLink": "https://www.alpbach.org/de/speakers/rosler-philipp"
+    "name": "Christine Rainer",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/rainer-christine-2"
+  },
+  {
+    "name": "Damita Pressl",
+    "role": "Internationale Moderatorin & Journalistin",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/pressl-damita-3"
+  },
+  {
+    "name": "Marco Pucci",
+    "role": "Country President",
+    "organization": "Sandoz Austria",
+    "bioLink": "https://www.alpbach.org/de/speakers/pucci-marco"
+  },
+  {
+    "name": "Dieter Pscheidl",
+    "role": "Head of European Affairs",
+    "organization": "Vienna Insurance Group",
+    "bioLink": "https://www.alpbach.org/de/speakers/pscheidl-dieter-2"
   },
   {
     "name": "Chiara Rinaldi",
@@ -1680,28 +1662,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/rinaldi-chiara"
   },
   {
-    "name": "Marie Ringler",
-    "role": "Vizepräsidentin & Global Leadership Group Member",
-    "organization": "European Forum Alpbach & Ashoka",
-    "bioLink": "https://www.alpbach.org/de/speakers/ringler-marie-4"
-  },
-  {
-    "name": "Günther Rautz",
-    "role": "Institut für Minderheitenrecht",
-    "organization": "Eurac Research Minority Rights Institute",
-    "bioLink": "https://www.alpbach.org/de/speakers/rautz-gunther"
-  },
-  {
     "name": "Katharina Rogenhofer",
     "role": "Vorständin",
     "organization": "KONTEXT Institut",
     "bioLink": "https://www.alpbach.org/de/speakers/rogenhofer-katharina-3"
   },
   {
-    "name": "Jenny Reddish",
-    "role": "Forschungsmitarbeiter and Chefredakteur",
-    "organization": "Complexity Science Hub & Seshat Global History Databank",
-    "bioLink": "https://www.alpbach.org/de/speakers/reddish-jenny"
+    "name": "Johanna Roniger",
+    "role": "Research Analyst",
+    "organization": "KONTEXT Institute",
+    "bioLink": "https://www.alpbach.org/de/speakers/roniger-johanna"
   },
   {
     "name": "Michael Reiterer",
@@ -1710,10 +1680,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/reiterer-michael-4"
   },
   {
-    "name": "Florian Reinold",
-    "role": "Leiter des Regionalbüros Südostasien",
-    "organization": "Heinrich-Böll-Stiftung e.V.",
-    "bioLink": "https://www.alpbach.org/de/speakers/reinold-florian"
+    "name": "Oliver Rathkolb",
+    "role": "Vorstandsvorsitzender",
+    "organization": "The Vienna Institute for Cultural and Contemporary History and Arts (VICCA)",
+    "bioLink": "https://www.alpbach.org/de/speakers/rathkolb-oliver"
   },
   {
     "name": "Dalibor Roháč",
@@ -1722,16 +1692,40 @@
     "bioLink": "https://www.alpbach.org/de/speakers/rohac-dalibor"
   },
   {
+    "name": "Jenny Reddish",
+    "role": "Forschungsmitarbeiter and Chefredakteur",
+    "organization": "Complexity Science Hub & Seshat Global History Databank",
+    "bioLink": "https://www.alpbach.org/de/speakers/reddish-jenny"
+  },
+  {
+    "name": "Philipp Rösler",
+    "role": "Generalsekretär",
+    "organization": "Global Neighbours",
+    "bioLink": "https://www.alpbach.org/de/speakers/rosler-philipp"
+  },
+  {
     "name": "Martijn Rigters",
     "role": "Designer",
     "organization": "Open Future Lab",
     "bioLink": "https://www.alpbach.org/de/speakers/rigters-martijn"
   },
   {
-    "name": "Ingrid Schiller",
-    "role": "Assistierende Schauspieldozentin",
-    "organization": "Royal Academy of Dramatic Arts | RADA",
-    "bioLink": "https://www.alpbach.org/de/speakers/schiller-ingrid-4"
+    "name": "Florian Reinold",
+    "role": "Leiter des Regionalbüros Südostasien",
+    "organization": "Heinrich-Böll-Stiftung e.V.",
+    "bioLink": "https://www.alpbach.org/de/speakers/reinold-florian"
+  },
+  {
+    "name": "Günther Rautz",
+    "role": "Institut für Minderheitenrecht",
+    "organization": "Eurac Research Minority Rights Institute",
+    "bioLink": "https://www.alpbach.org/de/speakers/rautz-gunther"
+  },
+  {
+    "name": "Marie Ringler",
+    "role": "Vizepräsidentin & Global Leadership Group Member",
+    "organization": "European Forum Alpbach & Ashoka",
+    "bioLink": "https://www.alpbach.org/de/speakers/ringler-marie-4"
   },
   {
     "name": "Daniel Sahl-Corts",
@@ -1740,40 +1734,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/sahl-corts-daniel"
   },
   {
-    "name": "Patrick Scheiwiller",
-    "role": "President",
-    "organization": "Club Alpbach Switzerland",
-    "bioLink": "https://www.alpbach.org/de/speakers/scheiwiller-patrick"
-  },
-  {
-    "name": "Momodou Sallah",
-    "role": "Executive Director",
-    "organization": "National Research and Innovation Fund (The Gambia)",
-    "bioLink": "https://www.alpbach.org/de/speakers/sallah-momodou"
-  },
-  {
-    "name": "Martin Schäfer",
-    "role": "Politische Direktor",
-    "organization": "Federal Ministry of Defence (Germany)",
-    "bioLink": "https://www.alpbach.org/de/speakers/schafer-martin"
-  },
-  {
-    "name": "Hannah Scheidl",
-    "role": "Bundesschulsprecherin",
-    "organization": "HLS Langenlois",
-    "bioLink": "https://www.alpbach.org/de/speakers/scheidl-hannah"
-  },
-  {
-    "name": "Sarah Helena Schäfer",
-    "role": "Politische Soziologin",
-    "organization": "University of Vienna",
-    "bioLink": "https://www.alpbach.org/de/speakers/schafer-sarah-helena"
-  },
-  {
-    "name": "Alexander Schiller",
-    "role": "Staff Officer for Psychological Operations (PsyOps) / Instructor for Communication Trainers",
-    "organization": "Operations Command Division of the Austrian Armed Forces",
-    "bioLink": "https://www.alpbach.org/de/speakers/schiller-alexander-3"
+    "name": "Ingrid Schiller",
+    "role": "Assistierende Schauspieldozentin",
+    "organization": "Royal Academy of Dramatic Arts | RADA",
+    "bioLink": "https://www.alpbach.org/de/speakers/schiller-ingrid-4"
   },
   {
     "name": "Liza Saris",
@@ -1782,10 +1746,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/saris-liza"
   },
   {
-    "name": "Artem Rybchenko",
-    "role": "Stellvertretender Premierminister",
-    "organization": "Recovery at the Ministry for Development of Communities and Territories of Ukraine",
-    "bioLink": "https://www.alpbach.org/de/speakers/rybchenko-artem"
+    "name": "Hannah Scheidl",
+    "role": "Bundesschulsprecherin",
+    "organization": "HLS Langenlois",
+    "bioLink": "https://www.alpbach.org/de/speakers/scheidl-hannah"
   },
   {
     "name": "Mollie Saltskog",
@@ -1794,10 +1758,46 @@
     "bioLink": "https://www.alpbach.org/de/speakers/saltskog-mollie"
   },
   {
+    "name": "Alexander Schiller",
+    "role": "Staff Officer for Psychological Operations (PsyOps) / Instructor for Communication Trainers",
+    "organization": "Operations Command Division of the Austrian Armed Forces",
+    "bioLink": "https://www.alpbach.org/de/speakers/schiller-alexander-3"
+  },
+  {
+    "name": "Patrick Scheiwiller",
+    "role": "President",
+    "organization": "Club Alpbach Switzerland",
+    "bioLink": "https://www.alpbach.org/de/speakers/scheiwiller-patrick"
+  },
+  {
+    "name": "Sarah Helena Schäfer",
+    "role": "Politische Soziologin",
+    "organization": "University of Vienna",
+    "bioLink": "https://www.alpbach.org/de/speakers/schafer-sarah-helena"
+  },
+  {
+    "name": "Artem Rybchenko",
+    "role": "Stellvertretender Premierminister",
+    "organization": "Recovery at the Ministry for Development of Communities and Territories of Ukraine",
+    "bioLink": "https://www.alpbach.org/de/speakers/rybchenko-artem"
+  },
+  {
     "name": "Hanna Sakhno",
     "role": "Politökonomin | Vorstandsmitglied",
     "organization": "SEO Amsterdam Economics | Club Alpbach Netherlands",
     "bioLink": "https://www.alpbach.org/de/speakers/sakhno-hanna-2"
+  },
+  {
+    "name": "Martin Schäfer",
+    "role": "Politische Direktor",
+    "organization": "Federal Ministry of Defence (Germany)",
+    "bioLink": "https://www.alpbach.org/de/speakers/schafer-martin"
+  },
+  {
+    "name": "Momodou Sallah",
+    "role": "Executive Director",
+    "organization": "National Research and Innovation Fund (The Gambia)",
+    "bioLink": "https://www.alpbach.org/de/speakers/sallah-momodou"
   },
   {
     "name": "Barbara Schwaighofer",
@@ -1806,58 +1806,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/schwaighofer-barbara"
   },
   {
-    "name": "Timo Seidl",
-    "role": "Assistenzprofessor für Politische Ökonomie",
-    "organization": "Technical University of Munich",
-    "bioLink": "https://www.alpbach.org/de/speakers/seidl-timo"
-  },
-  {
-    "name": "Thomas Seifert",
-    "role": "Co-Chefredakteur",
-    "organization": "European Voices",
-    "bioLink": "https://www.alpbach.org/de/speakers/seifert-thomas-2"
-  },
-  {
-    "name": "Liesje Schreinemacher",
-    "role": "Stellvertretende Generalsekretärin",
-    "organization": "Benelux Union",
-    "bioLink": "https://www.alpbach.org/de/speakers/schreinemacher-liesje"
-  },
-  {
-    "name": "Anna Magdalena Schwabegger",
-    "role": "Vorsitzende",
-    "organization": "Bundesjugendvertretung",
-    "bioLink": "https://www.alpbach.org/de/speakers/schwabegger-anna-magdalena"
-  },
-  {
-    "name": "Carsten Q. Schneider",
-    "role": "Interimspräsident und Rektor",
-    "organization": "Central European University",
-    "bioLink": "https://www.alpbach.org/de/speakers/schneider-carsten-q"
-  },
-  {
-    "name": "Christoph Schwarz",
-    "role": "Senior Research Fellow",
-    "organization": "Austrian Institute for European and Security Policy",
-    "bioLink": "https://www.alpbach.org/de/speakers/schwarz-christoph-3"
-  },
-  {
-    "name": "Barbara Schmidt",
-    "role": "Generalsekretärin",
-    "organization": "Oesterreichs Energie",
-    "bioLink": "https://www.alpbach.org/de/speakers/schmidt-barbara"
-  },
-  {
     "name": "Emily Schultheis",
     "role": "Redaktionsleiterin",
     "organization": "POLITICO",
     "bioLink": "https://www.alpbach.org/de/speakers/schultheis-emily"
-  },
-  {
-    "name": "Meike Gleim",
-    "role": "Artistic Coordinator and Senior Researcher",
-    "organization": "Science of Singularities ASBL / Technical University Dortmund",
-    "bioLink": "https://www.alpbach.org/de/speakers/schmidt-gleim-meike"
   },
   {
     "name": "Rainer Schnabl",
@@ -1866,46 +1818,58 @@
     "bioLink": "https://www.alpbach.org/de/speakers/schnabl-rainer"
   },
   {
+    "name": "Liesje Schreinemacher",
+    "role": "Stellvertretende Generalsekretärin",
+    "organization": "Benelux Union",
+    "bioLink": "https://www.alpbach.org/de/speakers/schreinemacher-liesje"
+  },
+  {
+    "name": "Meike Gleim",
+    "role": "Artistic Coordinator and Senior Researcher",
+    "organization": "Science of Singularities ASBL / Technical University Dortmund",
+    "bioLink": "https://www.alpbach.org/de/speakers/schmidt-gleim-meike"
+  },
+  {
+    "name": "Carsten Q. Schneider",
+    "role": "Interimspräsident und Rektor",
+    "organization": "Central European University",
+    "bioLink": "https://www.alpbach.org/de/speakers/schneider-carsten-q"
+  },
+  {
+    "name": "Anna Magdalena Schwabegger",
+    "role": "Vorsitzende",
+    "organization": "Bundesjugendvertretung",
+    "bioLink": "https://www.alpbach.org/de/speakers/schwabegger-anna-magdalena"
+  },
+  {
+    "name": "Thomas Seifert",
+    "role": "Co-Chefredakteur",
+    "organization": "European Voices",
+    "bioLink": "https://www.alpbach.org/de/speakers/seifert-thomas-2"
+  },
+  {
+    "name": "Barbara Schmidt",
+    "role": "Generalsekretärin",
+    "organization": "Oesterreichs Energie",
+    "bioLink": "https://www.alpbach.org/de/speakers/schmidt-barbara"
+  },
+  {
+    "name": "Christoph Schwarz",
+    "role": "Senior Research Fellow",
+    "organization": "Austrian Institute for European and Security Policy",
+    "bioLink": "https://www.alpbach.org/de/speakers/schwarz-christoph-3"
+  },
+  {
     "name": "Wiebke Schloemer",
     "role": "Direktorin der IFC für den Westbalkan und den Südkaukasus, Leiterin des IFC-Büros in Österreich",
     "organization": "International Finance Corporation",
     "bioLink": "https://www.alpbach.org/de/speakers/schloemer-wiebke"
   },
   {
-    "name": "Sanjay Sethi",
-    "role": "Co-Executive Director",
-    "organization": "Artistic Freedom Initiative",
-    "bioLink": "https://www.alpbach.org/de/speakers/sethi-sanjay"
-  },
-  {
-    "name": "Gudrun Senk",
-    "role": "Technische Geschäftsführerin",
-    "organization": "Wiener Linien",
-    "bioLink": "https://www.alpbach.org/de/speakers/senk-gudrun"
-  },
-  {
-    "name": "Jörg Spreitzer",
-    "role": "Vorstandsvorsitzender und geschäftsführender Gesellschafter",
-    "organization": "Great Place To Work",
-    "bioLink": "https://www.alpbach.org/de/speakers/spreitzer-jorg-2"
-  },
-  {
-    "name": "Lukas Silbernagel",
-    "role": "Gründer",
-    "organization": "tincx",
-    "bioLink": "https://www.alpbach.org/de/speakers/silbernagel-lukas"
-  },
-  {
-    "name": "Evelyne Selberherr",
-    "role": "Assoziierte Professorin (tenured) für Mikrobiomforschung",
-    "organization": "University of Veterinary Medicine Vienna",
-    "bioLink": "https://www.alpbach.org/de/speakers/selberherr-evelyne-2"
-  },
-  {
-    "name": "Fabian Sommavilla",
-    "role": "Journalist, Der STANDARD",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/sommavilla-fabian-2"
+    "name": "Timo Seidl",
+    "role": "Assistenzprofessor für Politische Ökonomie",
+    "organization": "Technical University of Munich",
+    "bioLink": "https://www.alpbach.org/de/speakers/seidl-timo"
   },
   {
     "name": "Bruno Stagno Ugarte",
@@ -1914,16 +1878,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/stagno-ugarte-bruno-4"
   },
   {
-    "name": "Lazar Simić",
-    "role": "Lokaler Programmassistent",
-    "organization": "Regional Youth Cooperation Office.",
-    "bioLink": "https://www.alpbach.org/de/speakers/simic-lazar"
-  },
-  {
     "name": "Nona Shepphard",
     "role": "Associate Director and Chair of Audition Panel",
     "organization": "Royal Academy of Dramatic Art London (RADA)",
     "bioLink": "https://www.alpbach.org/de/speakers/shepphard-nona-4"
+  },
+  {
+    "name": "Gudrun Senk",
+    "role": "Technische Geschäftsführerin",
+    "organization": "Wiener Linien",
+    "bioLink": "https://www.alpbach.org/de/speakers/senk-gudrun"
+  },
+  {
+    "name": "Sanjay Sethi",
+    "role": "Co-Executive Director",
+    "organization": "Artistic Freedom Initiative",
+    "bioLink": "https://www.alpbach.org/de/speakers/sethi-sanjay"
+  },
+  {
+    "name": "Evelyne Selberherr",
+    "role": "Assoziierte Professorin (tenured) für Mikrobiomforschung",
+    "organization": "University of Veterinary Medicine Vienna",
+    "bioLink": "https://www.alpbach.org/de/speakers/selberherr-evelyne-2"
   },
   {
     "name": "Yael Shavit",
@@ -1932,10 +1908,34 @@
     "bioLink": "https://www.alpbach.org/de/speakers/shavit-yael"
   },
   {
+    "name": "Lazar Simić",
+    "role": "Lokaler Programmassistent",
+    "organization": "Regional Youth Cooperation Office.",
+    "bioLink": "https://www.alpbach.org/de/speakers/simic-lazar"
+  },
+  {
+    "name": "Jörg Spreitzer",
+    "role": "Vorstandsvorsitzender und geschäftsführender Gesellschafter",
+    "organization": "Great Place To Work",
+    "bioLink": "https://www.alpbach.org/de/speakers/spreitzer-jorg-2"
+  },
+  {
+    "name": "Fabian Sommavilla",
+    "role": "Journalist, Der STANDARD",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/sommavilla-fabian-2"
+  },
+  {
     "name": "Andreas Sorge",
     "role": "Leitender Spezialist",
     "organization": "PD Science Group",
     "bioLink": "https://www.alpbach.org/de/speakers/sorge-andreas"
+  },
+  {
+    "name": "Lukas Silbernagel",
+    "role": "Gründer",
+    "organization": "tincx",
+    "bioLink": "https://www.alpbach.org/de/speakers/silbernagel-lukas"
   },
   {
     "name": "Haroon Sheikh",
@@ -1944,16 +1944,34 @@
     "bioLink": "https://www.alpbach.org/de/speakers/sheikh-haroon"
   },
   {
-    "name": "Ciara Staunton",
-    "role": "Experienced Legal and Compliance Expert",
-    "organization": "BBMRI ERIC",
-    "bioLink": "https://www.alpbach.org/de/speakers/staunton-ciara"
+    "name": "Matthias Strolz",
+    "role": "Impact Unternehmer & Capacity Builder & Autor",
+    "organization": "TRIQBRIQ AT & Büro Dr. Matthias Strolz - Betrieb für Entfaltung",
+    "bioLink": "https://www.alpbach.org/de/speakers/strolz-matthias-3"
   },
   {
-    "name": "Patrizia Stoitzner",
-    "role": "stv. Präsidentin, für Forschung und internationale Beziehungen, Medizinische Universität Innsbruck",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/stoitzner-patrizia"
+    "name": "Lukas Stühlinger",
+    "role": "Managing Partner",
+    "organization": "Fingreen",
+    "bioLink": "https://www.alpbach.org/de/speakers/stuhlinger-lukas-2"
+  },
+  {
+    "name": "Oliver Suchocki",
+    "role": "Partner, People Consulting",
+    "organization": "EY Österreich",
+    "bioLink": "https://www.alpbach.org/de/speakers/suchocki-oliver-4"
+  },
+  {
+    "name": "Nikolaus Sutter",
+    "role": "Leiter Government Relations & Public Affairs",
+    "organization": "Deutsche Börse Group",
+    "bioLink": "https://www.alpbach.org/de/speakers/sutter-nikolaus"
+  },
+  {
+    "name": "Kathrin Strasser-Weippl",
+    "role": "Onkologin und Leiterin | Medizinische Leiterin",
+    "organization": "Upper Austria Cancer Center | Austrian Society of Hematology and Medical Oncology (OeGHO)",
+    "bioLink": "https://www.alpbach.org/de/speakers/strasser-weippl-kathrin"
   },
   {
     "name": "Jo Swinson",
@@ -1968,46 +1986,22 @@
     "bioLink": "https://www.alpbach.org/de/speakers/steinhart-johannes"
   },
   {
-    "name": "Antonia Straden",
-    "role": "Junior Partner/ Board Member/ Outgoing Curator",
-    "organization": "Peyer Partner Rechtsanwälte/ Club Alpbach Switzerland/ Global Shapers Zurich Hub",
-    "bioLink": "https://www.alpbach.org/de/speakers/straden-antonia"
-  },
-  {
-    "name": "Oliver Suchocki",
-    "role": "Partner, People Consulting",
-    "organization": "EY Österreich",
-    "bioLink": "https://www.alpbach.org/de/speakers/suchocki-oliver-4"
-  },
-  {
-    "name": "Matthias Strolz",
-    "role": "Impact Unternehmer & Capacity Builder & Autor",
-    "organization": "TRIQBRIQ AT & Büro Dr. Matthias Strolz - Betrieb für Entfaltung",
-    "bioLink": "https://www.alpbach.org/de/speakers/strolz-matthias-3"
-  },
-  {
-    "name": "Kathrin Strasser-Weippl",
-    "role": "Onkologin und Leiterin | Medizinische Leiterin",
-    "organization": "Upper Austria Cancer Center | Austrian Society of Hematology and Medical Oncology (OeGHO)",
-    "bioLink": "https://www.alpbach.org/de/speakers/strasser-weippl-kathrin"
-  },
-  {
-    "name": "Lukas Stühlinger",
-    "role": "Managing Partner",
-    "organization": "Fingreen",
-    "bioLink": "https://www.alpbach.org/de/speakers/stuhlinger-lukas-2"
-  },
-  {
     "name": "Michael Strugl",
     "role": "Chief Executive Officer",
     "organization": "Verbund",
     "bioLink": "https://www.alpbach.org/de/speakers/strugl-michael-3"
   },
   {
-    "name": "Nikolaus Sutter",
-    "role": "Leiter Government Relations & Public Affairs",
-    "organization": "Deutsche Börse Group",
-    "bioLink": "https://www.alpbach.org/de/speakers/sutter-nikolaus"
+    "name": "Antonia Straden",
+    "role": "Junior Partner/ Board Member/ Outgoing Curator",
+    "organization": "Peyer Partner Rechtsanwälte/ Club Alpbach Switzerland/ Global Shapers Zurich Hub",
+    "bioLink": "https://www.alpbach.org/de/speakers/straden-antonia"
+  },
+  {
+    "name": "Ciara Staunton",
+    "role": "Experienced Legal and Compliance Expert",
+    "organization": "BBMRI ERIC",
+    "bioLink": "https://www.alpbach.org/de/speakers/staunton-ciara"
   },
   {
     "name": "Sebastian Swoboda",
@@ -2016,22 +2010,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/swoboda-sebastian"
   },
   {
-    "name": "Nhat An Trinh",
-    "role": "Soziologin",
-    "organization": "WZB Berlin Social Science Center",
-    "bioLink": "https://www.alpbach.org/de/speakers/trinh-nhat-an-2"
-  },
-  {
-    "name": "Stefan Theil",
-    "role": null,
+    "name": "Patrizia Stoitzner",
+    "role": "stv. Präsidentin, für Forschung und internationale Beziehungen, Medizinische Universität Innsbruck",
     "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/theil-stefan"
+    "bioLink": "https://www.alpbach.org/de/speakers/stoitzner-patrizia"
   },
   {
     "name": "Philipp Thurn und Taxis",
     "role": "Deputy CEO",
     "organization": "ERSTE Foundation",
     "bioLink": "https://www.alpbach.org/de/speakers/thurn-und-taxis-philipp"
+  },
+  {
+    "name": "Cecilia Trasi",
+    "role": "Leitende Politische Beraterin",
+    "organization": "ECCO Climate",
+    "bioLink": "https://www.alpbach.org/de/speakers/trasi-cecilia-2"
+  },
+  {
+    "name": "Ulrike Tappeiner",
+    "role": "Leiterin des Instituts für Alpine Umwelt bei Eurac Research",
+    "organization": "EURAC-Centre for Ethnic and Linguistic Diversity Studies",
+    "bioLink": "https://www.alpbach.org/de/speakers/tappeiner-ulrike-2"
   },
   {
     "name": "Christoph Thun-Hohenstein",
@@ -2046,34 +2046,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/traxler-nicole-2"
   },
   {
-    "name": "Günther Thallinger",
-    "role": "Mitglied des Vorstands Investment Management, Sustainability",
-    "organization": "Allianz SE",
-    "bioLink": "https://www.alpbach.org/de/speakers/thallinger-gunther"
-  },
-  {
-    "name": "Ulrike Tappeiner",
-    "role": "Leiterin des Instituts für Alpine Umwelt bei Eurac Research",
-    "organization": "EURAC-Centre for Ethnic and Linguistic Diversity Studies",
-    "bioLink": "https://www.alpbach.org/de/speakers/tappeiner-ulrike-2"
-  },
-  {
-    "name": "Cecilia Trasi",
-    "role": "Leitende Politische Beraterin",
-    "organization": "ECCO Climate",
-    "bioLink": "https://www.alpbach.org/de/speakers/trasi-cecilia-2"
-  },
-  {
-    "name": "Manuel Teschenet",
-    "role": "Geschäftsführer, Kufstein mobil",
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/teschenet-manuel"
-  },
-  {
     "name": "Chloé Touzet",
     "role": "Policy Lead",
     "organization": "SaferAI",
     "bioLink": "https://www.alpbach.org/de/speakers/touzet-chloe-2"
+  },
+  {
+    "name": "Nhat An Trinh",
+    "role": "Soziologin",
+    "organization": "WZB Berlin Social Science Center",
+    "bioLink": "https://www.alpbach.org/de/speakers/trinh-nhat-an-2"
   },
   {
     "name": "Shashi Tharoor",
@@ -2082,16 +2064,46 @@
     "bioLink": "https://www.alpbach.org/de/speakers/tharoor-shashi-2"
   },
   {
+    "name": "Günther Thallinger",
+    "role": "Mitglied des Vorstands Investment Management, Sustainability",
+    "organization": "Allianz SE",
+    "bioLink": "https://www.alpbach.org/de/speakers/thallinger-gunther"
+  },
+  {
     "name": "Flóra Szigeti",
     "role": "Seniorberaterin | Leiterin der Führungskräfteprogramme",
     "organization": "DemNet | CEU Democracy Institute",
     "bioLink": "https://www.alpbach.org/de/speakers/szigeti-flora"
   },
   {
-    "name": "Monika Unterholzner",
-    "role": "Generaldirektor- Stellvertreterin",
-    "organization": "Wiener Stadtwerke GmbH",
-    "bioLink": "https://www.alpbach.org/de/speakers/unterholzner-monika"
+    "name": "Manuel Teschenet",
+    "role": "Geschäftsführer, Kufstein mobil",
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/teschenet-manuel"
+  },
+  {
+    "name": "Stefan Theil",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/theil-stefan"
+  },
+  {
+    "name": "Antonia Ulrich",
+    "role": "Doktorandin, Philosophie",
+    "organization": "University of Potsdam in coop. with University of Applied Arts Hannover, Design and Media",
+    "bioLink": "https://www.alpbach.org/de/speakers/ulrich-antonia"
+  },
+  {
+    "name": "Ioannis Tsakiris",
+    "role": "Vizepräsident",
+    "organization": "European Investment Bank",
+    "bioLink": "https://www.alpbach.org/de/speakers/tsakiris-ioannis"
+  },
+  {
+    "name": "Guntars Upis",
+    "role": "Ökonom & Forschungsanalyst",
+    "organization": "PwC Netherlands Chief Economist Office",
+    "bioLink": "https://www.alpbach.org/de/speakers/upis-guntars-3"
   },
   {
     "name": "Kata Tüttő",
@@ -2100,16 +2112,34 @@
     "bioLink": "https://www.alpbach.org/de/speakers/tutto-kata"
   },
   {
+    "name": "Marcos Troyjo",
+    "role": "Ehemaliger Präsident",
+    "organization": "New Development Bank",
+    "bioLink": "https://www.alpbach.org/de/speakers/troyjo-marcos"
+  },
+  {
     "name": "Symeon Tsomokos",
     "role": "Gründer & Präsident",
     "organization": "Delphi Economic Forum",
     "bioLink": "https://www.alpbach.org/de/speakers/tsomokos-symeon"
   },
   {
-    "name": "Antonia Ulrich",
-    "role": "Doktorandin, Philosophie",
-    "organization": "University of Potsdam in coop. with University of Applied Arts Hannover, Design and Media",
-    "bioLink": "https://www.alpbach.org/de/speakers/ulrich-antonia"
+    "name": "Christian Trübenbach",
+    "role": "Senior Manager & Senior Culture Coach",
+    "organization": "Great Place To Work",
+    "bioLink": "https://www.alpbach.org/de/speakers/trubenbach-christian"
+  },
+  {
+    "name": "Monika Unterholzner",
+    "role": "Generaldirektor- Stellvertreterin",
+    "organization": "Wiener Stadtwerke GmbH",
+    "bioLink": "https://www.alpbach.org/de/speakers/unterholzner-monika"
+  },
+  {
+    "name": "Franz Tschida",
+    "role": "Innovation Lead",
+    "organization": "Future Health Lab",
+    "bioLink": "https://www.alpbach.org/de/speakers/tschida-franz"
   },
   {
     "name": "Ernst Überreiter",
@@ -2130,82 +2160,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/urbani-sergio"
   },
   {
-    "name": "Christian Trübenbach",
-    "role": "Senior Manager & Senior Culture Coach",
-    "organization": "Great Place To Work",
-    "bioLink": "https://www.alpbach.org/de/speakers/trubenbach-christian"
-  },
-  {
-    "name": "Marcos Troyjo",
-    "role": "Ehemaliger Präsident",
-    "organization": "New Development Bank",
-    "bioLink": "https://www.alpbach.org/de/speakers/troyjo-marcos"
-  },
-  {
-    "name": "Franz Tschida",
-    "role": "Innovation Lead",
-    "organization": "Future Health Lab",
-    "bioLink": "https://www.alpbach.org/de/speakers/tschida-franz"
-  },
-  {
-    "name": "Ioannis Tsakiris",
-    "role": "Vizepräsident",
-    "organization": "European Investment Bank",
-    "bioLink": "https://www.alpbach.org/de/speakers/tsakiris-ioannis"
-  },
-  {
-    "name": "Guntars Upis",
-    "role": "Ökonom & Forschungsanalyst",
-    "organization": "PwC Netherlands Chief Economist Office",
-    "bioLink": "https://www.alpbach.org/de/speakers/upis-guntars-3"
-  },
-  {
-    "name": "Anna Wallner",
-    "role": "Journalistin",
-    "organization": "Die Presse",
-    "bioLink": "https://www.alpbach.org/de/speakers/wallner-anna-2"
-  },
-  {
-    "name": "Anita Wälz",
-    "role": "Leitung Nachhaltigkeit | Unternehmenskommunikation",
-    "organization": "Nestlé",
-    "bioLink": "https://www.alpbach.org/de/speakers/walz-anita"
-  },
-  {
-    "name": "Rupert Ursin",
-    "role": "CEO | Mitgründer",
-    "organization": "qtlabs | zerothird",
-    "bioLink": "https://www.alpbach.org/de/speakers/ursin-rupert"
-  },
-  {
-    "name": "Alois Vahrner",
-    "role": null,
-    "organization": null,
-    "bioLink": "https://www.alpbach.org/de/speakers/vahrner-alois"
-  },
-  {
-    "name": "Juliette Vazard",
-    "role": "Oberassistentin",
-    "organization": "University of Zurich",
-    "bioLink": "https://www.alpbach.org/de/speakers/vazard-juliette"
-  },
-  {
-    "name": "Hanna Vasilevich",
-    "role": "Institut für Minderheitenrecht",
-    "organization": "EURAC-Centre for Ethnic and Linguistic Diversity Studies",
-    "bioLink": "https://www.alpbach.org/de/speakers/vasilevich-hanna"
-  },
-  {
     "name": "Anja Wehler-Schoeck",
     "role": "Mitglied der Chefredaktion",
     "organization": "Tagesspiegel",
     "bioLink": "https://www.alpbach.org/de/speakers/wehler-schoeck-anja"
-  },
-  {
-    "name": "Zuzanna Warso",
-    "role": "Forschungsdirektor",
-    "organization": "Open Future Foundation",
-    "bioLink": "https://www.alpbach.org/de/speakers/warso-zuzanna"
   },
   {
     "name": "Clemens Wasner",
@@ -2214,10 +2172,52 @@
     "bioLink": "https://www.alpbach.org/de/speakers/wasner-clemens-2"
   },
   {
+    "name": "Rupert Ursin",
+    "role": "CEO | Mitgründer",
+    "organization": "qtlabs | zerothird",
+    "bioLink": "https://www.alpbach.org/de/speakers/ursin-rupert"
+  },
+  {
+    "name": "Hanna Vasilevich",
+    "role": "Institut für Minderheitenrecht",
+    "organization": "EURAC-Centre for Ethnic and Linguistic Diversity Studies",
+    "bioLink": "https://www.alpbach.org/de/speakers/vasilevich-hanna"
+  },
+  {
+    "name": "Zuzanna Warso",
+    "role": "Forschungsdirektor",
+    "organization": "Open Future Foundation",
+    "bioLink": "https://www.alpbach.org/de/speakers/warso-zuzanna"
+  },
+  {
     "name": "Johannes Weißenbäck",
     "role": "Chief Sales Officer",
     "organization": "FTG Finance Technologies",
     "bioLink": "https://www.alpbach.org/de/speakers/weissenback-johannes"
+  },
+  {
+    "name": "Alois Vahrner",
+    "role": null,
+    "organization": null,
+    "bioLink": "https://www.alpbach.org/de/speakers/vahrner-alois"
+  },
+  {
+    "name": "Jan-Willem van Putten",
+    "role": "Executive Director",
+    "organization": "The School for Moral Ambition",
+    "bioLink": "https://www.alpbach.org/de/speakers/van-putten-jan-willem"
+  },
+  {
+    "name": "Juliette Vazard",
+    "role": "Oberassistentin",
+    "organization": "University of Zurich",
+    "bioLink": "https://www.alpbach.org/de/speakers/vazard-juliette"
+  },
+  {
+    "name": "Anita Wälz",
+    "role": "Leitung Nachhaltigkeit | Unternehmenskommunikation",
+    "organization": "Nestlé",
+    "bioLink": "https://www.alpbach.org/de/speakers/walz-anita"
   },
   {
     "name": "Oliver Vesper",
@@ -2226,10 +2226,28 @@
     "bioLink": "https://www.alpbach.org/de/speakers/vesper-oliver"
   },
   {
-    "name": "Jan-Willem van Putten",
-    "role": "Executive Director",
-    "organization": "The School for Moral Ambition",
-    "bioLink": "https://www.alpbach.org/de/speakers/van-putten-jan-willem"
+    "name": "Anna Wallner",
+    "role": "Journalistin",
+    "organization": "Die Presse",
+    "bioLink": "https://www.alpbach.org/de/speakers/wallner-anna-2"
+  },
+  {
+    "name": "Elisabeth Zehetner",
+    "role": "Staatssekretärin",
+    "organization": "Federal Ministry for Economic Affairs, Energy and Tourism (BMWET)",
+    "bioLink": "https://www.alpbach.org/de/speakers/zehetner-elisabeth-2"
+  },
+  {
+    "name": "Jacqueline Wild",
+    "role": "Vizepräsidentin | Geschäftsführerin",
+    "organization": "Kyndryl",
+    "bioLink": "https://www.alpbach.org/de/speakers/wild-jacqueline"
+  },
+  {
+    "name": "Bernhard Wiesinger",
+    "role": "Leiter Konsumentenschutz & Mitgliederinteressen",
+    "organization": "ÖAMTC",
+    "bioLink": "https://www.alpbach.org/de/speakers/wiesinger-bernhard"
   },
   {
     "name": "Salome Zourabichvili",
@@ -2262,22 +2280,16 @@
     "bioLink": "https://www.alpbach.org/de/speakers/zsambok-jakob"
   },
   {
-    "name": "Klaus Welle",
-    "role": "Chair of the Martens Centre's Academic Council, Special Advisor to the European Defence Commissioner",
-    "organization": "Martens Centre",
-    "bioLink": "https://www.alpbach.org/de/speakers/welle-klaus"
+    "name": "Jiayi Zhou",
+    "role": "Leitende Forscherin",
+    "organization": "Stockholm International Peace Research Institute",
+    "bioLink": "https://www.alpbach.org/de/speakers/zhou-jiayi"
   },
   {
-    "name": "Jacqueline Wild",
-    "role": "Vizepräsidentin | Geschäftsführerin",
-    "organization": "Kyndryl",
-    "bioLink": "https://www.alpbach.org/de/speakers/wild-jacqueline"
-  },
-  {
-    "name": "Bernhard Wiesinger",
-    "role": "Leiter Konsumentenschutz & Mitgliederinteressen",
-    "organization": "ÖAMTC",
-    "bioLink": "https://www.alpbach.org/de/speakers/wiesinger-bernhard"
+    "name": "Sascha Zabransky",
+    "role": "Geschäftsführer",
+    "organization": "Wien Energie",
+    "bioLink": "https://www.alpbach.org/de/speakers/zabransky-sascha"
   },
   {
     "name": "Michael Zinkanell-Süss",
@@ -2286,22 +2298,10 @@
     "bioLink": "https://www.alpbach.org/de/speakers/zinkanell-michael-gabriel-5"
   },
   {
-    "name": "Jiayi Zhou",
-    "role": "Leitende Forscherin",
-    "organization": "Stockholm International Peace Research Institute",
-    "bioLink": "https://www.alpbach.org/de/speakers/zhou-jiayi"
-  },
-  {
-    "name": "Elisabeth Zehetner",
-    "role": "Staatssekretärin",
-    "organization": "Federal Ministry for Economic Affairs, Energy and Tourism (BMWET)",
-    "bioLink": "https://www.alpbach.org/de/speakers/zehetner-elisabeth-2"
-  },
-  {
-    "name": "Sascha Zabransky",
-    "role": "Geschäftsführer",
-    "organization": "Wien Energie",
-    "bioLink": "https://www.alpbach.org/de/speakers/zabransky-sascha"
+    "name": "Klaus Welle",
+    "role": "Chair of the Martens Centre's Academic Council, Special Advisor to the European Defence Commissioner",
+    "organization": "Martens Centre",
+    "bioLink": "https://www.alpbach.org/de/speakers/welle-klaus"
   },
   {
     "name": "Martin Zsifkovits",
