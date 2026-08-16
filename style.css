@@ -426,13 +426,16 @@ code {
 .calendar-grid-day,
 .calendar-grid-week {
   display: flex;
+  flex-direction: column;
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   overflow: hidden;
 }
 
-.calendar-grid-week {
-  flex-direction: column;
+/* Stundenachse + Tages-Spalten nebeneinander - in beiden Ansichten gleich,
+   die Wochenansicht haengt nur zusaetzlich eine Kopfzeile mit Tagesnamen davor. */
+.calendar-body {
+  display: flex;
 }
 
 .calendar-hour-labels {
@@ -466,11 +469,7 @@ code {
   border-bottom: 1px solid var(--color-border);
 }
 
-.calendar-grid-week .calendar-columns {
-  display: flex;
-}
-
-.calendar-grid-day .calendar-columns {
+.calendar-columns {
   display: flex;
   flex: 1;
 }

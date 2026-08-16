@@ -667,8 +667,9 @@ function renderCalendar() {
   grid.innerHTML = "";
   grid.className = calendarState.mode === "day" ? "calendar-grid-day" : "calendar-grid-week";
 
-  renderCalendarHourLabels(grid);
-
+  // Kopfzeile mit Tagesnamen nur in der Wochenansicht - steht ÜBER der
+  // Stundenachse+Spalten-Zeile (nicht davor als eigener Block, sonst sieht
+  // es wie eine zweite, verwaiste Mini-Tagesansicht aus).
   if (calendarState.mode === "week") {
     const headerRow = document.createElement("div");
     headerRow.className = "calendar-week-headers";
@@ -683,12 +684,17 @@ function renderCalendar() {
     grid.appendChild(headerRow);
   }
 
+  const body = document.createElement("div");
+  body.className = "calendar-body";
+  renderCalendarHourLabels(body);
+
   const columnsWrapper = document.createElement("div");
   columnsWrapper.className = "calendar-columns";
   for (const day of days) {
     renderCalendarDayColumn(day, columnsWrapper);
   }
-  grid.appendChild(columnsWrapper);
+  body.appendChild(columnsWrapper);
+  grid.appendChild(body);
 
   document.getElementById("calendar-prev").disabled = calendarState.anchorIndex <= 0;
   const step = calendarState.mode === "day" ? 1 : 7;
