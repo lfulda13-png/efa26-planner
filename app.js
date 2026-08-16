@@ -6,7 +6,8 @@
 // Nach dem Deployment des Google Apps Script (siehe README.md, Abschnitt
 // "Club-Sync einrichten") die Web-App-URL hier eintragen. Leer = Sync
 // deaktiviert, App funktioniert trotzdem normal (nur ohne Club-Abgleich).
-const SHEET_API_URL = "";
+const SHEET_API_URL =
+  "https://script.google.com/macros/s/AKfycbwJ0aFUGEVbL8FW5w5mctbvPFxFDPNNDM_4uJUKtAyVNmfu1czH0HQZLcryMEmsEWSaKw/exec";
 
 const SELECTION_STORAGE_KEY = "efa26-selected-events";
 const USER_NAME_STORAGE_KEY = "efa26-user-name";
