@@ -178,9 +178,20 @@ aus der ersten Seite wiederverwendet).
     21:00–01:00). Bei Bedarf fixen: `toIcsDateTimeUtc` muesste erkennen,
     wenn `endTime < startTime`, und dann `event.day` fuer das Ende um
     einen Tag verschieben.
+- **Nutzer-Feedback-Runde nach Phase 6** ✅ abgeschlossen (2026-08-16)
+  - Fix: Wochenansicht zeigte die Stundenachse als verwaisten Block ueber
+    dem Raster statt daneben (DOM-Struktur-Bug, siehe Commit)
+  - Legende + Tooltips fuer die Track-Kuerzel (ART/CLI/DEM/...), sichtbar
+    unter den Track-Filtern + `title`-Attribut auf jedem Badge
+  - Volltextsuche (`#search` in `index.html`, `eventSearchText`/
+    `applyFilters` in `app.js`): durchsucht Titel, Beschreibung, Location,
+    Format, Sprache, Track-Kuerzel + ausgeschriebene Namen, Speaker:innen
+    und "Veranstaltet von" - kombiniert sich mit den bestehenden Filtern
+  - Damit ist die urspruengliche Phase-6-Idee "durchsuchbare Liste" erledigt
+
 - **Weitere "Gadgets" (nach Nutzer-Ansage besprechen, bevor gebaut wird):**
-  durchsuchbare Liste aller Events & Speaker (Volltextsuche), Speaker-
-  bioLink-Abgleich (siehe oben), Mitternachts-Bug im ICS-Export
+  Speaker-bioLink-Abgleich (siehe oben, bewusst nicht gemacht wegen
+  Fehlzuordnungs-Risiko), Mitternachts-Bug im ICS-Export (siehe oben)
 
 Für die nächste Session: einfach fragen, was als naechstes drankommt -
 es gibt keine feste "Phase 7", siehe "Weitere Gadgets" oben.
