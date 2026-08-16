@@ -27,6 +27,35 @@ code {
   border-radius: 0.25em;
 }
 
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid rgba(127, 127, 127, 0.2);
+  border-radius: 0.5rem;
+}
+
+.filter select {
+  font: inherit;
+}
+
+.filter-tracks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.track-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+}
+
 .day-section {
   margin-top: 2.5rem;
 }

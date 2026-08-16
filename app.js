@@ -28,6 +28,33 @@ function saveSelection(selection) {
 
 const selection = loadSelection();
 
+let allEvents = [];
+let totalEventCount = 0;
+const filters = { day: "all", format: "all", language: "all", tracks: new Set() };
+
+function uniqueSorted(values) {
+  return [...new Set(values.filter(Boolean))].sort();
+}
+
+function applyFilters(events) {
+  return events.filter((event) => {
+    if (filters.day !== "all" && event.day !== filters.day) return false;
+    if (filters.format !== "all" && event.format !== filters.format) return false;
+    if (filters.language !== "all" && event.language !== filters.language)
+      return false;
+    if (
+      filters.tracks.size > 0 &&
+      !event.trackTags.some((tag) => filters.tracks.has(tag))
+    )
+      return false;
+    return true;
+  });
+}
+
+function refresh() {
+  renderEvents(applyFilters(allEvents));
+}
+
 function formatDay(isoDate) {
   const date = new Date(`${isoDate}T00:00:00`);
   return DAY_FORMATTER.format(date);
@@ -136,12 +163,92 @@ function renderEvents(events) {
   }
 }
 
+function renderSelect(labelText, options, currentValue, onChange) {
+  const wrapper = document.createElement("label");
+  wrapper.className = "filter";
+  wrapper.append(`${labelText}: `);
+
+  const select = document.createElement("select");
+  const allOption = document.createElement("option");
+  allOption.value = "all";
+  allOption.textContent = "Alle";
+  select.appendChild(allOption);
+
+  for (const option of options) {
+    select.appendChild(new Option(option, option));
+  }
+  select.value = currentValue;
+  select.addEventListener("change", () => onChange(select.value));
+
+  wrapper.appendChild(select);
+  return wrapper;
+}
+
+function renderFilters(events) {
+  const container = document.getElementById("filters");
+  container.innerHTML = "";
+
+  const days = uniqueSorted(events.map((e) => e.day));
+  const formats = uniqueSorted(events.map((e) => e.format));
+  const languages = uniqueSorted(events.map((e) => e.language));
+  const tracks = uniqueSorted(events.flatMap((e) => e.trackTags));
+
+  const dayOptions = days.map((day) => ({ value: day, label: formatDay(day) }));
+  const dayWrapper = document.createElement("label");
+  dayWrapper.className = "filter";
+  dayWrapper.append("Tag: ");
+  const daySelect = document.createElement("select");
+  daySelect.appendChild(new Option("Alle", "all"));
+  for (const { value, label } of dayOptions) {
+    daySelect.appendChild(new Option(label, value));
+  }
+  daySelect.value = filters.day;
+  daySelect.addEventListener("change", () => {
+    filters.day = daySelect.value;
+    refresh();
+  });
+  dayWrapper.appendChild(daySelect);
+  container.appendChild(dayWrapper);
+
+  container.appendChild(
+    renderSelect("Format", formats, filters.format, (value) => {
+      filters.format = value;
+      refresh();
+    })
+  );
+
+  container.appendChild(
+    renderSelect("Sprache", languages, filters.language, (value) => {
+      filters.language = value;
+      refresh();
+    })
+  );
+
+  const trackWrapper = document.createElement("div");
+  trackWrapper.className = "filter filter-tracks";
+  trackWrapper.append("Track: ");
+  for (const track of tracks) {
+    const trackLabel = document.createElement("label");
+    trackLabel.className = "track-toggle";
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = filters.tracks.has(track);
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) filters.tracks.add(track);
+      else filters.tracks.delete(track);
+      refresh();
+    });
+    trackLabel.appendChild(checkbox);
+    trackLabel.append(track);
+    trackWrapper.appendChild(trackLabel);
+  }
+  container.appendChild(trackWrapper);
+}
+
 function updateSelectionCount() {
   const status = document.getElementById("status");
   status.textContent = `${selection.size} von ${totalEventCount} Events ausgewählt`;
 }
-
-let totalEventCount = 0;
 
 async function main() {
   const status = document.getElementById("status");
@@ -149,8 +256,10 @@ async function main() {
     const res = await fetch("data/events.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const events = await res.json();
+    allEvents = events;
     totalEventCount = events.length;
-    renderEvents(events);
+    renderFilters(events);
+    refresh();
     updateSelectionCount();
   } catch (err) {
     status.textContent = "Fehler beim Laden der Events. Details in der Konsole.";
