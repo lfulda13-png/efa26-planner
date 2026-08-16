@@ -26,3 +26,60 @@ code {
   padding: 0.1em 0.35em;
   border-radius: 0.25em;
 }
+
+.day-section {
+  margin-top: 2.5rem;
+}
+
+.day-section h2 {
+  text-transform: capitalize;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.event-card {
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(127, 127, 127, 0.15);
+}
+
+.event-time {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.event-title {
+  margin: 0.2rem 0 0.3rem;
+  font-size: 1.1rem;
+}
+
+.event-meta {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin-bottom: 0.5rem;
+}
+
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.15em 0.5em;
+  border-radius: 999px;
+  background: rgba(127, 127, 127, 0.15);
+}
+
+.tag-format {
+  background: rgba(80, 140, 255, 0.2);
+}
+
+.event-description {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  margin: 0;
+}
