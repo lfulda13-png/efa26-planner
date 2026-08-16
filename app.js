@@ -11,26 +11,196 @@ const SHEET_API_URL =
 
 const SELECTION_STORAGE_KEY = "efa26-selected-events";
 const USER_NAME_STORAGE_KEY = "efa26-user-name";
+const LANG_STORAGE_KEY = "efa26-lang";
+
+// ---------- Sprachumschalter (DE/EN) ----------
+let currentLang = localStorage.getItem(LANG_STORAGE_KEY) === "en" ? "en" : "de";
 
 // Ausgeschriebene Namen fuer die Track-Kuerzel (aus scripts/scrape.js
 // TRACK_CODE_BY_NAME uebernommen, dort aus den echten PDF-"Track:"-Zeilen
-// abgeleitet - keine Vermutung). Fuer Tooltips + die Legende in den Filtern.
+// abgeleitet - keine Vermutung; Englisch ist das Original, Deutsch die
+// Uebersetzung). Fuer Tooltips + die Legende in den Filtern.
 const TRACK_LEGEND = {
-  ART: "Kunst",
-  CLI: "Klima",
-  DEM: "Demokratie",
-  FIN: "Finanzen",
-  LAB: "Lab",
-  SEC: "Sicherheit",
-  SEM: "Seminar",
-  STU: "Studio",
+  de: {
+    ART: "Kunst",
+    CLI: "Klima",
+    DEM: "Demokratie",
+    FIN: "Finanzen",
+    LAB: "Lab",
+    SEC: "Sicherheit",
+    SEM: "Seminar",
+    STU: "Studio",
+  },
+  en: {
+    ART: "Art",
+    CLI: "Climate",
+    DEM: "Democracy",
+    FIN: "Finance",
+    LAB: "Lab",
+    SEC: "Security",
+    SEM: "Seminar",
+    STU: "Studio",
+  },
 };
 
-const DAY_FORMATTER = new Intl.DateTimeFormat("de-DE", {
-  weekday: "long",
-  day: "numeric",
-  month: "long",
-});
+const I18N = {
+  de: {
+    subtitle: "Kalender-Builder für das European Forum Alpbach 2026",
+    yourName: "Dein Name:",
+    namePlaceholder: "z.B. Anna",
+    syncButton: "Mit Club synchronisieren",
+    syncNotConfigured: "Sync noch nicht eingerichtet (siehe README.md).",
+    syncEnterName: "Bitte zuerst deinen Namen eingeben.",
+    syncing: "Synchronisiere …",
+    syncedAt: "Synchronisiert um {time}",
+    syncFailed: "Sync fehlgeschlagen. Details in der Konsole.",
+    loadingClub: "Lade Club-Auswahl …",
+    clubLoaded: "Club-Auswahl geladen.",
+    clubLoadFailed: "Club-Auswahl konnte nicht geladen werden.",
+    loadingEvents: "Lade Events …",
+    loadEventsFailed: "Fehler beim Laden der Events. Details in der Konsole.",
+    selectedStatus: "{count} von {total} Events ausgewählt",
+    clearSelection: "Auswahl leeren",
+    clearConfirm: "Wirklich alle {count} ausgewählten Events entfernen?",
+    exportIcs: "Auswahl als .ics exportieren",
+    viewList: "Alle Events",
+    viewCalendar: "Meine Auswahl (Kalender)",
+    filtersSummary: "Filter",
+    searchPlaceholder: "Suche nach Titel, Beschreibung, Speaker:in, Location …",
+    filterAll: "Alle",
+    filterDay: "Tag: ",
+    filterFormat: "Format",
+    filterLanguage: "Sprache",
+    filterTrack: "Track: ",
+    onlySelected: " Nur ausgewählte anzeigen",
+    legendPrefix: "Kürzel: ",
+    timeUnknown: "Zeit unbekannt",
+    noDate: "Ohne Datum",
+    speakersLabel: "Speaker:innen: ",
+    hostedByLabel: "Veranstaltet von: ",
+    alsoSelectedBy: "Auch gewählt von: {names}",
+    calendarViewerLabel: "Kalender von:",
+    calendarViewerMe: "Ich (lokale Auswahl)",
+    calendarModeDay: "Tag",
+    calendarModeWeek: "Woche",
+    calendarNoTime: "Ohne genaue Uhrzeit:",
+    calendarSummarySelected: "{who}: {count} ausgewählt · {parts}",
+    calendarSummaryEmpty: "{who}: noch keine Events in diesem Zeitraum ausgewählt.",
+    calendarMe: "Ich",
+    prev: "Zurück",
+    next: "Weiter",
+  },
+  en: {
+    subtitle: "Calendar builder for the European Forum Alpbach 2026",
+    yourName: "Your name:",
+    namePlaceholder: "e.g. Anna",
+    syncButton: "Sync with club",
+    syncNotConfigured: "Sync not set up yet (see README.md).",
+    syncEnterName: "Please enter your name first.",
+    syncing: "Syncing …",
+    syncedAt: "Synced at {time}",
+    syncFailed: "Sync failed. See console for details.",
+    loadingClub: "Loading club selection …",
+    clubLoaded: "Club selection loaded.",
+    clubLoadFailed: "Could not load club selection.",
+    loadingEvents: "Loading events …",
+    loadEventsFailed: "Failed to load events. See console for details.",
+    selectedStatus: "{count} of {total} events selected",
+    clearSelection: "Clear selection",
+    clearConfirm: "Really remove all {count} selected events?",
+    exportIcs: "Export selection as .ics",
+    viewList: "All events",
+    viewCalendar: "My selection (calendar)",
+    filtersSummary: "Filters",
+    searchPlaceholder: "Search title, description, speaker, location …",
+    filterAll: "All",
+    filterDay: "Day: ",
+    filterFormat: "Format",
+    filterLanguage: "Language",
+    filterTrack: "Track: ",
+    onlySelected: " Show only selected",
+    legendPrefix: "Abbreviations: ",
+    timeUnknown: "Time unknown",
+    noDate: "No date",
+    speakersLabel: "Speakers: ",
+    hostedByLabel: "Hosted by: ",
+    alsoSelectedBy: "Also selected by: {names}",
+    calendarViewerLabel: "Calendar of:",
+    calendarViewerMe: "Me (local selection)",
+    calendarModeDay: "Day",
+    calendarModeWeek: "Week",
+    calendarNoTime: "Without exact time:",
+    calendarSummarySelected: "{who}: {count} selected · {parts}",
+    calendarSummaryEmpty: "{who}: no events selected in this range yet.",
+    calendarMe: "Me",
+    prev: "Back",
+    next: "Next",
+  },
+};
+
+function t(key, vars) {
+  let text = I18N[currentLang][key] || key;
+  if (vars) {
+    for (const [k, v] of Object.entries(vars)) {
+      text = text.replace(`{${k}}`, v);
+    }
+  }
+  return text;
+}
+
+function applyStaticTranslations() {
+  document.documentElement.lang = currentLang;
+  for (const el of document.querySelectorAll("[data-i18n]")) {
+    el.textContent = t(el.dataset.i18n);
+  }
+  for (const el of document.querySelectorAll("[data-i18n-placeholder]")) {
+    el.placeholder = t(el.dataset.i18nPlaceholder);
+  }
+  for (const el of document.querySelectorAll("[data-i18n-aria-label]")) {
+    el.setAttribute("aria-label", t(el.dataset.i18nAriaLabel));
+  }
+}
+
+function setLang(lang) {
+  if (lang === currentLang) return;
+  currentLang = lang;
+  localStorage.setItem(LANG_STORAGE_KEY, lang);
+  document.getElementById("lang-de").classList.toggle("active", lang === "de");
+  document.getElementById("lang-en").classList.toggle("active", lang === "en");
+  applyStaticTranslations();
+  if (allEvents.length > 0) {
+    renderFilters(allEvents);
+    refresh();
+    updateSelectionCount();
+    populateCalendarViewerSelect();
+    if (!document.getElementById("calendar-view").hidden) renderCalendar();
+  }
+}
+
+function localeTag() {
+  return currentLang === "de" ? "de-DE" : "en-GB";
+}
+
+function dayFormatter() {
+  return new Intl.DateTimeFormat(localeTag(), {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+  });
+}
+
+// Titel/Beschreibung in der aktuell gewaehlten Sprache (mit Fallback,
+// siehe scripts/scrape.js - titleEn/descriptionEn sind fuer alle Events
+// vorhanden, aber zur Sicherheit trotzdem abgesichert).
+function eventTitle(event) {
+  return currentLang === "en" ? event.titleEn || event.title : event.title;
+}
+
+function eventDescription(event) {
+  return currentLang === "en"
+    ? event.descriptionEn || event.description
+    : event.description;
+}
 
 function loadSelection() {
   try {
@@ -91,30 +261,30 @@ async function postOwnSelection(name) {
 
 async function syncWithClub() {
   if (!SHEET_API_URL) {
-    setSyncStatus("Sync noch nicht eingerichtet (siehe README.md).");
+    setSyncStatus(t("syncNotConfigured"));
     return;
   }
 
   const nameInput = document.getElementById("user-name");
   const name = nameInput.value.trim();
   if (!name) {
-    setSyncStatus("Bitte zuerst deinen Namen eingeben.");
+    setSyncStatus(t("syncEnterName"));
     return;
   }
   saveUserName(name);
 
-  setSyncStatus("Synchronisiere …");
+  setSyncStatus(t("syncing"));
   try {
     await postOwnSelection(name);
     clubSelectionsByEvent = await fetchClubSelections();
     populateCalendarViewerSelect();
     refresh();
     setSyncStatus(
-      `Synchronisiert um ${new Date().toLocaleTimeString("de-DE")}`
+      t("syncedAt", { time: new Date().toLocaleTimeString(localeTag()) })
     );
   } catch (err) {
     console.error(err);
-    setSyncStatus("Sync fehlgeschlagen. Details in der Konsole.");
+    setSyncStatus(t("syncFailed"));
   }
 }
 
@@ -137,13 +307,18 @@ function uniqueSorted(values) {
 // (+ ausgeschriebene Namen), Speaker:innen (Name, Rolle, Organisation) und
 // "Veranstaltet von". Ein Suchbegriff muss nur in EINEM der Felder vorkommen.
 function eventSearchText(event) {
-  const trackNames = event.trackTags.map((t) => TRACK_LEGEND[t] || "");
+  const trackNames = event.trackTags.flatMap((tag) => [
+    TRACK_LEGEND.de[tag] || "",
+    TRACK_LEGEND.en[tag] || "",
+  ]);
   const speakerText = event.speakers
     .flatMap((s) => [s.name, s.role, s.organization])
     .filter(Boolean);
   return [
     event.title,
+    event.titleEn,
     event.description,
+    event.descriptionEn,
     event.location,
     event.format,
     event.language,
@@ -181,14 +356,14 @@ function refresh() {
 
 function formatDay(isoDate) {
   const date = new Date(`${isoDate}T00:00:00`);
-  return DAY_FORMATTER.format(date);
+  return dayFormatter().format(date);
 }
 
 function eventTimeLabel(event) {
   if (event.startTime && event.endTime) {
     return `${event.startTime}–${event.endTime}`;
   }
-  return "Zeit unbekannt";
+  return t("timeUnknown");
 }
 
 function groupByDay(events) {
@@ -231,7 +406,7 @@ function renderEventCard(event) {
 
   const title = document.createElement("h3");
   title.className = "event-title";
-  title.textContent = event.title;
+  title.textContent = eventTitle(event);
   card.appendChild(title);
 
   const meta = document.createElement("div");
@@ -247,7 +422,7 @@ function renderEventCard(event) {
       const badge = document.createElement("span");
       badge.className = "tag";
       badge.textContent = tag;
-      if (TRACK_LEGEND[tag]) badge.title = TRACK_LEGEND[tag];
+      if (TRACK_LEGEND[currentLang][tag]) badge.title = TRACK_LEGEND[currentLang][tag];
       tags.appendChild(badge);
     }
     if (event.format) {
@@ -259,18 +434,19 @@ function renderEventCard(event) {
     card.appendChild(tags);
   }
 
-  if (event.description) {
-    const description = document.createElement("p");
-    description.className = "event-description";
-    description.textContent = event.description;
-    card.appendChild(description);
+  const description = eventDescription(event);
+  if (description) {
+    const descriptionEl = document.createElement("p");
+    descriptionEl.className = "event-description";
+    descriptionEl.textContent = description;
+    card.appendChild(descriptionEl);
   }
 
   if (event.speakers.length > 0) {
     const speakers = document.createElement("p");
     speakers.className = "event-speakers";
     const label = document.createElement("strong");
-    label.textContent = "Speaker:innen: ";
+    label.textContent = t("speakersLabel");
     speakers.appendChild(label);
     speakers.append(
       event.speakers
@@ -285,7 +461,7 @@ function renderEventCard(event) {
     const hosted = document.createElement("p");
     hosted.className = "event-speakers";
     const label = document.createElement("strong");
-    label.textContent = "Veranstaltet von: ";
+    label.textContent = t("hostedByLabel");
     hosted.appendChild(label);
     hosted.append(event.hostedBy);
     card.appendChild(hosted);
@@ -295,7 +471,7 @@ function renderEventCard(event) {
   if (clubNames && clubNames.size > 0) {
     const clubInfo = document.createElement("p");
     clubInfo.className = "event-club-selections";
-    clubInfo.textContent = `Auch gewählt von: ${[...clubNames].join(", ")}`;
+    clubInfo.textContent = t("alsoSelectedBy", { names: [...clubNames].join(", ") });
     card.appendChild(clubInfo);
   }
 
@@ -311,7 +487,7 @@ function renderEvents(events) {
     section.className = "day-section";
 
     const heading = document.createElement("h2");
-    heading.textContent = day === "unbekannt" ? "Ohne Datum" : formatDay(day);
+    heading.textContent = day === "unbekannt" ? t("noDate") : formatDay(day);
     section.appendChild(heading);
 
     for (const event of dayEvents) {
@@ -330,7 +506,7 @@ function renderSelect(labelText, options, currentValue, onChange) {
   const select = document.createElement("select");
   const allOption = document.createElement("option");
   allOption.value = "all";
-  allOption.textContent = "Alle";
+  allOption.textContent = t("filterAll");
   select.appendChild(allOption);
 
   for (const option of options) {
@@ -355,9 +531,9 @@ function renderFilters(events) {
   const dayOptions = days.map((day) => ({ value: day, label: formatDay(day) }));
   const dayWrapper = document.createElement("label");
   dayWrapper.className = "filter";
-  dayWrapper.append("Tag: ");
+  dayWrapper.append(t("filterDay"));
   const daySelect = document.createElement("select");
-  daySelect.appendChild(new Option("Alle", "all"));
+  daySelect.appendChild(new Option(t("filterAll"), "all"));
   for (const { value, label } of dayOptions) {
     daySelect.appendChild(new Option(label, value));
   }
@@ -370,14 +546,14 @@ function renderFilters(events) {
   container.appendChild(dayWrapper);
 
   container.appendChild(
-    renderSelect("Format", formats, filters.format, (value) => {
+    renderSelect(t("filterFormat"), formats, filters.format, (value) => {
       filters.format = value;
       refresh();
     })
   );
 
   container.appendChild(
-    renderSelect("Sprache", languages, filters.language, (value) => {
+    renderSelect(t("filterLanguage"), languages, filters.language, (value) => {
       filters.language = value;
       refresh();
     })
@@ -385,12 +561,12 @@ function renderFilters(events) {
 
   const trackWrapper = document.createElement("div");
   trackWrapper.className = "filter filter-tracks";
-  trackWrapper.append("Track: ");
+  trackWrapper.append(t("filterTrack"));
   for (const track of tracks) {
     const trackLabel = document.createElement("label");
     trackLabel.className = "track-toggle";
     trackLabel.classList.toggle("checked", filters.tracks.has(track));
-    if (TRACK_LEGEND[track]) trackLabel.title = TRACK_LEGEND[track];
+    if (TRACK_LEGEND[currentLang][track]) trackLabel.title = TRACK_LEGEND[currentLang][track];
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = filters.tracks.has(track);
@@ -408,9 +584,9 @@ function renderFilters(events) {
 
   const legend = document.createElement("p");
   legend.className = "track-legend";
-  legend.textContent = `Kürzel: ${tracks
-    .map((t) => `${t} = ${TRACK_LEGEND[t] || t}`)
-    .join(" · ")}`;
+  legend.textContent =
+    t("legendPrefix") +
+    tracks.map((code) => `${code} = ${TRACK_LEGEND[currentLang][code] || code}`).join(" · ");
   container.appendChild(legend);
 
   const onlySelectedWrapper = document.createElement("label");
@@ -423,7 +599,7 @@ function renderFilters(events) {
     refresh();
   });
   onlySelectedWrapper.appendChild(onlySelectedCheckbox);
-  onlySelectedWrapper.append(" Nur ausgewählte anzeigen");
+  onlySelectedWrapper.append(t("onlySelected"));
   container.appendChild(onlySelectedWrapper);
 }
 
@@ -497,7 +673,7 @@ function eventToVEvent(event, dtstamp) {
     "BEGIN:VEVENT",
     `UID:${event.id}@efa26-planner`,
     `DTSTAMP:${dtstamp}`,
-    `SUMMARY:${escapeIcsText(event.title)}`,
+    `SUMMARY:${escapeIcsText(eventTitle(event))}`,
   ];
 
   if (event.startTime && event.endTime) {
@@ -512,8 +688,8 @@ function eventToVEvent(event, dtstamp) {
   }
 
   if (event.location) lines.push(`LOCATION:${escapeIcsText(event.location)}`);
-  if (event.description)
-    lines.push(`DESCRIPTION:${escapeIcsText(event.description)}`);
+  const description = eventDescription(event);
+  if (description) lines.push(`DESCRIPTION:${escapeIcsText(description)}`);
 
   lines.push("END:VEVENT");
   return lines.map(foldLine).join("\r\n");
@@ -590,7 +766,7 @@ function populateCalendarViewerSelect() {
   const names = [...new Set([...clubSelectionsByEvent.values()].flatMap((s) => [...s]))].sort();
 
   select.innerHTML = "";
-  select.appendChild(new Option("Ich (lokale Auswahl)", ""));
+  select.appendChild(new Option(t("calendarViewerMe"), ""));
   for (const name of names) {
     select.appendChild(new Option(name, name));
   }
@@ -628,7 +804,7 @@ function assignOverlapColumns(events) {
 }
 
 function formatDayShort(isoDate) {
-  return new Intl.DateTimeFormat("de-DE", {
+  return new Intl.DateTimeFormat(localeTag(), {
     weekday: "short",
     day: "numeric",
     month: "numeric",
@@ -641,11 +817,11 @@ function renderCalendarSummary(events) {
     counts.set(e.format || "?", (counts.get(e.format || "?") || 0) + 1);
   }
   const parts = [...counts.entries()].map(([format, n]) => `${n} ${format}`);
-  const who = calendarState.viewingName || "Ich";
+  const who = calendarState.viewingName || t("calendarMe");
   document.getElementById("calendar-summary").textContent =
     events.length > 0
-      ? `${who}: ${events.length} ausgewählt · ${parts.join(" · ")}`
-      : `${who}: noch keine Events in diesem Zeitraum ausgewählt.`;
+      ? t("calendarSummarySelected", { who, count: events.length, parts: parts.join(" · ") })
+      : t("calendarSummaryEmpty", { who });
 }
 
 function renderCalendarRangeLabel(days) {
@@ -665,13 +841,13 @@ function renderCalendarAllDay(events) {
 
   const heading = document.createElement("p");
   heading.className = "calendar-allday-heading";
-  heading.textContent = "Ohne genaue Uhrzeit:";
+  heading.textContent = t("calendarNoTime");
   container.appendChild(heading);
 
   for (const event of noTime) {
     const chip = document.createElement("span");
     chip.className = `calendar-chip tag-format-${(event.format || "").toLowerCase()}`;
-    chip.textContent = `${event.title} (${formatDayShort(event.day)})`;
+    chip.textContent = `${eventTitle(event)} (${formatDayShort(event.day)})`;
     container.appendChild(chip);
   }
 }
@@ -696,13 +872,13 @@ function renderCalendarDayColumn(day, container) {
     block.style.height = `${height}px`;
     block.style.left = `${(col / columnCount) * 100}%`;
     block.style.width = `${100 / columnCount}%`;
-    block.title = `${event.startTime}–${event.endTime} ${event.title}`;
+    block.title = `${event.startTime}–${event.endTime} ${eventTitle(event)}`;
 
     const time = document.createElement("span");
     time.className = "calendar-event-time";
     time.textContent = event.startTime;
     block.appendChild(time);
-    block.append(` ${event.title}`);
+    block.append(` ${eventTitle(event)}`);
 
     column.appendChild(block);
   }
@@ -810,7 +986,7 @@ function switchView(view) {
 
 function updateSelectionCount() {
   const status = document.getElementById("status");
-  status.textContent = `${selection.size} von ${totalEventCount} Events ausgewählt`;
+  status.textContent = t("selectedStatus", { count: selection.size, total: totalEventCount });
 
   document.getElementById("export-ics").disabled = selection.size === 0;
   document.getElementById("clear-selection").disabled = selection.size === 0;
@@ -818,9 +994,7 @@ function updateSelectionCount() {
 
 function clearSelection() {
   if (selection.size === 0) return;
-  const confirmed = confirm(
-    `Wirklich alle ${selection.size} ausgewählten Events entfernen?`
-  );
+  const confirmed = confirm(t("clearConfirm", { count: selection.size }));
   if (!confirmed) return;
 
   selection.clear();
@@ -831,6 +1005,12 @@ function clearSelection() {
 }
 
 async function main() {
+  document.getElementById("lang-de").classList.toggle("active", currentLang === "de");
+  document.getElementById("lang-en").classList.toggle("active", currentLang === "en");
+  applyStaticTranslations();
+  document.getElementById("lang-de").addEventListener("click", () => setLang("de"));
+  document.getElementById("lang-en").addEventListener("click", () => setLang("en"));
+
   const status = document.getElementById("status");
   try {
     const res = await fetch("data/events.json");
@@ -890,21 +1070,21 @@ async function main() {
       .addEventListener("click", syncWithClub);
 
     if (SHEET_API_URL) {
-      setSyncStatus("Lade Club-Auswahl …");
+      setSyncStatus(t("loadingClub"));
       try {
         clubSelectionsByEvent = await fetchClubSelections();
         populateCalendarViewerSelect();
         refresh();
-        setSyncStatus("Club-Auswahl geladen.");
+        setSyncStatus(t("clubLoaded"));
       } catch (err) {
         console.error(err);
-        setSyncStatus("Club-Auswahl konnte nicht geladen werden.");
+        setSyncStatus(t("clubLoadFailed"));
       }
     } else {
-      setSyncStatus("Sync noch nicht eingerichtet (siehe README.md).");
+      setSyncStatus(t("syncNotConfigured"));
     }
   } catch (err) {
-    status.textContent = "Fehler beim Laden der Events. Details in der Konsole.";
+    status.textContent = t("loadEventsFailed");
     console.error(err);
   }
 }

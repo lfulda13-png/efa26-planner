@@ -63,6 +63,10 @@ main {
 }
 
 header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   border-bottom: 4px solid transparent;
@@ -73,6 +77,12 @@ header {
       var(--color-accent-cream)
     )
     1;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 0.4rem;
+  flex-shrink: 0;
 }
 
 header h1 {
@@ -617,6 +627,10 @@ code {
 
   header h1 {
     font-size: 1.9rem;
+  }
+
+  header {
+    flex-wrap: wrap;
   }
 
   .status-bar-actions {
