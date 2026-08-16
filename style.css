@@ -312,6 +312,17 @@ code {
   margin: 0;
 }
 
+.event-speakers {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin: 0.5rem 0 0;
+}
+
+.event-speakers strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
 .event-club-selections {
   font-size: 0.85rem;
   color: var(--color-text-muted);

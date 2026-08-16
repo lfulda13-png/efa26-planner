@@ -163,7 +163,12 @@ function parseProgramHtml(html) {
 
 const HEADER_RE =
   /^(\d{2})\.(\d{2})\.(\d{4}) (\d{2}:\d{2}) - \d{2}\.\d{2}\.\d{4} (\d{2}:\d{2}) \| ([^|]+) \| (.+)$/gm;
-const SPEAKER_LINE_RE = /^[\p{L}][\p{L} .'’-]*,\s[\p{L}][\p{L} .'’-]*:(\s|$)/u;
+// Ein "Namensteil" ist max. 4 durch Leerzeichen getrennte Woerter, keine
+// Punkte darin. Wichtig eng gefasst, sonst matcht das Muster faelschlich auf
+// Beschreibungssaetze wie "..., and the key question is:" (siehe Git-Historie -
+// echter Bug, der einen Beschreibungsfetzen als Speaker-Namen eingelesen hat).
+const NAME_PART = "\\p{L}[\\p{L}'’-]*(?: \\p{L}[\\p{L}'’-]*){0,3}";
+const SPEAKER_LINE_RE = new RegExp(`^${NAME_PART},\\s${NAME_PART}:(\\s|$)`, "u");
 const HOSTED_BY_RE = /^Hosted by:/;
 
 // Titel in der PDF koennen ueber mehrere Zeilen umbrechen, ohne erkennbaren
@@ -205,8 +210,20 @@ function matchTitleLineCount(bodyLines, expectedTitle) {
   return 0;
 }
 
+// "Hosted by: X" steht (falls vorhanden) immer als einzelne Zeile direkt
+// nach dem Titel, vor "Track:" und vor der Beschreibung (in allen
+// Stichproben der PDF verifiziert) - deshalb hier vorab herausgeloest,
+// bevor Track/Beschreibung/Speaker verarbeitet werden. X ist die
+// veranstaltende Gruppe, kein Panelist.
 function splitTrackAndDescription(remainderLines) {
   let idx = 0;
+
+  let hostedBy = null;
+  if (HOSTED_BY_RE.test(remainderLines[idx] || "")) {
+    hostedBy = remainderLines[idx].replace(/^Hosted by:\s*/, "").trim() || null;
+    idx++;
+  }
+
   let trackFull = [];
   if (remainderLines[idx]?.startsWith("Track: ")) {
     trackFull = remainderLines[idx]
@@ -216,19 +233,55 @@ function splitTrackAndDescription(remainderLines) {
       .filter(Boolean);
     idx++;
   }
+
   const descriptionLines = [];
   while (
     idx < remainderLines.length &&
-    !SPEAKER_LINE_RE.test(remainderLines[idx]) &&
-    !HOSTED_BY_RE.test(remainderLines[idx])
+    !SPEAKER_LINE_RE.test(remainderLines[idx])
   ) {
     descriptionLines.push(remainderLines[idx]);
     idx++;
   }
+
   return {
     trackFull,
+    hostedBy,
     description: joinPdfLines(descriptionLines).replace(/\s+/g, " ").trim(),
+    remainder: remainderLines.slice(idx),
   };
+}
+
+// Speaker-Zeilen sehen so aus: "Lastname, Firstname:  Role (Organization)"
+// (Rolle/Organisation koennen ueber mehrere PDF-Zeilen umbrechen, ohne
+// erkennbaren Marker - deshalb wird pro Speaker akkumuliert, bis die naechste
+// Zeile wieder mit einem neuen Speaker-Muster beginnt).
+function parseSpeakersSection(lines) {
+  const speakers = [];
+  let currentBlock = [];
+
+  function flush() {
+    if (currentBlock.length === 0) return;
+    const joined = joinPdfLines(currentBlock).replace(/\s+/g, " ").trim();
+    const match = joined.match(/^([^:]+):\s*(.*)$/);
+    if (match) {
+      const [, rawName, rest] = match;
+      const [last, first] = rawName.split(",").map((s) => s.trim());
+      const name = first ? `${first} ${last}` : last;
+      const orgMatch = rest.match(/^(.*)\(([^)]*)\)\s*$/);
+      const role = (orgMatch ? orgMatch[1] : rest).trim() || null;
+      const organization = orgMatch ? orgMatch[2].trim() || null : null;
+      speakers.push({ name, role, organization });
+    }
+    currentBlock = [];
+  }
+
+  for (const line of lines) {
+    if (SPEAKER_LINE_RE.test(line)) flush();
+    currentBlock.push(line);
+  }
+  flush();
+
+  return speakers;
 }
 
 // Liefert PDF-"Bloecke" (noch nicht in title/track/description zerlegt) -
@@ -343,7 +396,9 @@ function mergeEvents(htmlEvents, pdfBlocks) {
       if (matchedBlock) {
         matchedBlock.used = true;
         const remainder = matchedBlock.bodyLines.slice(titleLineCount);
-        const { trackFull, description } = splitTrackAndDescription(remainder);
+        const { trackFull, description, hostedBy, remainder: speakerLines } =
+          splitTrackAndDescription(remainder);
+        const speakers = parseSpeakersSection(speakerLines);
 
         const trackTags =
           h.trackTags.length > 0 ? h.trackTags : trackCodesFromFullNames(trackFull);
@@ -361,6 +416,8 @@ function mergeEvents(htmlEvents, pdfBlocks) {
           // Deutsche Kurzbeschreibung bevorzugt (Sprachkonsistenz mit dem
           // deutschen Titel), volle PDF-Beschreibung (englisch) nur als Fallback.
           description: h.description || description,
+          speakers,
+          hostedBy,
         });
       } else {
         unmatchedHtml.push(h);
@@ -375,6 +432,8 @@ function mergeEvents(htmlEvents, pdfBlocks) {
           format: h.format,
           language: h.language,
           description: h.description,
+          speakers: [],
+          hostedBy: null,
         });
       }
     }
@@ -382,9 +441,9 @@ function mergeEvents(htmlEvents, pdfBlocks) {
     for (const p of pdfList) {
       if (p.used) continue;
       unmatchedPdf.push(p);
-      const { trackFull, description } = splitTrackAndDescription(
-        p.bodyLines.slice(1)
-      );
+      const { trackFull, description, hostedBy, remainder: speakerLines } =
+        splitTrackAndDescription(p.bodyLines.slice(1));
+      const speakers = parseSpeakersSection(speakerLines);
       const title = p.bodyLines[0];
       events.push({
         id: `${slugify(title)}-${p.isoDay}`,
@@ -397,6 +456,8 @@ function mergeEvents(htmlEvents, pdfBlocks) {
         format: formatFromHeaderType(p.headerType),
         language: null,
         description,
+        speakers,
+        hostedBy,
       });
     }
   }

@@ -223,6 +223,31 @@ function renderEventCard(event) {
     card.appendChild(description);
   }
 
+  if (event.speakers.length > 0) {
+    const speakers = document.createElement("p");
+    speakers.className = "event-speakers";
+    const label = document.createElement("strong");
+    label.textContent = "Speaker:innen: ";
+    speakers.appendChild(label);
+    speakers.append(
+      event.speakers
+        .map((s) => {
+          const details = [s.role, s.organization].filter(Boolean).join(", ");
+          return details ? `${s.name} (${details})` : s.name;
+        })
+        .join(" · ")
+    );
+    card.appendChild(speakers);
+  } else if (event.hostedBy) {
+    const hosted = document.createElement("p");
+    hosted.className = "event-speakers";
+    const label = document.createElement("strong");
+    label.textContent = "Veranstaltet von: ";
+    hosted.appendChild(label);
+    hosted.append(event.hostedBy);
+    card.appendChild(hosted);
+  }
+
   const clubNames = clubSelectionsByEvent.get(event.id);
   if (clubNames && clubNames.size > 0) {
     const clubInfo = document.createElement("p");
