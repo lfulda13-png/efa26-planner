@@ -114,8 +114,18 @@ aus der ersten Seite wiederverwendet).
     eindeutig, keine Zeile über 75 Bytes, Escaping von Kommas/Semikolons
     funktioniert. Noch nicht getestet: tatsächlicher Import in Google/Apple/
     Outlook Kalender (nur Struktur-Validierung, kein echter Import-Test)
-- **Phase 4 — Sync via Google Sheet**: Auswahl der Club-Mitglieder in einem
-  gemeinsamen Google Sheet ablegen/lesen, Übersicht wer was gewählt hat
+- **Phase 4 — Sync via Google Sheet** 🚧 fast fertig, wartet auf Nutzer-Aktion
+  - `google-apps-script/Code.gs` (Backend) + Setup-Anleitung in README.md
+    sind fertig. Nutzer muss das Google Sheet + Apps Script selbst
+    deployen (siehe README.md) - das braucht manuelle Google-
+    Berechtigungsdialoge, die Claude nicht automatisiert bestätigen sollte.
+  - Client-Seite (`app.js`) ist fertig gebaut und getestet (Name-Eingabe,
+    Sync-Button, "Auch gewählt von"-Anzeige, POST als `text/plain` gegen
+    CORS-Preflight-Problem mit Apps Script) - degradiert sauber, solange
+    `SHEET_API_URL` leer ist.
+  - **Letzter Schritt**: Sobald der Nutzer die Web-App-URL aus dem
+    Deployment hat, `SHEET_API_URL` in `app.js` (ganz oben) eintragen,
+    end-to-end testen, committen, pushen.
 - **Phase 5 — Alpbach-Design**: visuelles Feintuning
 - **Phase 6 — optional**: durchsuchbare Liste aller Events & Speaker
   (nutzt `data/speakers.json`, inkl. `bioLink`)
