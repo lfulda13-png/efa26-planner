@@ -83,20 +83,34 @@ aus der ersten Seite wiederverwendet).
 - **Phase 1 — Setup + Daten** ✅ abgeschlossen
   - Projektstruktur, GitHub-Repo, GitHub Pages
   - `scripts/scrape.js` (Node, `cheerio` + `pdf-parse`)
-  - `data/events.json` (314 Einträge, davon 305 mit exakter Uhrzeit)
+  - `data/events.json` (314 Einträge, davon 306 mit exakter Uhrzeit)
   - `data/speakers.json` (385 Einträge)
-- **Phase 2 — Kalender-UI**: Events aus `data/events.json` durchsuch-/filterbar
-  anzeigen (Tag, Track, Format, Sprache), Auswahl treffen und lokal speichern
-  (z. B. `localStorage`)
+- **Phase 2 — Kalender-UI** ✅ abgeschlossen (`app.js`, `index.html`, `style.css`)
+  - Events aus `data/events.json` laden, nach Tag gruppiert anzeigen
+  - Auswahl per Checkbox, persistiert in `localStorage`
+    (Key `efa26-selected-events`, Array von Event-`id`s)
+  - Filter: Tag, Format, Sprache (Dropdowns), Track (Mehrfachauswahl-Checkboxen)
+  - "Nur ausgewählte anzeigen"-Umschalter + Zähler ("X von Y ausgewählt")
+  - Beim Testen im Browser einen echten Datenbug gefunden und gefixt: sehr
+    lange Dauern (mehrtägige Labs) wurden mit deutschem Tausenderpunkt
+    angezeigt ("3.060") und dadurch faelschlich als `language` statt als
+    `durationMinutes` erkannt — jetzt in `scrape.js` korrigiert.
+  - Bekannte Grenze: `durationMinutes` wird zwar geparst, aber (noch) nirgends
+    in der UI angezeigt/genutzt — nur `startTime`/`endTime`. Kein Bug, einfach
+    ungenutztes Feld.
 - **Phase 3 — ICS-Export**: Ausgewählte Events als `.ics`-Datei exportieren
-  (Google/Apple/Outlook-kompatibel)
+  (Google/Apple/Outlook-kompatibel). Naheliegender Einstieg: Button neben dem
+  Auswahl-Zähler in `index.html`/`app.js`, der aus `selection` + `allEvents`
+  eine `.ics`-Datei baut (VEVENT pro Event, `DTSTART`/`DTEND` aus `day` +
+  `startTime`/`endTime`, Events ohne `startTime` müssen behandelt werden —
+  z. B. auslassen oder als ganztägig markieren, mit Nutzer absprechen).
 - **Phase 4 — Sync via Google Sheet**: Auswahl der Club-Mitglieder in einem
   gemeinsamen Google Sheet ablegen/lesen, Übersicht wer was gewählt hat
 - **Phase 5 — Alpbach-Design**: visuelles Feintuning
 - **Phase 6 — optional**: durchsuchbare Liste aller Events & Speaker
   (nutzt `data/speakers.json`, inkl. `bioLink`)
 
-Für die nächste Session reicht: **"mach weiter mit Phase 2"**.
+Für die nächste Session reicht: **"mach weiter mit Phase 3"**.
 
 ## Setup-Hinweise (diese Maschine)
 
