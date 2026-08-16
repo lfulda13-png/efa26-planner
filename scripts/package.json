@@ -1,0 +1,14 @@
+{
+  "name": "efa26-planner-scraper",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scraping-Skripte fuer den EFA26 Planner (nicht Teil der App selbst)",
+  "type": "module",
+  "scripts": {
+    "scrape": "node scrape.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "pdf-parse": "^1.1.1"
+  }
+}

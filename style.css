@@ -1,0 +1,28 @@
+:root {
+  color-scheme: light dark;
+  --max-width: 800px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.5;
+}
+
+header,
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+code {
+  font-family: ui-monospace, Menlo, monospace;
+  background: rgba(127, 127, 127, 0.15);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25em;
+}
