@@ -13,6 +13,15 @@
   </header>
 
   <main>
+    <div class="sync-panel">
+      <label>
+        Dein Name:
+        <input id="user-name" type="text" placeholder="z.B. Anna" />
+      </label>
+      <button id="sync-button" type="button">Mit Club synchronisieren</button>
+      <span id="sync-status"></span>
+    </div>
+
     <div class="status-bar">
       <p id="status">Lade Events …</p>
       <button id="export-ics" type="button" disabled>Auswahl als .ics exportieren</button>

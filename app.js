@@ -1,10 +1,15 @@
 // EFA26 Planner - App-Logik
 //
-// Phase 2: Events aus data/events.json laden, nach Tag gruppiert anzeigen,
-// Auswahl treffen (in localStorage gespeichert). Filter folgen im naechsten
-// Schritt, siehe CLAUDE.md.
+// Events laden/anzeigen/filtern (Phase 2), ICS-Export (Phase 3), Club-Sync
+// via Google Sheet (Phase 4). Siehe CLAUDE.md fuer den Gesamtplan.
+
+// Nach dem Deployment des Google Apps Script (siehe README.md, Abschnitt
+// "Club-Sync einrichten") die Web-App-URL hier eintragen. Leer = Sync
+// deaktiviert, App funktioniert trotzdem normal (nur ohne Club-Abgleich).
+const SHEET_API_URL = "";
 
 const SELECTION_STORAGE_KEY = "efa26-selected-events";
+const USER_NAME_STORAGE_KEY = "efa26-user-name";
 
 const DAY_FORMATTER = new Intl.DateTimeFormat("de-DE", {
   weekday: "long",
@@ -27,6 +32,75 @@ function saveSelection(selection) {
 }
 
 const selection = loadSelection();
+
+// ---------- Club-Sync (Phase 4) ----------
+// clubSelectionsByEvent: Map<eventId, Set<name>> - wer hat welches Event
+// gewaehlt (aus dem letzten Sync geladen, nicht live).
+let clubSelectionsByEvent = new Map();
+
+function loadUserName() {
+  return localStorage.getItem(USER_NAME_STORAGE_KEY) || "";
+}
+
+function saveUserName(name) {
+  localStorage.setItem(USER_NAME_STORAGE_KEY, name);
+}
+
+function setSyncStatus(text) {
+  document.getElementById("sync-status").textContent = text;
+}
+
+async function fetchClubSelections() {
+  const res = await fetch(SHEET_API_URL);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const data = await res.json();
+  const map = new Map();
+  for (const entry of data.selections || []) {
+    if (!map.has(entry.eventId)) map.set(entry.eventId, new Set());
+    map.get(entry.eventId).add(entry.name);
+  }
+  return map;
+}
+
+async function postOwnSelection(name) {
+  // text/plain statt application/json, damit der Browser keinen CORS-
+  // Preflight (OPTIONS) schickt - Apps-Script-Web-Apps beantworten den nicht.
+  const res = await fetch(SHEET_API_URL, {
+    method: "POST",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify({ name, eventIds: [...selection] }),
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return res.json();
+}
+
+async function syncWithClub() {
+  if (!SHEET_API_URL) {
+    setSyncStatus("Sync noch nicht eingerichtet (siehe README.md).");
+    return;
+  }
+
+  const nameInput = document.getElementById("user-name");
+  const name = nameInput.value.trim();
+  if (!name) {
+    setSyncStatus("Bitte zuerst deinen Namen eingeben.");
+    return;
+  }
+  saveUserName(name);
+
+  setSyncStatus("Synchronisiere …");
+  try {
+    await postOwnSelection(name);
+    clubSelectionsByEvent = await fetchClubSelections();
+    refresh();
+    setSyncStatus(
+      `Synchronisiert um ${new Date().toLocaleTimeString("de-DE")}`
+    );
+  } catch (err) {
+    console.error(err);
+    setSyncStatus("Sync fehlgeschlagen. Details in der Konsole.");
+  }
+}
 
 let allEvents = [];
 let totalEventCount = 0;
@@ -146,6 +220,14 @@ function renderEventCard(event) {
     description.className = "event-description";
     description.textContent = event.description;
     card.appendChild(description);
+  }
+
+  const clubNames = clubSelectionsByEvent.get(event.id);
+  if (clubNames && clubNames.size > 0) {
+    const clubInfo = document.createElement("p");
+    clubInfo.className = "event-club-selections";
+    clubInfo.textContent = `Auch gewählt von: ${[...clubNames].join(", ")}`;
+    card.appendChild(clubInfo);
   }
 
   return card;
@@ -415,6 +497,25 @@ async function main() {
       const selectedEvents = allEvents.filter((event) => selection.has(event.id));
       downloadIcsFile("efa26-mein-programm.ics", buildIcs(selectedEvents));
     });
+
+    document.getElementById("user-name").value = loadUserName();
+    document
+      .getElementById("sync-button")
+      .addEventListener("click", syncWithClub);
+
+    if (SHEET_API_URL) {
+      setSyncStatus("Lade Club-Auswahl …");
+      try {
+        clubSelectionsByEvent = await fetchClubSelections();
+        refresh();
+        setSyncStatus("Club-Auswahl geladen.");
+      } catch (err) {
+        console.error(err);
+        setSyncStatus("Club-Auswahl konnte nicht geladen werden.");
+      }
+    } else {
+      setSyncStatus("Sync noch nicht eingerichtet (siehe README.md).");
+    }
   } catch (err) {
     status.textContent = "Fehler beim Laden der Events. Details in der Konsole.";
     console.error(err);

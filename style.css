@@ -27,6 +27,36 @@ code {
   border-radius: 0.25em;
 }
 
+.sync-panel {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(127, 127, 127, 0.2);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.sync-panel input[type="text"] {
+  font: inherit;
+  padding: 0.3em 0.5em;
+}
+
+#sync-button {
+  font: inherit;
+  padding: 0.4em 0.9em;
+  border-radius: 0.4em;
+  border: 1px solid rgba(127, 127, 127, 0.4);
+  background: transparent;
+  cursor: pointer;
+}
+
+#sync-status {
+  opacity: 0.75;
+}
+
 .status-bar {
   display: flex;
   align-items: center;
@@ -151,4 +181,11 @@ code {
   font-size: 0.95rem;
   opacity: 0.9;
   margin: 0;
+}
+
+.event-club-selections {
+  font-size: 0.85rem;
+  opacity: 0.75;
+  margin: 0.5rem 0 0;
+  font-style: italic;
 }
