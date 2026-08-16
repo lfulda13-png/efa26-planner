@@ -501,6 +501,229 @@ function downloadIcsFile(filename, content) {
   URL.revokeObjectURL(url);
 }
 
+// ---------- Kalenderansicht (Phase 6) ----------
+// Zeigt NUR die ausgewaehlten Events als Zeitraster (Tag/Woche), damit man
+// vor dem .ics-Export sieht, wie sich die Auswahl ueber die Tage verteilt.
+
+let conferenceDays = []; // sortierte eindeutige ISO-Tage aus allEvents
+const calendarState = { mode: "day", anchorIndex: 0 };
+
+const CALENDAR_START_HOUR = 6;
+const CALENDAR_END_HOUR = 24;
+const CALENDAR_PX_PER_HOUR = 60;
+
+function timeToMinutes(hhmm) {
+  const [h, m] = hhmm.split(":").map(Number);
+  return h * 60 + m;
+}
+
+function selectedEventsForDay(day) {
+  return allEvents.filter((e) => e.day === day && selection.has(e.id));
+}
+
+// Greedy Spalten-Zuordnung fuer ueberlappende Events (Standard-Ansatz fuer
+// Kalenderraster): sortiert nach Startzeit, jedes Event bekommt die erste
+// Spalte, deren letztes Event schon vorbei ist. Anzahl belegter Spalten an
+// diesem Tag bestimmt die Breite jedes Blocks.
+function assignOverlapColumns(events) {
+  const sorted = [...events].sort(
+    (a, b) => timeToMinutes(a.startTime) - timeToMinutes(b.startTime)
+  );
+  const columnEnds = []; // Ende-Minute des zuletzt plazierten Events je Spalte
+  const placed = [];
+
+  for (const event of sorted) {
+    const start = timeToMinutes(event.startTime);
+    let end = timeToMinutes(event.endTime);
+    if (end <= start) end = CALENDAR_END_HOUR * 60; // Ueber Mitternacht -> am Tagesende kappen
+
+    let col = columnEnds.findIndex((endMin) => endMin <= start);
+    if (col === -1) {
+      col = columnEnds.length;
+      columnEnds.push(end);
+    } else {
+      columnEnds[col] = end;
+    }
+    placed.push({ event, start, end, col });
+  }
+
+  return { placed, columnCount: columnEnds.length || 1 };
+}
+
+function formatDayShort(isoDate) {
+  return new Intl.DateTimeFormat("de-DE", {
+    weekday: "short",
+    day: "numeric",
+    month: "numeric",
+  }).format(new Date(`${isoDate}T00:00:00`));
+}
+
+function renderCalendarSummary(events) {
+  const counts = new Map();
+  for (const e of events) {
+    counts.set(e.format || "?", (counts.get(e.format || "?") || 0) + 1);
+  }
+  const parts = [...counts.entries()].map(([format, n]) => `${n} ${format}`);
+  document.getElementById("calendar-summary").textContent =
+    events.length > 0
+      ? `${events.length} ausgewählt: ${parts.join(" · ")}`
+      : "Noch keine Events in diesem Zeitraum ausgewählt.";
+}
+
+function renderCalendarRangeLabel(days) {
+  const label = document.getElementById("calendar-range-label");
+  if (days.length === 1) {
+    label.textContent = formatDay(days[0]);
+  } else {
+    label.textContent = `${formatDayShort(days[0])} – ${formatDayShort(days[days.length - 1])}`;
+  }
+}
+
+function renderCalendarAllDay(events) {
+  const container = document.getElementById("calendar-allday");
+  container.innerHTML = "";
+  const noTime = events.filter((e) => !e.startTime);
+  if (noTime.length === 0) return;
+
+  const heading = document.createElement("p");
+  heading.className = "calendar-allday-heading";
+  heading.textContent = "Ohne genaue Uhrzeit:";
+  container.appendChild(heading);
+
+  for (const event of noTime) {
+    const chip = document.createElement("span");
+    chip.className = `calendar-chip tag-format-${(event.format || "").toLowerCase()}`;
+    chip.textContent = `${event.title} (${formatDayShort(event.day)})`;
+    container.appendChild(chip);
+  }
+}
+
+function renderCalendarDayColumn(day, container) {
+  const dayEvents = selectedEventsForDay(day).filter((e) => e.startTime);
+  const { placed, columnCount } = assignOverlapColumns(dayEvents);
+
+  const column = document.createElement("div");
+  column.className = "calendar-day-column";
+  column.style.height = `${(CALENDAR_END_HOUR - CALENDAR_START_HOUR) * CALENDAR_PX_PER_HOUR}px`;
+
+  for (const { event, start, end, col } of placed) {
+    const top = ((start - CALENDAR_START_HOUR * 60) / 60) * CALENDAR_PX_PER_HOUR;
+    const height = Math.max(
+      ((end - start) / 60) * CALENDAR_PX_PER_HOUR,
+      18
+    );
+    const block = document.createElement("div");
+    block.className = `calendar-event tag-format-${(event.format || "").toLowerCase()}`;
+    block.style.top = `${top}px`;
+    block.style.height = `${height}px`;
+    block.style.left = `${(col / columnCount) * 100}%`;
+    block.style.width = `${100 / columnCount}%`;
+    block.title = `${event.startTime}–${event.endTime} ${event.title}`;
+
+    const time = document.createElement("span");
+    time.className = "calendar-event-time";
+    time.textContent = event.startTime;
+    block.appendChild(time);
+    block.append(` ${event.title}`);
+
+    column.appendChild(block);
+  }
+
+  container.appendChild(column);
+}
+
+function renderCalendarHourLabels(container) {
+  const labels = document.createElement("div");
+  labels.className = "calendar-hour-labels";
+  labels.style.height = `${(CALENDAR_END_HOUR - CALENDAR_START_HOUR) * CALENDAR_PX_PER_HOUR}px`;
+  for (let h = CALENDAR_START_HOUR; h < CALENDAR_END_HOUR; h++) {
+    const label = document.createElement("div");
+    label.className = "calendar-hour-label";
+    label.style.height = `${CALENDAR_PX_PER_HOUR}px`;
+    label.textContent = `${String(h).padStart(2, "0")}:00`;
+    labels.appendChild(label);
+  }
+  container.appendChild(labels);
+}
+
+function currentCalendarDays() {
+  if (conferenceDays.length === 0) return [];
+  if (calendarState.mode === "day") {
+    return [conferenceDays[calendarState.anchorIndex]];
+  }
+  return conferenceDays.slice(calendarState.anchorIndex, calendarState.anchorIndex + 7);
+}
+
+function renderCalendar() {
+  const days = currentCalendarDays();
+  if (days.length === 0) return;
+
+  const allSelected = days.flatMap((d) => selectedEventsForDay(d));
+  renderCalendarRangeLabel(days);
+  renderCalendarSummary(allSelected);
+  renderCalendarAllDay(allSelected);
+
+  const grid = document.getElementById("calendar-grid");
+  grid.innerHTML = "";
+  grid.className = calendarState.mode === "day" ? "calendar-grid-day" : "calendar-grid-week";
+
+  renderCalendarHourLabels(grid);
+
+  if (calendarState.mode === "week") {
+    const headerRow = document.createElement("div");
+    headerRow.className = "calendar-week-headers";
+    const spacer = document.createElement("div");
+    headerRow.appendChild(spacer);
+    for (const day of days) {
+      const h = document.createElement("div");
+      h.className = "calendar-week-header";
+      h.textContent = formatDayShort(day);
+      headerRow.appendChild(h);
+    }
+    grid.appendChild(headerRow);
+  }
+
+  const columnsWrapper = document.createElement("div");
+  columnsWrapper.className = "calendar-columns";
+  for (const day of days) {
+    renderCalendarDayColumn(day, columnsWrapper);
+  }
+  grid.appendChild(columnsWrapper);
+
+  document.getElementById("calendar-prev").disabled = calendarState.anchorIndex <= 0;
+  const step = calendarState.mode === "day" ? 1 : 7;
+  document.getElementById("calendar-next").disabled =
+    calendarState.anchorIndex + step >= conferenceDays.length;
+}
+
+function setCalendarMode(mode) {
+  calendarState.mode = mode;
+  document
+    .getElementById("calendar-mode-day")
+    .classList.toggle("active", mode === "day");
+  document
+    .getElementById("calendar-mode-week")
+    .classList.toggle("active", mode === "week");
+  renderCalendar();
+}
+
+function moveCalendar(delta) {
+  const step = calendarState.mode === "day" ? delta : delta * 7;
+  const next = calendarState.anchorIndex + step;
+  calendarState.anchorIndex = Math.max(0, Math.min(next, conferenceDays.length - 1));
+  renderCalendar();
+}
+
+function switchView(view) {
+  document.getElementById("list-view").hidden = view !== "list";
+  document.getElementById("calendar-view").hidden = view !== "calendar";
+  document.getElementById("view-list").classList.toggle("active", view === "list");
+  document
+    .getElementById("view-calendar")
+    .classList.toggle("active", view === "calendar");
+  if (view === "calendar") renderCalendar();
+}
+
 function updateSelectionCount() {
   const status = document.getElementById("status");
   status.textContent = `${selection.size} von ${totalEventCount} Events ausgewählt`;
@@ -517,9 +740,23 @@ async function main() {
     const events = await res.json();
     allEvents = events;
     totalEventCount = events.length;
+    conferenceDays = [...new Set(events.map((e) => e.day))].sort();
     renderFilters(events);
     refresh();
     updateSelectionCount();
+
+    document.getElementById("view-list").addEventListener("click", () => switchView("list"));
+    document
+      .getElementById("view-calendar")
+      .addEventListener("click", () => switchView("calendar"));
+    document
+      .getElementById("calendar-mode-day")
+      .addEventListener("click", () => setCalendarMode("day"));
+    document
+      .getElementById("calendar-mode-week")
+      .addEventListener("click", () => setCalendarMode("week"));
+    document.getElementById("calendar-prev").addEventListener("click", () => moveCalendar(-1));
+    document.getElementById("calendar-next").addEventListener("click", () => moveCalendar(1));
 
     document.getElementById("export-ics").addEventListener("click", () => {
       const selectedEvents = allEvents.filter((event) => selection.has(event.id));

@@ -32,8 +32,41 @@
       <p id="status">Lade Events …</p>
       <button id="export-ics" type="button" disabled>Auswahl als .ics exportieren</button>
     </div>
-    <div id="filters" class="filters"></div>
-    <div id="events"></div>
+
+    <div class="view-switch">
+      <button id="view-list" type="button" class="view-switch-btn active">
+        Alle Events
+      </button>
+      <button id="view-calendar" type="button" class="view-switch-btn">
+        Meine Auswahl (Kalender)
+      </button>
+    </div>
+
+    <div id="list-view">
+      <div id="filters" class="filters"></div>
+      <div id="events"></div>
+    </div>
+
+    <div id="calendar-view" hidden>
+      <div class="calendar-toolbar">
+        <div class="calendar-nav">
+          <button id="calendar-prev" type="button" aria-label="Zurück">←</button>
+          <h2 id="calendar-range-label"></h2>
+          <button id="calendar-next" type="button" aria-label="Weiter">→</button>
+        </div>
+        <div class="calendar-mode-switch">
+          <button id="calendar-mode-day" type="button" class="view-switch-btn active">
+            Tag
+          </button>
+          <button id="calendar-mode-week" type="button" class="view-switch-btn">
+            Woche
+          </button>
+        </div>
+      </div>
+      <p id="calendar-summary"></p>
+      <div id="calendar-allday"></div>
+      <div id="calendar-grid"></div>
+    </div>
   </main>
 
   <script src="app.js"></script>
