@@ -38,8 +38,22 @@ code {
 }
 
 .event-card {
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(127, 127, 127, 0.15);
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border: 1px solid rgba(127, 127, 127, 0.15);
+  border-radius: 0.5rem;
+}
+
+.event-card.selected {
+  border-color: rgb(80, 140, 255);
+  background: rgba(80, 140, 255, 0.08);
+}
+
+.event-select {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
 }
 
 .event-time {

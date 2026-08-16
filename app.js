@@ -1,14 +1,32 @@
 // EFA26 Planner - App-Logik
 //
-// Phase 2, Schritt 1: Events aus data/events.json laden und nach Tag
-// gruppiert anzeigen. Noch ohne Auswahl/Filter (folgt in den naechsten
-// Schritten, siehe CLAUDE.md).
+// Phase 2: Events aus data/events.json laden, nach Tag gruppiert anzeigen,
+// Auswahl treffen (in localStorage gespeichert). Filter folgen im naechsten
+// Schritt, siehe CLAUDE.md.
+
+const SELECTION_STORAGE_KEY = "efa26-selected-events";
 
 const DAY_FORMATTER = new Intl.DateTimeFormat("de-DE", {
   weekday: "long",
   day: "numeric",
   month: "long",
 });
+
+function loadSelection() {
+  try {
+    const raw = localStorage.getItem(SELECTION_STORAGE_KEY);
+    return new Set(raw ? JSON.parse(raw) : []);
+  } catch (err) {
+    console.error("Auswahl konnte nicht geladen werden:", err);
+    return new Set();
+  }
+}
+
+function saveSelection(selection) {
+  localStorage.setItem(SELECTION_STORAGE_KEY, JSON.stringify([...selection]));
+}
+
+const selection = loadSelection();
 
 function formatDay(isoDate) {
   const date = new Date(`${isoDate}T00:00:00`);
@@ -35,11 +53,29 @@ function groupByDay(events) {
 function renderEventCard(event) {
   const card = document.createElement("article");
   card.className = "event-card";
+  card.classList.toggle("selected", selection.has(event.id));
 
-  const time = document.createElement("div");
+  const label = document.createElement("label");
+  label.className = "event-select";
+
+  const checkbox = document.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = selection.has(event.id);
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) selection.add(event.id);
+    else selection.delete(event.id);
+    saveSelection(selection);
+    card.classList.toggle("selected", checkbox.checked);
+    updateSelectionCount();
+  });
+  label.appendChild(checkbox);
+
+  const time = document.createElement("span");
   time.className = "event-time";
   time.textContent = eventTimeLabel(event);
-  card.appendChild(time);
+  label.appendChild(time);
+
+  card.appendChild(label);
 
   const title = document.createElement("h3");
   title.className = "event-title";
@@ -100,14 +136,22 @@ function renderEvents(events) {
   }
 }
 
+function updateSelectionCount() {
+  const status = document.getElementById("status");
+  status.textContent = `${selection.size} von ${totalEventCount} Events ausgewählt`;
+}
+
+let totalEventCount = 0;
+
 async function main() {
   const status = document.getElementById("status");
   try {
     const res = await fetch("data/events.json");
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const events = await res.json();
-    status.textContent = `${events.length} Events geladen`;
+    totalEventCount = events.length;
     renderEvents(events);
+    updateSelectionCount();
   } catch (err) {
     status.textContent = "Fehler beim Laden der Events. Details in der Konsole.";
     console.error(err);
