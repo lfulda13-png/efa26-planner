@@ -321,12 +321,14 @@ function renderFilters(events) {
   for (const track of tracks) {
     const trackLabel = document.createElement("label");
     trackLabel.className = "track-toggle";
+    trackLabel.classList.toggle("checked", filters.tracks.has(track));
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = filters.tracks.has(track);
     checkbox.addEventListener("change", () => {
       if (checkbox.checked) filters.tracks.add(track);
       else filters.tracks.delete(track);
+      trackLabel.classList.toggle("checked", checkbox.checked);
       refresh();
     });
     trackLabel.appendChild(checkbox);
