@@ -107,6 +107,7 @@ async function syncWithClub() {
   try {
     await postOwnSelection(name);
     clubSelectionsByEvent = await fetchClubSelections();
+    populateCalendarViewerSelect();
     refresh();
     setSyncStatus(
       `Synchronisiert um ${new Date().toLocaleTimeString("de-DE")}`
@@ -556,7 +557,9 @@ function downloadIcsFile(filename, content) {
 // vor dem .ics-Export sieht, wie sich die Auswahl ueber die Tage verteilt.
 
 let conferenceDays = []; // sortierte eindeutige ISO-Tage aus allEvents
-const calendarState = { mode: "day", anchorIndex: 0 };
+// viewingName: null = eigene lokale Auswahl im Kalender zeigen, sonst Name
+// einer/eines synchronisierten Club-Mitglieds (siehe Kalender-Viewer-Select).
+const calendarState = { mode: "day", anchorIndex: 0, viewingName: null };
 
 const CALENDAR_START_HOUR = 6;
 const CALENDAR_END_HOUR = 24;
@@ -567,8 +570,32 @@ function timeToMinutes(hhmm) {
   return h * 60 + m;
 }
 
+function eventIdsForViewer(name) {
+  if (!name) return selection;
+  const ids = new Set();
+  for (const [eventId, names] of clubSelectionsByEvent) {
+    if (names.has(name)) ids.add(eventId);
+  }
+  return ids;
+}
+
 function selectedEventsForDay(day) {
-  return allEvents.filter((e) => e.day === day && selection.has(e.id));
+  const ids = eventIdsForViewer(calendarState.viewingName);
+  return allEvents.filter((e) => e.day === day && ids.has(e.id));
+}
+
+function populateCalendarViewerSelect() {
+  const select = document.getElementById("calendar-viewer-select");
+  const previousValue = select.value;
+  const names = [...new Set([...clubSelectionsByEvent.values()].flatMap((s) => [...s]))].sort();
+
+  select.innerHTML = "";
+  select.appendChild(new Option("Ich (lokale Auswahl)", ""));
+  for (const name of names) {
+    select.appendChild(new Option(name, name));
+  }
+  select.value = names.includes(previousValue) ? previousValue : "";
+  calendarState.viewingName = select.value || null;
 }
 
 // Greedy Spalten-Zuordnung fuer ueberlappende Events (Standard-Ansatz fuer
@@ -614,10 +641,11 @@ function renderCalendarSummary(events) {
     counts.set(e.format || "?", (counts.get(e.format || "?") || 0) + 1);
   }
   const parts = [...counts.entries()].map(([format, n]) => `${n} ${format}`);
+  const who = calendarState.viewingName || "Ich";
   document.getElementById("calendar-summary").textContent =
     events.length > 0
-      ? `${events.length} ausgewählt: ${parts.join(" · ")}`
-      : "Noch keine Events in diesem Zeitraum ausgewählt.";
+      ? `${who}: ${events.length} ausgewählt · ${parts.join(" · ")}`
+      : `${who}: noch keine Events in diesem Zeitraum ausgewählt.`;
 }
 
 function renderCalendarRangeLabel(days) {
@@ -784,8 +812,22 @@ function updateSelectionCount() {
   const status = document.getElementById("status");
   status.textContent = `${selection.size} von ${totalEventCount} Events ausgewählt`;
 
-  const exportButton = document.getElementById("export-ics");
-  exportButton.disabled = selection.size === 0;
+  document.getElementById("export-ics").disabled = selection.size === 0;
+  document.getElementById("clear-selection").disabled = selection.size === 0;
+}
+
+function clearSelection() {
+  if (selection.size === 0) return;
+  const confirmed = confirm(
+    `Wirklich alle ${selection.size} ausgewählten Events entfernen?`
+  );
+  if (!confirmed) return;
+
+  selection.clear();
+  saveSelection(selection);
+  refresh();
+  updateSelectionCount();
+  if (!document.getElementById("calendar-view").hidden) renderCalendar();
 }
 
 async function main() {
@@ -806,6 +848,18 @@ async function main() {
       refresh();
     });
 
+    function goHome() {
+      switchView("list");
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+    document.getElementById("home-link").addEventListener("click", goHome);
+    document.getElementById("home-link").addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        goHome();
+      }
+    });
+
     document.getElementById("view-list").addEventListener("click", () => switchView("list"));
     document
       .getElementById("view-calendar")
@@ -818,11 +872,17 @@ async function main() {
       .addEventListener("click", () => setCalendarMode("week"));
     document.getElementById("calendar-prev").addEventListener("click", () => moveCalendar(-1));
     document.getElementById("calendar-next").addEventListener("click", () => moveCalendar(1));
+    document.getElementById("calendar-viewer-select").addEventListener("change", (e) => {
+      calendarState.viewingName = e.target.value || null;
+      renderCalendar();
+    });
 
     document.getElementById("export-ics").addEventListener("click", () => {
       const selectedEvents = allEvents.filter((event) => selection.has(event.id));
       downloadIcsFile("efa26-mein-programm.ics", buildIcs(selectedEvents));
     });
+
+    document.getElementById("clear-selection").addEventListener("click", clearSelection);
 
     document.getElementById("user-name").value = loadUserName();
     document
@@ -833,6 +893,7 @@ async function main() {
       setSyncStatus("Lade Club-Auswahl …");
       try {
         clubSelectionsByEvent = await fetchClubSelections();
+        populateCalendarViewerSelect();
         refresh();
         setSyncStatus("Club-Auswahl geladen.");
       } catch (err) {

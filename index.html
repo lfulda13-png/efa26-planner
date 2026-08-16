@@ -14,7 +14,7 @@
 </head>
 <body>
   <header>
-    <h1>EFA26 Planner</h1>
+    <h1 id="home-link" role="button" tabindex="0">EFA26 Planner</h1>
     <p>Kalender-Builder für das European Forum Alpbach 2026</p>
   </header>
 
@@ -30,7 +30,10 @@
 
     <div class="status-bar">
       <p id="status">Lade Events …</p>
-      <button id="export-ics" type="button" disabled>Auswahl als .ics exportieren</button>
+      <div class="status-bar-actions">
+        <button id="clear-selection" type="button" disabled>Auswahl leeren</button>
+        <button id="export-ics" type="button" disabled>Auswahl als .ics exportieren</button>
+      </div>
     </div>
 
     <div class="view-switch">
@@ -69,6 +72,12 @@
           </button>
         </div>
       </div>
+      <label class="calendar-viewer">
+        Kalender von:
+        <select id="calendar-viewer-select">
+          <option value="">Ich (lokale Auswahl)</option>
+        </select>
+      </label>
       <p id="calendar-summary"></p>
       <div id="calendar-allday"></div>
       <div id="calendar-grid"></div>
