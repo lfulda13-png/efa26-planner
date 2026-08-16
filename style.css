@@ -205,12 +205,38 @@ code {
   color: var(--color-text);
 }
 
-.filters {
+#filters-details {
+  margin-top: 1rem;
+}
+
+#filters-details summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 0.3rem 0;
+}
+
+#filters-details summary:hover {
+  color: var(--color-text);
+}
+
+/* Sichtbarkeit explizit selbst steuern statt sich auf die native
+   <details>-Klapplogik zu verlassen (in Tests unzuverlaessig - die
+   eigene Regel gewinnt so oder so per Spezifitaet). */
+#filters-details[open] .filters {
   display: flex;
+}
+
+#filters-details:not([open]) .filters {
+  display: none;
+}
+
+.filters {
   flex-wrap: wrap;
   gap: 1rem 1.5rem;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   padding: 1rem;
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
@@ -492,7 +518,22 @@ code {
   flex-direction: column;
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
+}
+
+.calendar-grid-day {
   overflow: hidden;
+}
+
+/* Wochenansicht: auf schmalen Bildschirmen wuerden 7 Spalten unlesbar
+   schrumpfen - stattdessen bekommt jede Spalte eine Mindestbreite und der
+   Container scrollt horizontal (Kopfzeile + Raster gemeinsam, da beide im
+   selben scrollenden Block liegen). */
+.calendar-grid-week {
+  overflow-x: auto;
+}
+
+.calendar-grid-week .calendar-day-column {
+  min-width: 85px;
 }
 
 /* Stundenachse + Tages-Spalten nebeneinander - in beiden Ansichten gleich,
@@ -524,6 +565,7 @@ code {
 
 .calendar-week-header {
   flex: 1;
+  min-width: 85px;
   text-align: center;
   font-size: 0.8rem;
   font-weight: 600;
@@ -565,4 +607,42 @@ code {
 
 .calendar-event-time {
   font-weight: 700;
+}
+
+/* ---------- Schmale Bildschirme (Handy) ---------- */
+@media (max-width: 480px) {
+  body {
+    padding: 1.25rem 0.75rem;
+  }
+
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  .status-bar-actions {
+    width: 100%;
+  }
+
+  .status-bar-actions button {
+    flex: 1;
+  }
+
+  .calendar-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .calendar-nav h2 {
+    min-width: 0;
+    font-size: 1.05rem;
+  }
+
+  .calendar-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .calendar-mode-switch {
+    justify-content: center;
+  }
 }
