@@ -192,6 +192,13 @@ code {
   gap: 0.5rem;
 }
 
+.track-legend {
+  flex-basis: 100%;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin: 0.25rem 0 0;
+}
+
 .track-toggle {
   display: inline-flex;
   align-items: center;

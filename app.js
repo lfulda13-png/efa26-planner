@@ -12,6 +12,20 @@ const SHEET_API_URL =
 const SELECTION_STORAGE_KEY = "efa26-selected-events";
 const USER_NAME_STORAGE_KEY = "efa26-user-name";
 
+// Ausgeschriebene Namen fuer die Track-Kuerzel (aus scripts/scrape.js
+// TRACK_CODE_BY_NAME uebernommen, dort aus den echten PDF-"Track:"-Zeilen
+// abgeleitet - keine Vermutung). Fuer Tooltips + die Legende in den Filtern.
+const TRACK_LEGEND = {
+  ART: "Kunst",
+  CLI: "Klima",
+  DEM: "Demokratie",
+  FIN: "Finanzen",
+  LAB: "Lab",
+  SEC: "Sicherheit",
+  SEM: "Seminar",
+  STU: "Studio",
+};
+
 const DAY_FORMATTER = new Intl.DateTimeFormat("de-DE", {
   weekday: "long",
   day: "numeric",
@@ -205,6 +219,7 @@ function renderEventCard(event) {
       const badge = document.createElement("span");
       badge.className = "tag";
       badge.textContent = tag;
+      if (TRACK_LEGEND[tag]) badge.title = TRACK_LEGEND[tag];
       tags.appendChild(badge);
     }
     if (event.format) {
@@ -347,6 +362,7 @@ function renderFilters(events) {
     const trackLabel = document.createElement("label");
     trackLabel.className = "track-toggle";
     trackLabel.classList.toggle("checked", filters.tracks.has(track));
+    if (TRACK_LEGEND[track]) trackLabel.title = TRACK_LEGEND[track];
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.checked = filters.tracks.has(track);
@@ -361,6 +377,13 @@ function renderFilters(events) {
     trackWrapper.appendChild(trackLabel);
   }
   container.appendChild(trackWrapper);
+
+  const legend = document.createElement("p");
+  legend.className = "track-legend";
+  legend.textContent = `Kürzel: ${tracks
+    .map((t) => `${t} = ${TRACK_LEGEND[t] || t}`)
+    .join(" · ")}`;
+  container.appendChild(legend);
 
   const onlySelectedWrapper = document.createElement("label");
   onlySelectedWrapper.className = "filter";
