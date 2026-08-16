@@ -21,7 +21,11 @@ committen, lieber nachfragen als raten.
   "trackTags": ["ART", "CLI", "DEM", "FIN", "SEC"], // Kurzcodes, siehe unten
   "format": "Content",                        // "Content" | "Rituals" | "Network"
   "language": "English",                      // Sprache der Session (nicht der UI)
-  "description": "..."                        // Deutsch bevorzugt, sonst PDF-Fallback (englisch)
+  "description": "...",                       // Deutsch bevorzugt, sonst PDF-Fallback (englisch)
+  "speakers": [                               // Panelist:innen, aus der PDF extrahiert (kann leer sein)
+    { "name": "Othmar Karas", "role": "President", "organization": "European Forum Alpbach" }
+  ],
+  "hostedBy": null                            // Veranstaltende Gruppe bei Happenings/Ritualen (statt speakers), sonst null
 }
 ```
 
@@ -143,30 +147,43 @@ aus der ersten Seite wiederverwendet).
     Akzentfarben, Track-Tags Schwarz/Weiss wie im Original, Auswahl-
     Highlight in Salbeigruen, grosse fette Ueberschriften, Track-Filter als
     Pill-Buttons
-  - **Unverifiziertes Detail:** Die Pill-Faerbung beim Anklicken eines
-    Track-Filters (`.track-toggle.checked` in `style.css`) konnte in der
-    Browser-Automatisierung nicht per Screenshot/`getComputedStyle`
-    bestaetigt werden - das Test-Browserfenster war waehrend der Session
-    laut `document.hidden` durchgehend "hidden" (Chrome drosselt
-    Style-Neuberechnung fuer nicht sichtbare Fenster). Mehrfach isoliert
-    nachgewiesen, dass die JS-Logik korrekt ist (Klasse wird zuverlaessig
-    gesetzt, `checkbox.checked` stimmt) und dass sogar direktes
-    `element.style.backgroundColor` nicht in `getComputedStyle` auftauchte
-    - also eindeutig ein Artefakt der Testumgebung, kein Code-Fehler. Falls
-    die Pills beim Klicken in einer echten Session doch nicht schwarz/weiss
-    umfaerben: `.track-toggle.checked` in `style.css` pruefen.
-- **Phase 6 — optional**: durchsuchbare Liste aller Events & Speaker
-  (nutzt `data/speakers.json`, inkl. `bioLink`)
-  - **Bekannte Lücke (bewusst hierher verschoben, 2026-08-16):**
-    `data/events.json` enthält aktuell KEINE Panelisten/Speaker pro Event.
-    Die PDF hat diese Infos pro Session (Name, Rolle, Organisation), aber
-    `scrape.js` wirft sie aktuell weg (Speaker-Zeilen dienen nur als Signal
-    "hier endet die Beschreibung", siehe `splitTrackAndDescription`). Für
-    Phase 6: Scraper erweitern um ein `speakers`-Array pro Event (aus der
-    PDF extrahieren, ggf. mit `data/speakers.json` über den Namen matchen
-    für `bioLink`), dann in der Event-Karte in `app.js` anzeigen.
+  - Track-Filter-Pill-Faerbung vom Nutzer im echten Browser bestaetigt
+    (die Test-Umgebung konnte es wegen eines `document.hidden`-Render-
+    Throttlings nicht selbst verifizieren, siehe Git-Historie).
+- **Phase 6 — Panelisten pro Event + Kalenderansicht** ✅ abgeschlossen
+  (Nutzer-Prioritaet, "Suche" aus der urspruenglichen Phase-6-Idee bewusst
+  zurueckgestellt fuer spaeter)
+  - `scrape.js` extrahiert jetzt `speakers` (Name/Rolle/Organisation) und
+    `hostedBy` pro Event aus der PDF, angezeigt in der Event-Karte
+    (`app.js`). Zwei echte Bugs beim Verifizieren gefunden+gefixt (falsch
+    positionierte "Hosted by"-Zeile, zu lockeres Speaker-Namen-Muster hat
+    vereinzelt Beschreibungssaetze als Namen eingelesen) - siehe Git-Log
+    Commit "Panelisten pro Event akkurat extrahieren". Gegen den vollen
+    Datensatz verifiziert: 687 Speaker-Eintraege, 0 Anomalien.
+  - **Bewusst NICHT gemacht:** Kein automatischer Abgleich mit
+    `data/speakers.json` fuer `bioLink` pro Event-Speaker - Risiko von
+    Namens-Fehlzuordnungen (z.B. Duplikate ueber mehrere Jahre) wurde
+    hoeher eingeschaetzt als der Nutzen, angesichts der Nutzer-Prioritaet
+    "sehr akkurat". Bei Bedarf spaeter mit vorsichtiger Matching-Strategie
+    nachruesten.
+  - Neue Kalenderansicht (Tag/Woche) fuer die eigene Auswahl, siehe
+    "Ansicht-Umschalter" in `index.html`/`app.js` (Abschnitt "Kalenderansicht
+    (Phase 6)"). Details und bekannte Vereinfachung (Mitternachts-
+    ueberschreitende Events werden am Tagesende gekappt) im Commit
+    "Kalenderansicht (Tag/Woche) fuer die eigene Auswahl".
+  - **Verwandter Bug, noch nicht gefixt:** Derselbe Mitternachts-Fall
+    betrifft auch den ICS-Export (Phase 3) - `buildIcs` geht von
+    gleichem Kalendertag fuer `startTime`/`endTime` aus. Betrifft aktuell
+    nur 1 Event ("European Echoes - Academy Days Abschlussfeier",
+    21:00–01:00). Bei Bedarf fixen: `toIcsDateTimeUtc` muesste erkennen,
+    wenn `endTime < startTime`, und dann `event.day` fuer das Ende um
+    einen Tag verschieben.
+- **Weitere "Gadgets" (nach Nutzer-Ansage besprechen, bevor gebaut wird):**
+  durchsuchbare Liste aller Events & Speaker (Volltextsuche), Speaker-
+  bioLink-Abgleich (siehe oben), Mitternachts-Bug im ICS-Export
 
-Für die nächste Session reicht: **"mach weiter mit Phase 6"**.
+Für die nächste Session: einfach fragen, was als naechstes drankommt -
+es gibt keine feste "Phase 7", siehe "Weitere Gadgets" oben.
 
 ## Setup-Hinweise (diese Maschine)
 
