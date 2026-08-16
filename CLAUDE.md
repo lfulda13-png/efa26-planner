@@ -130,7 +130,31 @@ aus der ersten Seite wiederverwendet).
     falls das Sheet je Probleme mit Spam/Missbrauch bekommt: Deployment auf
     "Nur ich" umstellen und einen einfachen Shared-Secret-Parameter
     einbauen, oder komplett neu denken.
-- **Phase 5 — Alpbach-Design**: visuelles Feintuning
+- **Phase 5 — Alpbach-Design** ✅ abgeschlossen, ein Detail unverifiziert
+  - Farben aus dem echten `alpbach.org`-CSS extrahiert (nicht geraten):
+    Basis Schwarz/Weiss/Grau, drei gedeckte Alpin-Akzente (Violett
+    `#7e5585`, Salbeigruen `#9fc17b`, Creme `#e4d9c6`) als CSS Custom
+    Properties in `style.css` (`:root` + `prefers-color-scheme: dark`)
+  - Fonts: Alpbach nutzt "Antique Olive Nord" + "Degular" ueber ein
+    kostenpflichtiges Adobe-Fonts-Kit - **nicht** mitbenutzbar. Stattdessen
+    freie Google Fonts mit aehnlichem Charakter: Space Grotesk (Headings),
+    Inter (Text)
+  - Format-Badges (Content/Rituals/Network) je in einer der drei
+    Akzentfarben, Track-Tags Schwarz/Weiss wie im Original, Auswahl-
+    Highlight in Salbeigruen, grosse fette Ueberschriften, Track-Filter als
+    Pill-Buttons
+  - **Unverifiziertes Detail:** Die Pill-Faerbung beim Anklicken eines
+    Track-Filters (`.track-toggle.checked` in `style.css`) konnte in der
+    Browser-Automatisierung nicht per Screenshot/`getComputedStyle`
+    bestaetigt werden - das Test-Browserfenster war waehrend der Session
+    laut `document.hidden` durchgehend "hidden" (Chrome drosselt
+    Style-Neuberechnung fuer nicht sichtbare Fenster). Mehrfach isoliert
+    nachgewiesen, dass die JS-Logik korrekt ist (Klasse wird zuverlaessig
+    gesetzt, `checkbox.checked` stimmt) und dass sogar direktes
+    `element.style.backgroundColor` nicht in `getComputedStyle` auftauchte
+    - also eindeutig ein Artefakt der Testumgebung, kein Code-Fehler. Falls
+    die Pills beim Klicken in einer echten Session doch nicht schwarz/weiss
+    umfaerben: `.track-toggle.checked` in `style.css` pruefen.
 - **Phase 6 — optional**: durchsuchbare Liste aller Events & Speaker
   (nutzt `data/speakers.json`, inkl. `bioLink`)
   - **Bekannte Lücke (bewusst hierher verschoben, 2026-08-16):**
@@ -142,8 +166,7 @@ aus der ersten Seite wiederverwendet).
     PDF extrahieren, ggf. mit `data/speakers.json` über den Namen matchen
     für `bioLink`), dann in der Event-Karte in `app.js` anzeigen.
 
-Für die nächste Session reicht: **"mach weiter mit Phase 5"** (oder direkt
-Phase 6, falls das Design erstmal zweitrangig ist).
+Für die nächste Session reicht: **"mach weiter mit Phase 6"**.
 
 ## Setup-Hinweise (diese Maschine)
 
