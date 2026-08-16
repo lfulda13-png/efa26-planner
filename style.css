@@ -1,8 +1,40 @@
+/*
+ * Farbpalette aus dem echten alpbach.org-CSS extrahiert (kein Raten):
+ * ueberwiegend Schwarz/Weiss/Grau, dazu drei gedeckte Alpin-Akzentfarben
+ * (Violett/Salbeigruen/Creme). Fonts sind freie Alternativen zu Alpbachs
+ * kostenpflichtigen Adobe-Fonts (siehe Kommentar weiter unten).
+ */
 :root {
   color-scheme: light dark;
   --max-width: 800px;
   --font-heading: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-bg: #fcfcfc;
+  --color-bg-raised: #ffffff;
+  --color-text: #121212;
+  --color-text-muted: #5a5a5a;
+  --color-border: #e2e2e2;
+
+  --color-ink-bg: #000000;
+  --color-ink-text: #ffffff;
+
+  --color-accent-purple: #7e5585;
+  --color-accent-green: #9fc17b;
+  --color-accent-cream: #e4d9c6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg: #121212;
+    --color-bg-raised: #1c1c1c;
+    --color-text: #f1f1f1;
+    --color-text-muted: #a3a3a3;
+    --color-border: #333333;
+
+    --color-ink-bg: #ffffff;
+    --color-ink-text: #000000;
+  }
 }
 
 * {
@@ -14,6 +46,8 @@ body {
   padding: 2rem 1rem;
   font-family: var(--font-body);
   line-height: 1.5;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 h1,
@@ -28,9 +62,26 @@ main {
   margin: 0 auto;
 }
 
+header {
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 4px solid transparent;
+  border-image: linear-gradient(
+      90deg,
+      var(--color-accent-purple),
+      var(--color-accent-green),
+      var(--color-accent-cream)
+    )
+    1;
+}
+
+header p {
+  color: var(--color-text-muted);
+}
+
 code {
   font-family: ui-monospace, Menlo, monospace;
-  background: rgba(127, 127, 127, 0.15);
+  background: var(--color-border);
   padding: 0.1em 0.35em;
   border-radius: 0.25em;
 }
@@ -42,7 +93,7 @@ code {
   flex-wrap: wrap;
   margin-bottom: 1rem;
   padding: 0.75rem 1rem;
-  border: 1px solid rgba(127, 127, 127, 0.2);
+  border: 1px solid var(--color-border);
   border-radius: 0.5rem;
   font-size: 0.9rem;
 }
@@ -50,19 +101,28 @@ code {
 .sync-panel input[type="text"] {
   font: inherit;
   padding: 0.3em 0.5em;
+  border: 1px solid var(--color-border);
+  border-radius: 0.3em;
+  background: var(--color-bg-raised);
+  color: var(--color-text);
 }
 
 #sync-button {
   font: inherit;
   padding: 0.4em 0.9em;
   border-radius: 0.4em;
-  border: 1px solid rgba(127, 127, 127, 0.4);
+  border: 1px solid var(--color-border);
   background: transparent;
+  color: var(--color-text);
   cursor: pointer;
 }
 
+#sync-button:hover {
+  border-color: var(--color-text-muted);
+}
+
 #sync-status {
-  opacity: 0.75;
+  color: var(--color-text-muted);
 }
 
 .status-bar {
@@ -79,15 +139,21 @@ code {
 
 #export-ics {
   font: inherit;
-  padding: 0.5em 1em;
+  font-weight: 500;
+  padding: 0.5em 1.1em;
   border-radius: 0.4em;
-  border: 1px solid rgba(80, 140, 255, 0.6);
-  background: rgba(80, 140, 255, 0.15);
+  border: 1px solid var(--color-ink-bg);
+  background: var(--color-ink-bg);
+  color: var(--color-ink-text);
   cursor: pointer;
 }
 
+#export-ics:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
 #export-ics:disabled {
-  opacity: 0.5;
+  opacity: 0.4;
   cursor: not-allowed;
 }
 
@@ -98,12 +164,16 @@ code {
   align-items: center;
   margin-top: 1rem;
   padding: 1rem;
-  border: 1px solid rgba(127, 127, 127, 0.2);
+  border: 1px solid var(--color-border);
   border-radius: 0.5rem;
 }
 
 .filter select {
   font: inherit;
+  background: var(--color-bg-raised);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 0.3em;
 }
 
 .filter-tracks {
@@ -126,20 +196,21 @@ code {
 
 .day-section h2 {
   text-transform: capitalize;
-  border-bottom: 1px solid rgba(127, 127, 127, 0.3);
+  border-bottom: 1px solid var(--color-border);
   padding-bottom: 0.5rem;
 }
 
 .event-card {
   padding: 1rem;
   margin: 0.5rem 0;
-  border: 1px solid rgba(127, 127, 127, 0.15);
+  border: 1px solid var(--color-border);
   border-radius: 0.5rem;
+  background: var(--color-bg-raised);
 }
 
 .event-card.selected {
-  border-color: rgb(80, 140, 255);
-  background: rgba(80, 140, 255, 0.08);
+  border-color: var(--color-accent-green);
+  background: color-mix(in srgb, var(--color-accent-green) 12%, var(--color-bg-raised));
 }
 
 .event-select {
@@ -152,7 +223,7 @@ code {
 .event-time {
   font-family: ui-monospace, Menlo, monospace;
   font-size: 0.9rem;
-  opacity: 0.75;
+  color: var(--color-text-muted);
 }
 
 .event-title {
@@ -162,7 +233,7 @@ code {
 
 .event-meta {
   font-size: 0.9rem;
-  opacity: 0.75;
+  color: var(--color-text-muted);
   margin-bottom: 0.5rem;
 }
 
@@ -176,24 +247,37 @@ code {
 .tag {
   font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.15em 0.5em;
+  padding: 0.2em 0.6em;
   border-radius: 999px;
-  background: rgba(127, 127, 127, 0.15);
+  background: var(--color-ink-bg);
+  color: var(--color-ink-text);
 }
 
-.tag-format {
-  background: rgba(80, 140, 255, 0.2);
+.tag-format-rituals {
+  background: var(--color-accent-purple);
+  color: #ffffff;
+}
+
+.tag-format-network {
+  background: var(--color-accent-green);
+  color: #121212;
+}
+
+.tag-format-content {
+  background: var(--color-accent-cream);
+  color: #121212;
 }
 
 .event-description {
   font-size: 0.95rem;
+  color: var(--color-text);
   opacity: 0.9;
   margin: 0;
 }
 
 .event-club-selections {
   font-size: 0.85rem;
-  opacity: 0.75;
+  color: var(--color-text-muted);
   margin: 0.5rem 0 0;
   font-style: italic;
 }

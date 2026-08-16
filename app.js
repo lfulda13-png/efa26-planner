@@ -209,7 +209,7 @@ function renderEventCard(event) {
     }
     if (event.format) {
       const badge = document.createElement("span");
-      badge.className = "tag tag-format";
+      badge.className = `tag tag-format tag-format-${event.format.toLowerCase()}`;
       badge.textContent = event.format;
       tags.appendChild(badge);
     }
