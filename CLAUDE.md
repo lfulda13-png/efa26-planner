@@ -114,18 +114,22 @@ aus der ersten Seite wiederverwendet).
     eindeutig, keine Zeile über 75 Bytes, Escaping von Kommas/Semikolons
     funktioniert. Noch nicht getestet: tatsächlicher Import in Google/Apple/
     Outlook Kalender (nur Struktur-Validierung, kein echter Import-Test)
-- **Phase 4 — Sync via Google Sheet** 🚧 fast fertig, wartet auf Nutzer-Aktion
-  - `google-apps-script/Code.gs` (Backend) + Setup-Anleitung in README.md
-    sind fertig. Nutzer muss das Google Sheet + Apps Script selbst
-    deployen (siehe README.md) - das braucht manuelle Google-
-    Berechtigungsdialoge, die Claude nicht automatisiert bestätigen sollte.
-  - Client-Seite (`app.js`) ist fertig gebaut und getestet (Name-Eingabe,
-    Sync-Button, "Auch gewählt von"-Anzeige, POST als `text/plain` gegen
-    CORS-Preflight-Problem mit Apps Script) - degradiert sauber, solange
-    `SHEET_API_URL` leer ist.
-  - **Letzter Schritt**: Sobald der Nutzer die Web-App-URL aus dem
-    Deployment hat, `SHEET_API_URL` in `app.js` (ganz oben) eintragen,
-    end-to-end testen, committen, pushen.
+- **Phase 4 — Sync via Google Sheet** ✅ abgeschlossen
+  - `google-apps-script/Code.gs` (Backend, an Nutzer-eigenem Google Sheet
+    deployt) + Setup-Anleitung in README.md
+  - `app.js`: Name-Eingabe (localStorage `efa26-user-name`), Sync-Button,
+    "Auch gewählt von"-Anzeige pro Event-Karte. POST als `text/plain` statt
+    `application/json`, um den CORS-Preflight zu vermeiden, den Apps-Script-
+    Web-Apps nicht beantworten.
+  - `SHEET_API_URL` in `app.js` ist gesetzt (echte, deployte Web-App-URL).
+    End-to-end getestet: POST/GET/Ersetzen-Logik gegen das echte Sheet.
+  - **Wichtig zu wissen für später:** Der Endpunkt hat "Wer hat Zugriff:
+    Alle" (kein Login) und die URL steht im öffentlichen Repo - technisch
+    könnte also nicht nur der Club, sondern irgendwer im Internet Zeilen
+    reinschreiben. Für einen Freundeskreis okay (siehe README.md), aber
+    falls das Sheet je Probleme mit Spam/Missbrauch bekommt: Deployment auf
+    "Nur ich" umstellen und einen einfachen Shared-Secret-Parameter
+    einbauen, oder komplett neu denken.
 - **Phase 5 — Alpbach-Design**: visuelles Feintuning
 - **Phase 6 — optional**: durchsuchbare Liste aller Events & Speaker
   (nutzt `data/speakers.json`, inkl. `bioLink`)
@@ -138,7 +142,8 @@ aus der ersten Seite wiederverwendet).
     PDF extrahieren, ggf. mit `data/speakers.json` über den Namen matchen
     für `bioLink`), dann in der Event-Karte in `app.js` anzeigen.
 
-Für die nächste Session reicht: **"mach weiter mit Phase 4"**.
+Für die nächste Session reicht: **"mach weiter mit Phase 5"** (oder direkt
+Phase 6, falls das Design erstmal zweitrangig ist).
 
 ## Setup-Hinweise (diese Maschine)
 
