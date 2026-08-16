@@ -119,6 +119,14 @@ aus der ersten Seite wiederverwendet).
 - **Phase 5 — Alpbach-Design**: visuelles Feintuning
 - **Phase 6 — optional**: durchsuchbare Liste aller Events & Speaker
   (nutzt `data/speakers.json`, inkl. `bioLink`)
+  - **Bekannte Lücke (bewusst hierher verschoben, 2026-08-16):**
+    `data/events.json` enthält aktuell KEINE Panelisten/Speaker pro Event.
+    Die PDF hat diese Infos pro Session (Name, Rolle, Organisation), aber
+    `scrape.js` wirft sie aktuell weg (Speaker-Zeilen dienen nur als Signal
+    "hier endet die Beschreibung", siehe `splitTrackAndDescription`). Für
+    Phase 6: Scraper erweitern um ein `speakers`-Array pro Event (aus der
+    PDF extrahieren, ggf. mit `data/speakers.json` über den Namen matchen
+    für `bioLink`), dann in der Event-Karte in `app.js` anzeigen.
 
 Für die nächste Session reicht: **"mach weiter mit Phase 4"**.
 
