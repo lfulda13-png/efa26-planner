@@ -98,19 +98,29 @@ aus der ersten Seite wiederverwendet).
   - Bekannte Grenze: `durationMinutes` wird zwar geparst, aber (noch) nirgends
     in der UI angezeigt/genutzt — nur `startTime`/`endTime`. Kein Bug, einfach
     ungenutztes Feld.
-- **Phase 3 — ICS-Export**: Ausgewählte Events als `.ics`-Datei exportieren
-  (Google/Apple/Outlook-kompatibel). Naheliegender Einstieg: Button neben dem
-  Auswahl-Zähler in `index.html`/`app.js`, der aus `selection` + `allEvents`
-  eine `.ics`-Datei baut (VEVENT pro Event, `DTSTART`/`DTEND` aus `day` +
-  `startTime`/`endTime`, Events ohne `startTime` müssen behandelt werden —
-  z. B. auslassen oder als ganztägig markieren, mit Nutzer absprechen).
+- **Phase 3 — ICS-Export** ✅ abgeschlossen (`app.js`: `buildIcs`,
+  `downloadIcsFile` + Button `#export-ics` in `index.html`)
+  - Ein VEVENT pro ausgewähltem Event, Download als `efa26-mein-programm.ics`
+  - Zeiten werden als UTC exportiert; Alpbach/Europe-Vienna ist im gesamten
+    Konferenzzeitraum in der Sommerzeit (UTC+2), daher fest verdrahteter
+    Offset (`VIENNA_UTC_OFFSET_HOURS`) statt vollem VTIMEZONE-Block — falls
+    das Projekt mal eine Konferenz über den DST-Wechsel hinweg abbilden
+    müsste, müsste das neu gebaut werden.
+  - Die 8 Events ohne exakte Uhrzeit werden als ganztägige Termine exportiert
+    (DTEND exklusiv = Folgetag), damit sie nicht komplett fehlen
+  - Zeilenfaltung nach RFC 5545 ist byte-basiert (UTF-8), nicht zeichenbasiert
+    — wichtig wegen Umlauten in den deutschen Titeln/Beschreibungen
+  - Getestet: 314 Events durchgeneriert, alle UIDs nach RFC5545-Unfolding
+    eindeutig, keine Zeile über 75 Bytes, Escaping von Kommas/Semikolons
+    funktioniert. Noch nicht getestet: tatsächlicher Import in Google/Apple/
+    Outlook Kalender (nur Struktur-Validierung, kein echter Import-Test)
 - **Phase 4 — Sync via Google Sheet**: Auswahl der Club-Mitglieder in einem
   gemeinsamen Google Sheet ablegen/lesen, Übersicht wer was gewählt hat
 - **Phase 5 — Alpbach-Design**: visuelles Feintuning
 - **Phase 6 — optional**: durchsuchbare Liste aller Events & Speaker
   (nutzt `data/speakers.json`, inkl. `bioLink`)
 
-Für die nächste Session reicht: **"mach weiter mit Phase 3"**.
+Für die nächste Session reicht: **"mach weiter mit Phase 4"**.
 
 ## Setup-Hinweise (diese Maschine)
 
