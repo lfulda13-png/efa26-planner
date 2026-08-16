@@ -27,6 +27,10 @@ code {
   border-radius: 0.25em;
 }
 
+#status {
+  font-weight: 600;
+}
+
 .filters {
   display: flex;
   flex-wrap: wrap;

@@ -30,7 +30,13 @@ const selection = loadSelection();
 
 let allEvents = [];
 let totalEventCount = 0;
-const filters = { day: "all", format: "all", language: "all", tracks: new Set() };
+const filters = {
+  day: "all",
+  format: "all",
+  language: "all",
+  tracks: new Set(),
+  onlySelected: false,
+};
 
 function uniqueSorted(values) {
   return [...new Set(values.filter(Boolean))].sort();
@@ -47,6 +53,7 @@ function applyFilters(events) {
       !event.trackTags.some((tag) => filters.tracks.has(tag))
     )
       return false;
+    if (filters.onlySelected && !selection.has(event.id)) return false;
     return true;
   });
 }
@@ -94,6 +101,7 @@ function renderEventCard(event) {
     saveSelection(selection);
     card.classList.toggle("selected", checkbox.checked);
     updateSelectionCount();
+    if (filters.onlySelected) refresh();
   });
   label.appendChild(checkbox);
 
@@ -243,6 +251,19 @@ function renderFilters(events) {
     trackWrapper.appendChild(trackLabel);
   }
   container.appendChild(trackWrapper);
+
+  const onlySelectedWrapper = document.createElement("label");
+  onlySelectedWrapper.className = "filter";
+  const onlySelectedCheckbox = document.createElement("input");
+  onlySelectedCheckbox.type = "checkbox";
+  onlySelectedCheckbox.checked = filters.onlySelected;
+  onlySelectedCheckbox.addEventListener("change", () => {
+    filters.onlySelected = onlySelectedCheckbox.checked;
+    refresh();
+  });
+  onlySelectedWrapper.appendChild(onlySelectedCheckbox);
+  onlySelectedWrapper.append(" Nur ausgewählte anzeigen");
+  container.appendChild(onlySelectedWrapper);
 }
 
 function updateSelectionCount() {
