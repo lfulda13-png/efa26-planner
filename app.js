@@ -125,13 +125,39 @@ const filters = {
   language: "all",
   tracks: new Set(),
   onlySelected: false,
+  search: "",
 };
 
 function uniqueSorted(values) {
   return [...new Set(values.filter(Boolean))].sort();
 }
 
+// Durchsucht Titel, Beschreibung, Location, Format, Sprache, Track-Kuerzel
+// (+ ausgeschriebene Namen), Speaker:innen (Name, Rolle, Organisation) und
+// "Veranstaltet von". Ein Suchbegriff muss nur in EINEM der Felder vorkommen.
+function eventSearchText(event) {
+  const trackNames = event.trackTags.map((t) => TRACK_LEGEND[t] || "");
+  const speakerText = event.speakers
+    .flatMap((s) => [s.name, s.role, s.organization])
+    .filter(Boolean);
+  return [
+    event.title,
+    event.description,
+    event.location,
+    event.format,
+    event.language,
+    event.hostedBy,
+    ...event.trackTags,
+    ...trackNames,
+    ...speakerText,
+  ]
+    .filter(Boolean)
+    .join(" ␟ ") // Trennzeichen, damit Wortenden nicht versehentlich zusammenlaufen
+    .toLowerCase();
+}
+
 function applyFilters(events) {
+  const query = filters.search.trim().toLowerCase();
   return events.filter((event) => {
     if (filters.day !== "all" && event.day !== filters.day) return false;
     if (filters.format !== "all" && event.format !== filters.format) return false;
@@ -143,6 +169,7 @@ function applyFilters(events) {
     )
       return false;
     if (filters.onlySelected && !selection.has(event.id)) return false;
+    if (query && !eventSearchText(event).includes(query)) return false;
     return true;
   });
 }
@@ -773,6 +800,11 @@ async function main() {
     renderFilters(events);
     refresh();
     updateSelectionCount();
+
+    document.getElementById("search").addEventListener("input", (e) => {
+      filters.search = e.target.value;
+      refresh();
+    });
 
     document.getElementById("view-list").addEventListener("click", () => switchView("list"));
     document
