@@ -14,6 +14,7 @@ committen, lieber nachfragen als raten.
 {
   "id": "welcome-of-scholarship-holders-2",   // Website-URL-Slug (stabil, eindeutig)
   "title": "Begrüßung der Stipendiat:innen",  // Deutsch (von der /de/-Programmseite)
+  "titleEn": "Welcome of Scholarship Holders", // Englisch (Bruecken-Titel/PDF), fuer den Sprachumschalter
   "day": "2026-08-24",                        // ISO-Datum
   "startTime": "18:00",                       // "HH:MM", von der PDF (kann null sein, siehe unten)
   "endTime": "19:30",
@@ -22,6 +23,7 @@ committen, lieber nachfragen als raten.
   "format": "Content",                        // "Content" | "Rituals" | "Network"
   "language": "English",                      // Sprache der Session (nicht der UI)
   "description": "...",                       // Deutsch bevorzugt, sonst PDF-Fallback (englisch)
+  "descriptionEn": "...",                     // Englisch (PDF), fuer den Sprachumschalter
   "speakers": [                               // Panelist:innen, aus der PDF extrahiert (kann leer sein)
     { "name": "Othmar Karas", "role": "President", "organization": "European Forum Alpbach" }
   ],
@@ -209,6 +211,24 @@ aus der ersten Seite wiederverwendet).
     funktioniert, obwohl sie in normalen Browsern Standard ist. Der Fix
     (explizite Sichtbarkeits-Regeln) ist trotzdem strikt besser/robuster,
     unabhaengig von der Ursache - kein Nacharbeiten noetig.
+
+- **Sprachumschalter DE/EN** ✅ abgeschlossen (2026-08-16)
+  - `data/events.json`: `titleEn`/`descriptionEn` pro Event (aus dem
+    bisher nur intern genutzten englischen Bruecken-Titel bzw. der
+    englischen PDF-Beschreibung, die vorher nur als Fallback diente)
+  - `app.js`: `I18N`-Woerterbuch (`de`/`en`) + `t(key, vars)`-Helper fuer
+    alle UI-Texte, `eventTitle()`/`eventDescription()` fuer die
+    sprachabhaengige Event-Anzeige (inkl. ICS-Export), `localeTag()` fuer
+    `Intl.DateTimeFormat` (de-DE/en-GB). Wahl landet in localStorage
+    (`efa26-lang`) und bleibt nach Reload erhalten.
+  - Button oben rechts im Header (`#lang-de`/`#lang-en`)
+  - Track-Kuerzel-Legende zeigt auf Englisch die Original-Woerter (Art,
+    Climate, ...), nicht die deutsche Uebersetzung
+  - Suche durchsucht immer BEIDE Sprachversionen (Titel/Beschreibung DE+EN),
+    unabhaengig von der aktuell angezeigten Sprache
+  - **Neue Events pruefen:** Falls `scrape.js` nochmal laeuft (z.B. bei
+    Programmaenderungen), sind `titleEn`/`descriptionEn` automatisch dabei -
+    kein manueller Schritt noetig, das ist jetzt fester Teil des Datenmodells
 
 - **Weitere "Gadgets" (nach Nutzer-Ansage besprechen, bevor gebaut wird):**
   Speaker-bioLink-Abgleich (siehe oben, bewusst nicht gemacht wegen
