@@ -406,6 +406,7 @@ function mergeEvents(htmlEvents, pdfBlocks) {
         events.push({
           id: h.slug,
           title: h.title,
+          titleEn: h.matchTitle || h.title,
           day: matchedBlock.isoDay,
           startTime: matchedBlock.startTime,
           endTime: matchedBlock.endTime,
@@ -416,6 +417,7 @@ function mergeEvents(htmlEvents, pdfBlocks) {
           // Deutsche Kurzbeschreibung bevorzugt (Sprachkonsistenz mit dem
           // deutschen Titel), volle PDF-Beschreibung (englisch) nur als Fallback.
           description: h.description || description,
+          descriptionEn: description || h.description,
           speakers,
           hostedBy,
         });
@@ -424,6 +426,7 @@ function mergeEvents(htmlEvents, pdfBlocks) {
         events.push({
           id: h.slug,
           title: h.title,
+          titleEn: h.matchTitle || h.title,
           day: h.isoDay,
           startTime: null,
           endTime: null,
@@ -432,6 +435,7 @@ function mergeEvents(htmlEvents, pdfBlocks) {
           format: h.format,
           language: h.language,
           description: h.description,
+          descriptionEn: h.description,
           speakers: [],
           hostedBy: null,
         });
@@ -448,6 +452,7 @@ function mergeEvents(htmlEvents, pdfBlocks) {
       events.push({
         id: `${slugify(title)}-${p.isoDay}`,
         title,
+        titleEn: title,
         day: p.isoDay,
         startTime: p.startTime,
         endTime: p.endTime,
@@ -456,6 +461,7 @@ function mergeEvents(htmlEvents, pdfBlocks) {
         format: formatFromHeaderType(p.headerType),
         language: null,
         description,
+        descriptionEn: description,
         speakers,
         hostedBy,
       });
